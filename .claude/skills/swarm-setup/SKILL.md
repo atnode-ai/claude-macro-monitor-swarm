@@ -33,6 +33,8 @@ For each file in `routines/*.json`:
 - Skip if `config/routines.local.json` already lists a trigger for that `key` (unless the user asked to recreate).
 - Create it with this environment's routine/trigger tool (for example `create_trigger`): the `cron`, the `prompt`, fresh session per firing (`fires_into: new_session`), the listed `connectors`, initiation = human request.
 - If no such tool exists in this environment, print the spec as a table so the user can create it in the claude.ai Routines UI, and stop here.
+- **Finish each routine in the Routines UI.** A routine created by the tool may come out without a repository source and without connectors (the tool can only pass through connectors the calling session holds, and some organizations disable the `connectors` parameter). Such a routine starts with no checkout and cannot post to Slack. Check the created trigger: if `sources` or `mcp_connections` is empty, create it paused (`enabled: false`) and ask the user to open it in the claude.ai Routines page, add the repository (`github.owner/github.repo`, branch `github.branch`) and the Slack connector, then re-enable it. Set the model with the update tool afterwards if the create tool has no model field.
+- Routine sessions may only be allowed to push to their own `claude/*` branch. The first run that has something to commit shows it: if the push to `github.branch` is refused, the skills report `WRITE BLOCKED`; then either allow routine pushes to that branch or switch the routines to a data branch that is merged automatically.
 
 Write the returned IDs to `config/routines.local.json` (gitignored; per account):
 
