@@ -1,6 +1,6 @@
 # From Hyperagent to Claude Code: assessment and migration
 
-Source: the Hyperagent backup of "A - Macro Strategist" and its 7 domain agents (Drive: `agent.hyperagent.talfco/`, snapshot 2026-10-07). This repo replaces it.
+Source: the Hyperagent backup of "A - Macro Strategist" and its 7 domain agents (the `agent.<slug>/` folders at the repo root, also on Drive under `agent.hyperagent.talfco/`, snapshot 2026-10-07). This repo replaces it.
 
 ## Verdict on the original architecture
 
