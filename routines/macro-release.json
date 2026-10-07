@@ -1,0 +1,11 @@
+{
+  "_doc": "Declarative routine spec, read by the swarm-setup skill. Model is an alias so it works in any account's catalog. Cron uses CRON_TZ so DST is handled by the scheduler.",
+  "key": "release",
+  "name_from": "deployment.routines.release.name",
+  "model_from": "deployment.routines.release.model",
+  "cron": "CRON_TZ=America/New_York 7 11,17 * * 1-5",
+  "fires_into": "new_session",
+  "connectors": ["Slack"],
+  "prompt": "Run the macro-release skill in this repository. Follow CLAUDE.md. If nothing is pending, answer in one line and stop.",
+  "why_this_schedule": "11:07 ET catches the 08:30/10:00 prints after the 10:45 ET collector run; 17:07 ET catches the afternoon (FOMC 14:00, collector 16:15 ET). Quiet runs exit after one command."
+}

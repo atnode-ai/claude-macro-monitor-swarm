@@ -1,0 +1,26 @@
+{
+  "_doc": "Every account-specific value lives here. Copy to config/deployment.json and fill in. Nothing else in the repo hardcodes these.",
+  "github": {
+    "owner": "YOUR_GITHUB_OWNER",
+    "repo": "claude-macro-monitor-swarm",
+    "branch": "main"
+  },
+  "site": {
+    "base_url": "https://YOUR_GITHUB_OWNER.github.io/claude-macro-monitor-swarm/macro-monitor/",
+    "title": "Macro Monitor",
+    "footer": "Macro Monitor, built with Claude Code"
+  },
+  "slack": {
+    "channel_id": "YOUR_SLACK_CHANNEL_ID",
+    "channel_name": "#your-channel"
+  },
+  "timezone": "America/New_York",
+  "routines": {
+    "release": {"name": "macro-release", "model": "sonnet"},
+    "strategist": {"name": "macro-strategist", "model": "opus"}
+  },
+  "secrets": {
+    "_doc": "Names only. All are optional: BLS and FRED CSV work keyless. FRED_API_KEY adds the official FRED release calendar; BLS_API_KEY raises the BLS rate limit.",
+    "optional": ["FRED_API_KEY", "BLS_API_KEY"]
+  }
+}

@@ -1,0 +1,469 @@
+{
+  "generated_at": "2026-10-07 16:50 ET",
+  "cb_meetings": {
+    "fed": [
+      "2021-01-27",
+      "2021-03-17",
+      "2021-04-28",
+      "2021-06-16",
+      "2021-07-28",
+      "2021-09-22",
+      "2021-11-03",
+      "2021-12-15",
+      "2022-01-26",
+      "2022-03-16",
+      "2022-05-04",
+      "2022-06-15",
+      "2022-07-27",
+      "2022-09-21",
+      "2022-11-02",
+      "2022-12-14",
+      "2023-03-22",
+      "2023-05-03",
+      "2023-06-14",
+      "2023-07-26",
+      "2023-09-20",
+      "2023-12-13",
+      "2024-01-31",
+      "2024-03-20",
+      "2024-05-01",
+      "2024-06-12",
+      "2024-07-31",
+      "2024-09-18",
+      "2024-11-07",
+      "2024-12-18",
+      "2025-01-29",
+      "2025-03-19",
+      "2025-05-07",
+      "2025-06-18",
+      "2025-07-30",
+      "2025-08-22",
+      "2025-09-17",
+      "2025-10-29",
+      "2025-12-10",
+      "2026-01-28",
+      "2026-03-18",
+      "2026-04-29",
+      "2026-06-17",
+      "2026-07-29",
+      "2026-09-16",
+      "2026-10-28",
+      "2026-12-09",
+      "2027-01-27",
+      "2027-03-17",
+      "2027-04-28",
+      "2027-06-09",
+      "2027-07-28",
+      "2027-09-15",
+      "2027-10-27",
+      "2027-12-08"
+    ],
+    "ecb": [
+      "2026-10-29",
+      "2026-12-17",
+      "2027-02-04",
+      "2027-03-18",
+      "2027-04-29",
+      "2027-06-10",
+      "2027-07-22",
+      "2027-09-09",
+      "2027-10-28",
+      "2027-12-16",
+      "2028-02-03",
+      "2028-03-23",
+      "2028-05-04",
+      "2028-06-08",
+      "2028-07-20",
+      "2028-09-07",
+      "2028-10-11",
+      "2028-12-07"
+    ],
+    "boe": [
+      "2026-02-05",
+      "2026-03-19",
+      "2026-04-30",
+      "2026-06-18",
+      "2026-07-30",
+      "2026-09-17",
+      "2026-11-05",
+      "2026-12-17",
+      "2027-02-04",
+      "2027-03-18",
+      "2027-04-29",
+      "2027-06-17",
+      "2027-07-29",
+      "2027-09-16",
+      "2027-11-04",
+      "2027-12-16"
+    ]
+  },
+  "events": [
+    {
+      "date": "2026-09-30",
+      "time_et": "08:30",
+      "report": "gdp",
+      "name": "GDP (real, SAAR)",
+      "source": "official",
+      "summary": "GDP (Third Estimate), Industries, Corporate Profits, State GDP, and State Personal Income, 2nd Quarter 2026\\; State PCE, 2025",
+      "weekday": "Wed"
+    },
+    {
+      "date": "2026-09-30",
+      "time_et": "08:30",
+      "report": "pce",
+      "name": "PCE price index",
+      "source": "official",
+      "summary": "Personal Income and Outlays, August 2026",
+      "weekday": "Wed"
+    },
+    {
+      "date": "2026-10-01",
+      "time_et": "08:30",
+      "report": "claims",
+      "name": "Initial Jobless Claims",
+      "source": "estimate",
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-10-01",
+      "time_et": null,
+      "report": "ism_mfg",
+      "name": "ISM Manufacturing PMI",
+      "source": "estimate",
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-10-02",
+      "time_et": "08:30",
+      "report": "nfp",
+      "name": "Non-Farm Payrolls",
+      "source": "estimate",
+      "weekday": "Fri"
+    },
+    {
+      "date": "2026-10-05",
+      "time_et": null,
+      "report": "ism_services",
+      "name": "ISM Services PMI",
+      "source": "estimate",
+      "weekday": "Mon"
+    },
+    {
+      "date": "2026-10-06",
+      "time_et": "08:30",
+      "report": "trade",
+      "name": "Trade Balance",
+      "source": "official",
+      "summary": "U.S. International Trade in Goods and Services, August 2026",
+      "weekday": "Tue"
+    },
+    {
+      "date": "2026-10-07",
+      "time_et": "10:00",
+      "report": "jolts",
+      "name": "JOLTS",
+      "source": "estimate",
+      "weekday": "Wed"
+    },
+    {
+      "date": "2026-10-08",
+      "time_et": "08:30",
+      "report": "claims",
+      "name": "Initial Jobless Claims",
+      "source": "estimate",
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-10-09",
+      "time_et": "10:00",
+      "report": "umich",
+      "name": "UMich Consumer Sentiment (final)",
+      "source": "estimate",
+      "weekday": "Fri"
+    },
+    {
+      "date": "2026-10-12",
+      "time_et": "08:30",
+      "report": "cpi",
+      "name": "CPI",
+      "source": "estimate",
+      "weekday": "Mon"
+    },
+    {
+      "date": "2026-10-13",
+      "time_et": "08:30",
+      "report": "ppi",
+      "name": "PPI",
+      "source": "estimate",
+      "weekday": "Tue"
+    },
+    {
+      "date": "2026-10-15",
+      "time_et": "08:30",
+      "report": "claims",
+      "name": "Initial Jobless Claims",
+      "source": "estimate",
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-10-16",
+      "time_et": "08:30",
+      "report": "retail",
+      "name": "Retail Sales",
+      "source": "estimate",
+      "weekday": "Fri"
+    },
+    {
+      "date": "2026-10-16",
+      "time_et": "09:15",
+      "report": "indpro",
+      "name": "Industrial Production",
+      "source": "estimate",
+      "weekday": "Fri"
+    },
+    {
+      "date": "2026-10-19",
+      "time_et": "08:30",
+      "report": "starts",
+      "name": "Housing Starts & Building Permits",
+      "source": "estimate",
+      "weekday": "Mon"
+    },
+    {
+      "date": "2026-10-20",
+      "time_et": null,
+      "report": "uk_labour",
+      "name": "UK Labour Market (ONS)",
+      "source": "estimate",
+      "weekday": "Tue"
+    },
+    {
+      "date": "2026-10-21",
+      "time_et": "10:00",
+      "report": "existing_home",
+      "name": "Existing Home Sales",
+      "source": "estimate",
+      "weekday": "Wed"
+    },
+    {
+      "date": "2026-10-22",
+      "time_et": "08:30",
+      "report": "claims",
+      "name": "Initial Jobless Claims",
+      "source": "estimate",
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-10-26",
+      "time_et": "08:30",
+      "report": "durables",
+      "name": "Durable Goods",
+      "source": "estimate",
+      "weekday": "Mon"
+    },
+    {
+      "date": "2026-10-26",
+      "time_et": "10:00",
+      "report": "new_home",
+      "name": "New Home Sales",
+      "source": "estimate",
+      "weekday": "Mon"
+    },
+    {
+      "date": "2026-10-26",
+      "time_et": null,
+      "report": "ifo",
+      "name": "German Ifo Business Climate",
+      "source": "estimate",
+      "weekday": "Mon"
+    },
+    {
+      "date": "2026-10-27",
+      "time_et": null,
+      "report": "conf_board",
+      "name": "Conference Board Consumer Confidence",
+      "source": "estimate",
+      "weekday": "Tue"
+    },
+    {
+      "date": "2026-10-28",
+      "time_et": "14:00",
+      "report": "fomc",
+      "name": "FOMC decision",
+      "source": "official",
+      "weekday": "Wed"
+    },
+    {
+      "date": "2026-10-28",
+      "time_et": null,
+      "report": "carts",
+      "name": "Chicago Fed CARTS retail nowcast",
+      "source": "estimate",
+      "weekday": "Wed"
+    },
+    {
+      "date": "2026-10-29",
+      "time_et": "08:15",
+      "report": "ecb",
+      "name": "ECB decision",
+      "source": "official",
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-10-29",
+      "time_et": "08:30",
+      "report": "claims",
+      "name": "Initial Jobless Claims",
+      "source": "estimate",
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-10-29",
+      "time_et": "08:30",
+      "report": "gdp",
+      "name": "GDP (real, SAAR)",
+      "source": "official",
+      "summary": "GDP (Advance Estimate), 3rd Quarter 2026",
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-10-29",
+      "time_et": "08:30",
+      "report": "pce",
+      "name": "PCE price index",
+      "source": "official",
+      "summary": "Personal Income and Outlays, September 2026",
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-11-02",
+      "time_et": null,
+      "report": "ism_mfg",
+      "name": "ISM Manufacturing PMI",
+      "source": "estimate",
+      "weekday": "Mon"
+    },
+    {
+      "date": "2026-11-04",
+      "time_et": "08:30",
+      "report": "trade",
+      "name": "Trade Balance",
+      "source": "official",
+      "summary": "U.S. International Trade in Goods and Services, September 2026",
+      "weekday": "Wed"
+    },
+    {
+      "date": "2026-11-04",
+      "time_et": null,
+      "report": "ism_services",
+      "name": "ISM Services PMI",
+      "source": "estimate",
+      "weekday": "Wed"
+    },
+    {
+      "date": "2026-11-05",
+      "time_et": "07:00",
+      "report": "boe",
+      "name": "BoE decision",
+      "source": "official",
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-11-05",
+      "time_et": "08:30",
+      "report": "claims",
+      "name": "Initial Jobless Claims",
+      "source": "estimate",
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-11-06",
+      "time_et": "08:30",
+      "report": "nfp",
+      "name": "Non-Farm Payrolls",
+      "source": "estimate",
+      "weekday": "Fri"
+    },
+    {
+      "date": "2026-11-06",
+      "time_et": "10:00",
+      "report": "jolts",
+      "name": "JOLTS",
+      "source": "estimate",
+      "weekday": "Fri"
+    },
+    {
+      "date": "2026-11-12",
+      "time_et": "08:30",
+      "report": "claims",
+      "name": "Initial Jobless Claims",
+      "source": "estimate",
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-11-12",
+      "time_et": "08:30",
+      "report": "cpi",
+      "name": "CPI",
+      "source": "estimate",
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-11-13",
+      "time_et": "08:30",
+      "report": "ppi",
+      "name": "PPI",
+      "source": "estimate",
+      "weekday": "Fri"
+    },
+    {
+      "date": "2026-11-13",
+      "time_et": "10:00",
+      "report": "umich",
+      "name": "UMich Consumer Sentiment (final)",
+      "source": "estimate",
+      "weekday": "Fri"
+    },
+    {
+      "date": "2026-11-16",
+      "time_et": "08:30",
+      "report": "retail",
+      "name": "Retail Sales",
+      "source": "estimate",
+      "weekday": "Mon"
+    },
+    {
+      "date": "2026-11-16",
+      "time_et": "09:15",
+      "report": "indpro",
+      "name": "Industrial Production",
+      "source": "estimate",
+      "weekday": "Mon"
+    },
+    {
+      "date": "2026-11-17",
+      "time_et": "08:30",
+      "report": "starts",
+      "name": "Housing Starts & Building Permits",
+      "source": "estimate",
+      "weekday": "Tue"
+    },
+    {
+      "date": "2026-11-17",
+      "time_et": null,
+      "report": "uk_labour",
+      "name": "UK Labour Market (ONS)",
+      "source": "estimate",
+      "weekday": "Tue"
+    },
+    {
+      "date": "2026-11-19",
+      "time_et": "08:30",
+      "report": "claims",
+      "name": "Initial Jobless Claims",
+      "source": "estimate",
+      "weekday": "Thu"
+    }
+  ],
+  "errors": []
+}

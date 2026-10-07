@@ -1,0 +1,89 @@
+name: collect
+
+# Free, deterministic release detection. No LLM runs here.
+# UTC crons: 13:00, 14:45, 20:15 = 09:00 / 10:45 / 16:15 ET in summer (EDT), one hour earlier in winter (EST).
+on:
+  schedule:
+    - cron: "0 13 * * 1-5"
+    - cron: "45 14 * * 1-5"
+    - cron: "15 20 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      seed:
+        description: "Seed baselines (first run in a new repo)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ROUTINE_FIRE_URL: ${{ secrets.ROUTINE_FIRE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Tests
+        run: python -m unittest discover -s tests -t .
+
+      - name: Release calendar
+        continue-on-error: true
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python -m collectors.calendar
+
+      - name: Collect
+        id: collect
+        env:
+          BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
+        run: |
+          if [ "${{ inputs.seed }}" = "true" ] || [ ! -f data/state.json ]; then
+            python -m collectors.engine --seed
+          else
+            python -m collectors.engine
+          fi
+
+      - name: Render blackboard
+        run: python -m tools.render_blackboard
+
+      - name: Commit
+        run: |
+          git config user.name "macro-collector[bot]"
+          git config user.email "macro-collector@users.noreply.github.com"
+          git add data blackboard
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "collect: ${{ steps.collect.outputs.new_count }} new, ${{ steps.collect.outputs.pending_total }} pending, ${{ steps.collect.outputs.error_count }} errors"
+            for i in 1 2 3; do git push && break; git pull --rebase; done
+          fi
+
+      # Optional: wake the macro-release routine right away instead of waiting
+      # for its next scheduled run. Set ROUTINE_FIRE_URL (+ ROUTINE_FIRE_TOKEN)
+      # as repository secrets if your account offers an HTTP trigger for routines.
+      - name: Fire release routine
+        if: steps.collect.outputs.new_count != '0' && env.ROUTINE_FIRE_URL != ''
+        env:
+          ROUTINE_FIRE_TOKEN: ${{ secrets.ROUTINE_FIRE_TOKEN }}
+        run: |
+          curl -fsS -X POST "$ROUTINE_FIRE_URL" \
+            -H "Authorization: Bearer $ROUTINE_FIRE_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{\"text\": \"${{ steps.collect.outputs.new_count }} new release(s) queued\"}" || echo "fire failed; scheduled run will pick it up"
+
+      - name: Fail on collector errors
+        if: steps.collect.outputs.error_count != '0'
+        run: |
+          echo "::warning::collector errors; see data/state.json reports[*].error"
+          exit 1

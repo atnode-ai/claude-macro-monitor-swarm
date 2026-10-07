@@ -1,0 +1,22 @@
+{
+  "domain": "labor",
+  "report": "adp",
+  "name": "ADP employment",
+  "ref": "2026-09",
+  "tier": 3,
+  "detected_at": "2026-10-07 17:09 ET",
+  "source": "fred",
+  "source_url": "https://adpemploymentreport.com/",
+  "metrics": {
+    "private_payrolls_k.diff": 90.0
+  },
+  "prior": {
+    "private_payrolls_k.diff": 36.0
+  },
+  "verified": true,
+  "consensus": null,
+  "consensus_source": null,
+  "surprise": null,
+  "read": null,
+  "status": "baseline"
+}
