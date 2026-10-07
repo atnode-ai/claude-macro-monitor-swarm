@@ -1,0 +1,62 @@
+{
+  "agent_name": "A - Labor Watch",
+  "display_name_current": "A - Labor Watch",
+  "slug": "agent.labor.watch",
+  "source_agent_id": "cmq66xpjk00pa06admwfg7v4g",
+  "model": "zai/glm-5.2",
+  "blackboard_doc_id": "cmq5rqdws16qq06adoiw88r03",
+  "blackboard_section": "Labor",
+  "skills": [
+    {
+      "id": "cmq2zoi2z0a1u07ad0unohtca",
+      "name": "Agent State Backup"
+    },
+    {
+      "id": "cmqim4z57023n07ad7it6mifj",
+      "name": "Labor Watch — Release Gate"
+    }
+  ],
+  "memory_count": 4,
+  "memory_ids": [
+    "cmq7lkiwy03mw07ad6lql4ztq",
+    "cmr3vk95j0m7l07aditxt5gh4",
+    "cmr3vkozu0j7k06ad39e6q4k9",
+    "cmr3vluuo0jqz07adkzbtpeug"
+  ],
+  "files": [
+    {
+      "path": "MEMORIES.md",
+      "sha256": "3b1d593d05913f1ae0d3562d83362ab864a6cb01406f113c8c4ee5c3de6ad49c"
+    },
+    {
+      "path": "SECTION_SNAPSHOT.md",
+      "sha256": "a7b3baa355ab82d5d8190c27333b919e8f44b88800ba3ad7b114423e4658c9c7"
+    },
+    {
+      "path": "SYSTEM_PROMPT.md",
+      "sha256": "8f9d225d2d3d0ebe21b884377c3464261d80a6d05a90aa323c621374d546deb3"
+    },
+    {
+      "path": "agent_config.json",
+      "sha256": "6a24773f3a99d926cde2ddb3c2fc8c6e854e255947136e4215708e5d540afd34"
+    },
+    {
+      "path": "skills/agent-state-backup/SKILL.md",
+      "sha256": "64a18195fa955ef8680c82effb05fc4dda54a4eee54171afa044809ee655124d"
+    },
+    {
+      "path": "skills/agent-state-backup/render_project_doc.py",
+      "sha256": "cae7a05842039ac05c1021afe7ab6bc3c5845a86ea37bf3f53c337e605a604f1"
+    },
+    {
+      "path": "skills/labor-watch-release-gate/SKILL.md",
+      "sha256": "25bd7a09cdc51e1d483c80917c50f2be4ad62955cf18d2eadb98536eff57432e"
+    },
+    {
+      "path": "skills/labor-watch-release-gate/gate.py",
+      "sha256": "dfef11f20e2ef80788b76c2f80d81b02abe3e03d479bea2d8cd229d3c979d89f"
+    }
+  ],
+  "last_backup": "2026-10-07",
+  "note": "No secrets or credentials are included in this backup."
+}

@@ -1,0 +1,87 @@
+{
+  "slug": "agent.inflation.watch",
+  "display_name_current": "A - Inflation Watch",
+  "name": "A - Inflation Watch",
+  "description": "Inflation-domain collector in the macro-monitoring swarm. Watches US CPI, PPI and PCE releases, logs each print to the Macro Monitor blackboard, and alerts #hyper-asset-monitoring on new releases / material surprises.",
+  "icon": "📈",
+  "executionMode": "auto",
+  "delegation": {
+    "scope": "none",
+    "approvalMode": "always_ask"
+  },
+  "modelSettings": {
+    "modelId": "zai/glm-5.2",
+    "defaultSubagentModel": null,
+    "maxThinkingTokens": null,
+    "effort": null,
+    "maxBudgetUsd": null,
+    "speed": null,
+    "fastMode": null
+  },
+  "learning": {
+    "skillLoadMode": "preload",
+    "skillScope": "selected",
+    "enableMemorySuggestions": false,
+    "enableSkillSuggestions": false,
+    "enablePromptSuggestions": false,
+    "enableRubricSuggestions": false,
+    "autoSaveMemories": false,
+    "autoSaveSkills": false,
+    "autoSaveAgents": false,
+    "autoSavePrompts": false
+  },
+  "tools": [
+    "searchMode",
+    "exa-mode",
+    "web-search",
+    "browser",
+    "documents",
+    "turnTimeoutMinutes"
+  ],
+  "integrations": [
+    {
+      "id": "slack",
+      "resourceScope": {
+        "version": 1,
+        "allChannelsAccess": true,
+        "readDMs": false,
+        "writeDMs": false,
+        "allChannelsPermission": "read",
+        "writeChannels": [
+          {
+            "id": "C0B8B76L7NH",
+            "displayName": "#hyper-asset-monitoring"
+          }
+        ]
+      }
+    }
+  ],
+  "scheduledInvocations": [
+    {
+      "name": "Release check — morning",
+      "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;BYHOUR=9;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "status": "paused",
+      "prompt": "Scheduled release check. (1) DEDUP: read the Macro Monitor blackboard (doc cmq5rqdws16qq06adoiw88r03), the Inflation section; note the latest logged date per report. (2) CHECK each of your official sources for a release newer than logged (use the browser if a source blocks plain fetch). (3) NEW release -> capture headline + key sub-readings, consensus, prior, surprise (mark 'unconfirmed' if not verifiable); append a row to your section table; update Current stance; post a concise alert to #hyper-asset-monitoring (C0B8B76L7NH). (4) HEARTBEAT (ALWAYS, even if nothing new): set the section's 'Last checked' line to the current time (ET) with status 'logged <report>' or 'no new release'. Never post to Slack on a no-new-release run."
+    },
+    {
+      "name": "Release check — late morning + heartbeat",
+      "rrule": "FREQ=WEEKLY;BYDAY=FR;BYHOUR=11;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "status": "active",
+      "prompt": "Scheduled release check. (1) DEDUP: read the Macro Monitor blackboard (doc cmq5rqdws16qq06adoiw88r03), the Inflation section; note the latest logged date per report. (2) CHECK each of your official sources for a release newer than logged (use the browser if a source blocks plain fetch). (3) NEW release -> capture headline + key sub-readings, consensus, prior, surprise (mark 'unconfirmed' if not verifiable); append a row to your section table; update Current stance; post a concise alert to #hyper-asset-monitoring (C0B8B76L7NH). (4) HEARTBEAT (ALWAYS, even if nothing new): set the section's 'Last checked' line to the current time (ET) with status 'logged <report>' or 'no new release'. Never post to Slack on a no-new-release run."
+    }
+  ],
+  "skills": [
+    "cmq2zoi2z0a1u07ad0unohtca",
+    "cmqiie9g800os07advynt3xgl"
+  ],
+  "memories": [
+    "cmq7luzrv03m908adkbg8c472",
+    "cmq7lznju03xj07adfoogswsq",
+    "cmq7m00ez042p07ad283uat18",
+    "cmqe83wvz0p2907adulrmxaz2",
+    "cmqiiye1c00we06ad323a5h7z"
+  ],
+  "contextFiles": []
+}

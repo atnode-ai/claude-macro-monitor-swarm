@@ -1,0 +1,131 @@
+{
+  "agent_name": "A - Macro Strategist",
+  "display_name_current": "A - Macro Strategist",
+  "slug_folder": "agent.macro.strategist",
+  "source_agent_id": "cmq667l5l00jp07adt010uj06",
+  "description": "Orchestrator of the macro-monitoring swarm. Reads all domain digests from the Macro Monitor blackboard, applies the Master Cross-Indicator (leads/lags) logic, writes the synthesis, and owns the team's high-signal alerts to #hyper-asset-monitoring.",
+  "icon": "🧠",
+  "executionMode": "auto",
+  "persistBrowser": false,
+  "delegation": {
+    "scope": "none",
+    "approvalMode": "always_ask"
+  },
+  "modelSettings": {
+    "modelId": "claude-opus-4-8",
+    "defaultSubagentModel": "sonnet",
+    "maxThinkingTokens": null,
+    "effort": null,
+    "maxBudgetUsd": null,
+    "speed": null,
+    "fastMode": null
+  },
+  "learning": {
+    "skillLoadMode": "discover",
+    "skillScope": "global",
+    "enableMemorySuggestions": false,
+    "enableSkillSuggestions": false,
+    "enablePromptSuggestions": false,
+    "enableRubricSuggestions": false,
+    "autoSaveMemories": false,
+    "autoSaveSkills": false,
+    "autoSaveAgents": false,
+    "autoSavePrompts": false
+  },
+  "tools_enabled": [
+    "searchMode",
+    "globalTablesEnabled",
+    "exa-mode",
+    "web-search",
+    "documents",
+    "searchthreads"
+  ],
+  "integrations": [
+    "slack",
+    "googledrive",
+    "github"
+  ],
+  "skills": [
+    "cmq2zoi2z0a1u07ad0unohtca",
+    "cmq684hk5010l06ady4zn188w",
+    "cmqh3383s026o06adfksd2qni",
+    "cmqikv9c001rd06aden8i820k"
+  ],
+  "memories": [
+    "cmq7lu6ds03q107adeaq9zo19",
+    "cmq7luip5044n07adxyg0vi4h",
+    "cmq7lup7c03sr07ad6u1i2jyz",
+    "cmq7lzhi403xf07adv4z0okbh",
+    "cmqe7wf4l0ooi07adszukqtu1",
+    "cmqe7wn6n0oy606ad5ge0xvlg",
+    "cmqe7wt0y0p0907adpct6z1w2",
+    "cmqe815z60r8e08adgvjcatfc",
+    "cmqe8172g0o9g06adsv4nvsb3",
+    "cmqe85n9r0ogd07adz48fkmwa",
+    "cmqe8bapx0oz806ada2ct2iod",
+    "cmqikwp0901ql06adie1590y7",
+    "cmqikynya01s907adswfuy8ab",
+    "cmr3viu900k7707advzgm26ag",
+    "cmr3vjobn0k7y07adhmi5w6jz"
+  ],
+  "contextFiles": [
+    {
+      "type": "document",
+      "id": "cmq75s3ob02to07ad95xo18ke",
+      "name": "Domain Agent — Revised Config (scheduled + heartbeat)",
+      "isPinned": false
+    }
+  ],
+  "scheduledInvocations": [
+    {
+      "id": "cmq667l7j00jq07adryo79bpp",
+      "name": "Daily macro wrap",
+      "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;BYHOUR=17;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "prompt": "Step 1 — DIGEST, don't dump: ReadDocument the Macro Monitor blackboard (doc cmq5rqdws16qq06adoiw88r03); it externalizes to a file — pass that file path to the \"Macro Blackboard Digest & Health\" skill with --mode digest (do NOT read the full doc into context). It returns the 7 domain Current-stance lines, fresh_today (what landed today), the prior synthesis lines, and a domain-liveness health block. Step 2: apply the cross-indicator chain and update the Macro Synthesis section, editing the Regime watch / Week ahead / Swarm health lines in place. Step 3 — Slack: if health.all_fresh is false, post the skill's ready HEALTH ALERT to #hyper-asset-monitoring (fires even on a quiet day). Post a concise daily macro wrap ONLY if there were notable prints today (see fresh_today) or a multi-domain alignment is forming; otherwise update the doc only and stay off Slack.",
+      "threadStrategy": "new",
+      "status": "paused",
+      "readOnlyMode": false,
+      "alertMode": false,
+      "runNotifications": []
+    },
+    {
+      "id": "cmq667l7x00jr07ade9x0m686",
+      "name": "Weekly look-ahead",
+      "rrule": "FREQ=WEEKLY;BYDAY=SU;BYHOUR=17;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "prompt": "Step 1 — DIGEST, don't dump: ReadDocument the Macro Monitor blackboard (doc cmq5rqdws16qq06adoiw88r03); it externalizes to a file — pass that path to the \"Macro Blackboard Digest & Health\" skill with --mode digest (do NOT read the full doc into context). Step 2: summarise the past week's macro signal from the 7 stances, and refresh the Macro Synthesis \"Week ahead\" and \"Swarm health\" lines — use the baked-in US/UK/EZ release-calendar memory for the upcoming calendar (no web lookups). Step 3: post a week-ahead briefing to #hyper-asset-monitoring, leading with the upcoming release calendar. If health.all_fresh is false, also post the skill's HEALTH ALERT.",
+      "threadStrategy": "new",
+      "status": "paused",
+      "readOnlyMode": false,
+      "alertMode": false,
+      "runNotifications": []
+    },
+    {
+      "id": "cmqeb9k970pt006adqpouihsh",
+      "name": "Weekly public report (Saturday)",
+      "rrule": "FREQ=WEEKLY;BYDAY=SA;BYHOUR=9;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "prompt": "Weekly public macro publishing — publish the business briefing AND the detailed blackboard to the Macro Monitor site on GitHub Pages. You are the Macro Strategist; run autonomously (fresh thread, everything you need is below). Repo: atnode-ai/agentweb (branch main; GitHub Pages serves the repo ROOT). The site lives under the macro-monitor/ subdirectory. Live site: https://atnode-ai.github.io/agentweb/macro-monitor/\n\nSTEP 1 — READ THE DATA (via skill, don't dump). ReadDocument the Macro Monitor blackboard (doc cmq5rqdws16qq06adoiw88r03); it externalizes to a file — pass that path to the \"Macro Blackboard Digest & Health\" skill: run --mode digest --full for every domain's stances + report rows, and use its health block for the domain-liveness check. Do NOT read the full doc into context. Apply cross-indicator (leads/lags) reasoning. Reflect the blackboard's CURRENT state; if a domain is stale/empty say so; never invent data.\n\nSTEP 2 — EDITION LABEL. Compute the current ISO week YYYY-Www and the 'week ending Friday' date. Files this run: macro-monitor/reports/<YYYY-Www>.html (business report) and macro-monitor/blackboard/<YYYY-Www>.html (detailed snapshot).\n\nSTEP 3 — BUILD THE BUSINESS REPORT (design IDENTICAL to prior editions; do not redesign). Fetch the MOST RECENT EXISTING edition as the template (do NOT hardcode a week number): list the reports via the GitHub contents API (curl -s https://api.github.com/repos/atnode-ai/agentweb/contents/macro-monitor/reports), take the filenames matching 2026-W<NN>.html, sort them, and pick the highest-numbered one that is NOT this run’s own <YYYY-Www>.html (so a same-week re-run still uses the prior edition); then curl it from https://raw.githubusercontent.com/atnode-ai/agentweb/main/macro-monitor/reports/<file> . Copy verbatim and update ONLY the content: <title>, cover label (No. 2026-Www) + 'WEEK ENDING' date, the regime banner, Executive Summary, At-a-Glance KPI tiles, the Domain Scorecard table (7 rows incl. Financial Conditions — mark 'not yet reporting' until Market Watch logs), the four 'What the data is saying' paragraphs, the inflation bar chart (update the four .bc-bar heights — height% = value ÷ 8 × 100 — and their +x.x% value labels; the chart is dependency-free HTML/CSS, do NOT reintroduce Chart.js or any CDN), Regime Watch, Week Ahead, and Monitoring Status. Keep the site footer (atnode.ai / hyperagent platform) intact. Body copy ~650-700 words, plain business language, standard abbreviations (CPI, PPI, PCE, NFP, ISM, FOMC, ECB, BoE). Save to /agent/workspace/site/reports/<YYYY-Www>.html.\n\nSTEP 4 — BUILD THE DETAILED BLACKBOARD PAGE (uses the committed builder for consistent styling). (a) Generate the markdown DETERMINISTICALLY with the \"Macro Blackboard Digest & Health\" skill — do NOT hand-reconstruct it: run it with --mode markdown against the externalized blackboard file and save stdout to /agent/workspace/bb-<YYYY-Www>.md . It emits '## <Section name>' + content for the 7 domains + '3rd-Party Analysis' + 'Macro Synthesis', with a blank line before every GitHub pipe table. (b) Fetch the builder: curl -sS https://raw.githubusercontent.com/atnode-ai/agentweb/main/macro-monitor/tools/build_blackboard.py -o /agent/workspace/build_blackboard.py . (c) python3 -m pip install --quiet markdown . (d) Run: python3 /agent/workspace/build_blackboard.py /agent/workspace/bb-<YYYY-Www>.md /agent/workspace/site/blackboard/<YYYY-Www>.html \"<YYYY · WNN>\" \"Week ending <DD Mon YYYY>\" \"<DD Mon YYYY>\" \"../reports/<YYYY-Www>.html\" . The builder applies the styled template (nav, header, scrollable tables, new-tab links) and the attribution footer automatically.\n\nSTEP 5 — UPDATE THE LANDING PAGE (two archive lists). Fetch current: curl -sS https://raw.githubusercontent.com/atnode-ai/agentweb/main/macro-monitor/index.html -o /agent/workspace/site/index.html . Insert a NEW business-report row immediately AFTER the marker '<!-- REPORTS:INSERT -->': <a class=\"report-row\" href=\"reports/<YYYY-Www>.html\"><div class=\"rr-left\"><span class=\"rr-wk\">YYYY · WNN</span><span class=\"rr-title\">Weekly Executive Briefing</span></div><div class=\"rr-right\"><span class=\"rr-date\">Week ending <DD Mon YYYY></span><span class=\"rr-cta\">Read →</span></div></a> . Insert a NEW blackboard row immediately AFTER the marker '<!-- BLACKBOARD:INSERT -->': <a class=\"report-row\" href=\"blackboard/<YYYY-Www>.html\"><div class=\"rr-left\"><span class=\"rr-wk\">YYYY · WNN</span><span class=\"rr-title\">Detailed Blackboard Snapshot</span></div><div class=\"rr-right\"><span class=\"rr-date\">Week ending <DD Mon YYYY></span><span class=\"rr-cta\">View →</span></div></a> . Leave everything else (overview, architecture callout, footer) unchanged. If a row for this week already exists in either list, replace it rather than duplicate. Save to /agent/workspace/site/index.html.\n\nSTEP 6 — COMMIT. Use the 'GitHub Push (PAT) — atnode-ai' skill: FetchSkillScripts('GitHub Push (PAT) — atnode-ai'); python3 -m pip install --quiet requests; write a manifest JSON array [{\"path\":\"macro-monitor/reports/<YYYY-Www>.html\",\"local\":\"/agent/workspace/site/reports/<YYYY-Www>.html\"},{\"path\":\"macro-monitor/blackboard/<YYYY-Www>.html\",\"local\":\"/agent/workspace/site/blackboard/<YYYY-Www>.html\"},{\"path\":\"macro-monitor/index.html\",\"local\":\"/agent/workspace/site/index.html\"}]; then RunWithCredentials: python3 \"skills/GitHub Push (PAT) — atnode-ai/github_push.py\" --owner atnode-ai --repo agentweb --branch main --message \"Macro briefing + blackboard <YYYY-Www>\" --manifest <manifest path>.\n\nSTEP 7 — VERIFY & NOTIFY. After ~60s confirm HTTP 200 on https://atnode-ai.github.io/agentweb/macro-monitor/ , .../macro-monitor/reports/<YYYY-Www>.html and .../macro-monitor/blackboard/<YYYY-Www>.html . Then post a concise 2-3 line summary to Slack #hyper-asset-monitoring (C0B8B76L7NH): the regime headline + the public report link.\n\nBLOCKED-WRITE RULE: if any intended write is blocked this run, lead your response with the '⚠️ WRITE BLOCKED' banner and output verbatim what you would have committed/posted. The GitHub publish runs via the PAT skill (script execution, not an integration write); the Slack post IS an integration write and needs this schedule's 'allow integration writes' toggle ON. If Slack is blocked but the publish succeeded, still report the live URL.",
+      "threadStrategy": "new",
+      "status": "paused",
+      "readOnlyMode": false,
+      "alertMode": false,
+      "runNotifications": []
+    },
+    {
+      "id": "cmtkixnqc0gn006adv3di31o0",
+      "name": "Weekly consolidated (Friday)",
+      "rrule": "FREQ=WEEKLY;BYDAY=FR;BYHOUR=17;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "prompt": "Weekly consolidated run (Friday 17:00 ET). This SINGLE run replaces the former Daily macro wrap + Weekly look-ahead + Saturday public report (all three are paused). Do the end-of-week synthesis AND publish the public site, then post ONE Slack summary. Run autonomously in a fresh thread; everything needed is below.\n\nPART A — SYNTHESIS & HEALTH (update the blackboard). Step 1 — DIGEST, don't dump: ReadDocument the Macro Monitor blackboard (doc cmq5rqdws16qq06adoiw88r03); it externalizes to a file — pass that path to the 'Macro Blackboard Digest & Health' skill with --mode digest (do NOT read the full doc into context). It returns the 7 domain Current-stance lines, fresh_today, the prior synthesis lines, and a domain-liveness health block. Step 1b — SELF-HEAL (auto-restore a wiped domain, BEFORE synthesizing or publishing). Classify each of the 7 domain sections from the digest: a domain is WIPED if its section body is missing, blank, or has ZERO release rows — this is DIFFERENT from merely STALE (content present but an old 'Last checked'); never restore a stale-but-populated domain. For each WIPED domain: (a) walk the blackboard version history backward from the current version (ReadDocument doc cmq5rqdws16qq06adoiw88r03 with version=N, decrementing; each historical read externalizes to a file — node-parse and slice ONLY that one domain's section, never load the whole doc into context) until you find the most recent version whose section has real content (a populated release table); cap the search at 20 versions back. (b) UpdateDocument operation=replace on that section (by name) with the recovered content, and append a restoration marker line: 'Auto-restored from v<N> on <YYYY-MM-DD HH:MM ET> — heartbeat frozen; treat as STALE until the domain agent next writes.' PRESERVE the recovered section's original 'Last checked' timestamp (do NOT stamp it fresh) so liveness stays correctly flagged stale. (c) if no populated version is found within 20 versions back, leave the section as-is and record it as WIPED+unrecoverable. Record every action (domain, source version, or unrecoverable) for the Swarm-health line and the health alert. If nothing is wiped, skip this step. This gate mutates the blackboard BEFORE Part B, so the published site reflects the restored content. Step 2 — apply the cross-indicator (leads/lags) chain and update the Macro Synthesis section IN PLACE: the narrative, Regime watch, Week ahead (use the baked-in US/UK/EZ release-calendar memory for the coming week — no web lookups), and Swarm health lines (the Swarm-health line must name any domain auto-restored this run as 'domain ← v<N> (auto-restored)', plus any WIPED+unrecoverable domain). Step 3 — HEALTH: if health.all_fresh is false OR any domain was auto-restored/unrecoverable in Step 1b, hold the HEALTH ALERT text (the skill's ready alert PLUS a line for each domain auto-restored 'domain auto-restored from v<N>, heartbeat frozen — needs the domain agent to resume' and each WIPED+unrecoverable domain) and post it to #hyper-asset-monitoring in Part C (fires even on a quiet week, separate from the macro summary).\n\nPART B — PUBLISH THE PUBLIC SITE (business report + detailed blackboard). Repo atnode-ai/agentweb (branch main; Pages serves repo ROOT), site under macro-monitor/. Live: https://atnode-ai.github.io/agentweb/macro-monitor/\n- EDITION LABEL: compute current ISO week YYYY-Www and the 'week ending Friday' date (this run's Friday). Files: macro-monitor/reports/<YYYY-Www>.html + macro-monitor/blackboard/<YYYY-Www>.html + macro-monitor/rubric/<YYYY-Www>.html.\n- DATA: reuse Part A's digest; for the full report rows also run the skill with --mode digest --full. Reflect the blackboard's CURRENT state; if a domain is stale/empty say so; never invent data.\n- BUSINESS REPORT (design IDENTICAL to prior editions; do not redesign): fetch the MOST RECENT EXISTING edition as the template (do NOT hardcode a week number): list the reports via the GitHub contents API (curl -s https://api.github.com/repos/atnode-ai/agentweb/contents/macro-monitor/reports), take the filenames matching 2026-W<NN>.html, sort them, and pick the highest-numbered one that is NOT this run’s own <YYYY-Www>.html (so a same-week re-run still uses the prior edition); then curl that file from https://raw.githubusercontent.com/atnode-ai/agentweb/main/macro-monitor/reports/<file>. Copy verbatim and update ONLY the content: <title>, cover label (No. 2026-Www) + WEEK ENDING date, regime banner, Executive Summary, At-a-Glance KPI tiles, the 7-row Domain Scorecard, the four 'What the data is saying' paragraphs, the inflation bar chart (update the four .bc-bar heights — height% = value ÷ 8 × 100 — and their value labels; dependency-free HTML/CSS, do NOT reintroduce Chart.js or any CDN), Regime Watch, Week Ahead, Monitoring Status. At the END of the last content page add a Quality Assurance block (styled like the opnote) linking to the rubric page — link text \"Rubric — qualitative check →\", href \"../rubric/<YYYY-Www>.html\". Keep the site footer intact. ~650-700 words. Save to /agent/workspace/site/reports/<YYYY-Www>.html.\n- DETAILED BLACKBOARD (use the committed builder): (a) generate markdown DETERMINISTICALLY with the skill --mode markdown against the externalized file → /agent/workspace/bb-<YYYY-Www>.md (do NOT hand-reconstruct). (b) curl the builder https://raw.githubusercontent.com/atnode-ai/agentweb/main/macro-monitor/tools/build_blackboard.py -o /agent/workspace/build_blackboard.py . (c) python3 -m pip install --quiet markdown . (d) python3 /agent/workspace/build_blackboard.py /agent/workspace/bb-<YYYY-Www>.md /agent/workspace/site/blackboard/<YYYY-Www>.html \"<YYYY · WNN>\" \"Week ending <DD Mon YYYY>\" \"<DD Mon YYYY>\" \"../reports/<YYYY-Www>.html\" .\n- RUBRIC PAGE (per edition, built from Part D’s self-audit): create macro-monitor/rubric/<YYYY-Www>.html reusing the business report’s stylesheet, nav and footer (copy the <style> block + nav + site-footer from the report you just built — same design, do NOT redesign). Contents: a cover carrying the overall weighted score; a 5-row scorecard table (Criterion | Weight | Score /5 | Assessment) for the \"Macro Friday Report — Factual Accuracy Audit\" rubric, filled from Part D’s per-criterion results; a \"Findings & Corrections\" section listing every issue the self-audit found and how it was resolved (or, if the audit was clean, state \"no issues found\" with the rationale); and links back to ../reports/<YYYY-Www>.html and ../blackboard/<YYYY-Www>.html. Save to /agent/workspace/site/rubric/<YYYY-Www>.html.\n- LANDING PAGE: curl https://raw.githubusercontent.com/atnode-ai/agentweb/main/macro-monitor/index.html -o /agent/workspace/site/index.html . Insert a new business-report row immediately AFTER '<!-- REPORTS:INSERT -->', a new blackboard row immediately AFTER '<!-- BLACKBOARD:INSERT -->', and a new rubric-check row immediately AFTER '<!-- RUBRIC:INSERT -->' (same row markup as prior editions, newest-first; the rubric row links to rubric/<YYYY-Www>.html with title “Rubric — Qualitative Check” and CTA “Check →”). ALSO: the business-report row’s rr-right must LEAD with a QA score badge — <span class=\"rr-qa\" title=\"Rubric qualitative check — <score>/5\">QA <score>/5</span> — placed before the rr-date, where <score> is Part D’s overall weighted score (e.g. 3.05). The .rr-qa CSS rule already exists on the landing page; do not redefine it. If a row for this week already exists in any of the three lists, replace rather than duplicate. Save to /agent/workspace/site/index.html.\n- COMMIT: 'GitHub Push (PAT) — atnode-ai' skill: FetchSkillScripts; python3 -m pip install --quiet requests; write a manifest JSON [{\"path\":\"macro-monitor/reports/<YYYY-Www>.html\",\"local\":\"/agent/workspace/site/reports/<YYYY-Www>.html\"},{\"path\":\"macro-monitor/blackboard/<YYYY-Www>.html\",\"local\":\"/agent/workspace/site/blackboard/<YYYY-Www>.html\"},{\"path\":\"macro-monitor/rubric/<YYYY-Www>.html\",\"local\":\"/agent/workspace/site/rubric/<YYYY-Www>.html\"},{\"path\":\"macro-monitor/index.html\",\"local\":\"/agent/workspace/site/index.html\"}]; RunWithCredentials: python3 \"skills/GitHub Push (PAT) — atnode-ai/github_push.py\" --owner atnode-ai --repo agentweb --branch main --message \"Macro briefing + blackboard <YYYY-Www>\" --manifest <manifest>.\n- VERIFY: after ~60s confirm HTTP 200 on the landing, reports/<YYYY-Www>.html, blackboard/<YYYY-Www>.html and rubric/<YYYY-Www>.html.\n\nPART D — SELF-AUDIT & CORRECT (MANDATORY ACCURACY GATE). Perform this AFTER drafting the Part A synthesis and the Part B report/blackboard files, but BEFORE the Part B COMMIT step and BEFORE the Part C Slack post. Fact-check every factual statement across the Macro Synthesis, the business report (Week Ahead, KPI tiles, 7-row scorecard, inflation bar chart), and the Slack draft against the \"Macro Friday Report — Factual Accuracy Audit\" rubric:\n- DATES / CALENDAR (highest priority): for every dated event (FOMC / ECB / BoE meetings, Jackson Hole, and each Week-ahead release) independently derive the weekday from the actual calendar date and confirm any day-name you wrote matches it. US/UK/EZ data releases and central-bank decisions fall on weekdays — flag any event asserted on a Saturday or Sunday. Cross-check against the baked-in US/UK/EZ release-calendar memory. If a specific date or weekday is not certain, state the date WITHOUT a weekday rather than guessing. (This is exactly the class of error that put Jackson Hole on Saturday in the W35 report when it was Friday.)\n- FIGURES: every number (levels, MoM/YoY, consensus, KPI tiles, bar-chart heights) must match the blackboard's logged values; recompute each bar height (value ÷ 8 × 100) and verify its label.\n- GROUNDING: every substantive claim must trace to a blackboard entry or the calendar memory; stale/empty domains are labelled as such, never invented.\n- CONSISTENCY: the Slack summary, the blackboard synthesis, and the published report must agree (regime headline, week-ahead items, numbers).\n- ATTRIBUTION / RECENCY: correct reference months; Fed Chair = Warsh (not Powell); lead/lag statements directionally correct.\nCORRECT every error in place before committing/posting; if a claim cannot be verified, soften or drop it rather than ship it. Append a one-line \"Self-audit: <N> corrections (dates/figures/grounding/consistency)\" note to the Macro Synthesis section (keep it out of the public report). Record each criterion’s score (1–5) and the list of issues found/corrected — these populate the Part B rubric page (macro-monitor/rubric/<YYYY-Www>.html). Only once this gate passes do you proceed to the Part B COMMIT and the Part C Slack post.\n\nPART C — ONE SLACK POST to #hyper-asset-monitoring (C0B8B76L7NH): a single concise message = the regime headline + the coming week's key releases (week-ahead) + the public report link. If Part A flagged health.all_fresh=false, post the HEALTH ALERT as a SEPARATE message. This run ALWAYS posts the weekly summary (unlike the old daily-wrap quiet-day gating) because it always ships a report.\n\nBLOCKED-WRITE RULE: if any intended write is blocked this run, lead your response with the '⚠️ WRITE BLOCKED' banner and output verbatim what you would have committed/posted. The GitHub publish runs via the PAT skill (script execution, not an integration write); the Slack post IS an integration write and needs this schedule's 'allow integration writes' toggle ON. If Slack is blocked but the publish succeeded, still report the live URL.",
+      "threadStrategy": "new",
+      "status": "active",
+      "readOnlyMode": false,
+      "alertMode": false,
+      "runNotifications": []
+    }
+  ],
+  "system_prompt_file": "SYSTEM_PROMPT.md",
+  "no_secrets": "true; Slack via connected workspace integration (channel C0B8B76L7NH); GitHub via connected app / PAT skills (tokens injected at runtime, never stored)"
+}

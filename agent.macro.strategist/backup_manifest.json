@@ -1,0 +1,105 @@
+{
+  "agent_name": "Macro Strategist",
+  "display_name_current": "A - Macro Strategist",
+  "slug": "agent.macro.strategist",
+  "source_agent_id": "cmq667l5l00jp07adt010uj06",
+  "system_prompt_source": "GetAgentConfig (current agent, authoritative)",
+  "repo": "cloudburostaff/agent.hyperagent.talfco",
+  "branch": "main",
+  "model": "claude-opus-4-8 (default subagent: sonnet)",
+  "blackboard_doc_id": "cmq5rqdws16qq06adoiw88r03",
+  "project_doc_id": "cmq5nbodk14p808ad869iobt1",
+  "architecture_doc_id": "cmq5rkc1815wk06advgj6mndl",
+  "domain_revised_config_doc_id": "cmq75s3ob02to07ad95xo18ke",
+  "attached_skill_ids": {
+    "Agent State Backup": "cmq2zoi2z0a1u07ad0unohtca",
+    "GitHub Push (PAT)": "cmq684hk5010l06ady4zn188w",
+    "GitHub Push (PAT) — atnode-ai": "cmqh3383s026o06adfksd2qni",
+    "Macro Blackboard Digest & Health": "cmqikv9c001rd06aden8i820k"
+  },
+  "attached_memory_count": 15,
+  "attached_memories_snapshot": "MEMORIES.md",
+  "active_scheduled_invocations": [
+    "Weekly consolidated (Friday) 17:00 ET America/New_York"
+  ],
+  "paused_scheduled_invocations": [
+    "Daily macro wrap",
+    "Weekly look-ahead",
+    "Weekly public report (Saturday)"
+  ],
+  "no_secrets": "true; Slack delivery via connected workspace integration to channel C0B8B76L7NH; GitHub via connected app / PAT skills (tokens injected at runtime, never stored)",
+  "files": [
+    {
+      "path": "agent_config.json",
+      "sha256": "b592c8188ea8b782f7ef81b0b6ecc2bd548b019d705548d7f35ad49d611e2c5a"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "sha256": "72cee6c12c4398c79fb452c0c1ad854975fe105698ba26706fac6f6d2de3aa72"
+    },
+    {
+      "path": "BLACKBOARD.md",
+      "sha256": "c81c8f5de3703bf05e982991c1758b0709d9db96414fda4f6412b282d65d6cbf"
+    },
+    {
+      "path": "DOMAIN_AGENT_REVISED_CONFIG.md",
+      "sha256": "050b5a56eb4fbe16d70304fcb36f43df197f6a486e40a5a2d6559fe818013763"
+    },
+    {
+      "path": "MEMORIES.md",
+      "sha256": "234362f2f1b4ebab00649559fcc24b206ac372c4f62a7eb86da6201e6ef9a734"
+    },
+    {
+      "path": "PROJECT.md",
+      "sha256": "cefd677c4d6c959de39bbc4081d39da05431b80f5b9c52c3c3e72d78df7e21f2",
+      "note": "unchanged since 2026-06-14 backup; project doc not modified"
+    },
+    {
+      "path": "skills/agent-state-backup/render_project_doc.py",
+      "sha256": "cae7a05842039ac05c1021afe7ab6bc3c5845a86ea37bf3f53c337e605a604f1"
+    },
+    {
+      "path": "skills/agent-state-backup/SKILL.md",
+      "sha256": "64a18195fa955ef8680c82effb05fc4dda54a4eee54171afa044809ee655124d"
+    },
+    {
+      "path": "skills/github-push-pat-atnode-ai/github_push.py",
+      "sha256": "fa3071302d3ba77126553ff2e70de13b761c7cea218aeb610895b7952bf3da2c"
+    },
+    {
+      "path": "skills/github-push-pat-atnode-ai/SKILL.md",
+      "sha256": "ea75a46ce93e5ed22f538c481158b65dbf5ceadf0415b8256767ac4d02f8958c"
+    },
+    {
+      "path": "skills/github-push-pat/github_push.py",
+      "sha256": "fa3071302d3ba77126553ff2e70de13b761c7cea218aeb610895b7952bf3da2c"
+    },
+    {
+      "path": "skills/github-push-pat/SKILL.md",
+      "sha256": "3603eb528cd81238605ef044bfb10a94a9f831b1065f092ef621d7e2c6fc56f5"
+    },
+    {
+      "path": "skills/macro-blackboard-digest/macro_blackboard_digest.py",
+      "sha256": "1a147e406f622c60af1370c99f510ba9e85cc56e8336e4714425338473c9aa36"
+    },
+    {
+      "path": "skills/macro-blackboard-digest/SKILL.md",
+      "sha256": "5f71efca76ad65e5a1e844268b8f27bf68e130d2364122a9171931e5be0abdb3"
+    },
+    {
+      "path": "SWARM.md",
+      "sha256": "a6fc941752f971e5ef015a62010de2d2a49af8d0ce66c922fdad72aa87a26b5f"
+    },
+    {
+      "path": "SYSTEM_PROMPT.md",
+      "sha256": "0275cc10686f8c5c8a6eb5648905832c362d3a44d0586ac203e212d32a645278"
+    }
+  ],
+  "last_backup": "2026-10-07",
+  "notes": [
+    "Folder kept as agent.macro.strategist despite the display-name rename to \"A - Macro Strategist\" (the \"A - \" prefix would otherwise fork an orphan agent.a.-.macro.strategist folder).",
+    "BLACKBOARD.md rendered deterministically by the Macro Blackboard Digest & Health skill (--mode markdown).",
+    "PROJECT.md unchanged since the 2026-06-14 backup; not restaged this run.",
+    "This run also added DOMAIN_AGENT_REVISED_CONFIG.md, MEMORIES.md, and skills/ snapshots (not present in the June backup)."
+  ]
+}
