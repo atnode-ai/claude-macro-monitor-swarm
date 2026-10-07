@@ -1,6 +1,6 @@
-# Legacy: Hyperagent swarm
+# Migration: original Hyperagent swarm
 
-The original swarm's backup sits at the repo root in the `agent.<slug>/` folders (one per agent: SYSTEM_PROMPT.md, agent_config.json, MEMORIES.md, SECTION_SNAPSHOT.md, skills/). The orchestrator folder `agent.macro.strategist/` also holds ARCHITECTURE.md and the last BLACKBOARD.md snapshot. The same backup lives on Google Drive under `agent.hyperagent.talfco/`.
+The original swarm's backup sits in this folder as `agent.<slug>/` (one per agent: SYSTEM_PROMPT.md, agent_config.json, MEMORIES.md, SECTION_SNAPSHOT.md, skills/). The orchestrator folder `agent.macro.strategist/` also holds ARCHITECTURE.md and the last BLACKBOARD.md snapshot. The same backup lives on Google Drive under `agent.hyperagent.talfco/`.
 
 Those folders are reference only. Nothing in the Claude Code swarm reads them, and the old prompts reference platform tools (ReadDocument, ExecuteIntegration, RunWithCredentials) that don't exist in Claude Code.
 

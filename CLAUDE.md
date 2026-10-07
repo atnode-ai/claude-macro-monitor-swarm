@@ -1,6 +1,6 @@
 # Macro Monitor swarm
 
-A macro-monitoring swarm: 7 domain collectors (code), a domain-analyst subagent (LLM, per release) and a weekly strategist (LLM). Port of a Hyperagent swarm; see `legacy/README.md` for the mapping.
+A macro-monitoring swarm: 7 domain collectors (code), a domain-analyst subagent (LLM, per release) and a weekly strategist (LLM). Port of a Hyperagent swarm; see `migration/README.md` for the original backup and `MIGRATION.md` for the mapping.
 
 ## How it runs
 
