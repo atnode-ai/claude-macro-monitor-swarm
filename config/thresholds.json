@@ -1,0 +1,45 @@
+{
+  "_doc": "Alert policy, applied by tools/alert_gate.py. A release alerts when (a) its report is tier 1, or (b) |actual - consensus| on any listed metric reaches the threshold. Units match the metric (pct points for *_pct and rates, thousands for *_k, index points otherwise). Market thresholds are basis points over 5 trading days unless noted.",
+  "always_alert_tiers": [1],
+  "surprise": {
+    "cpi": {"core.chg_pct": 0.1, "headline.chg_pct": 0.2},
+    "ppi": {"core.chg_pct": 0.2, "headline.chg_pct": 0.3},
+    "pce": {"core.chg_pct": 0.1},
+    "nfp": {"payrolls_k.diff": 75, "unemployment_rate.level": 0.2},
+    "claims": {"initial.level": 25000},
+    "jolts": {"openings_k.level": 500},
+    "adp": {"private_payrolls_k.diff": 75},
+    "gdp": {"real_gdp_saar.level": 0.7},
+    "retail": {"headline.chg_pct": 0.5, "ex_auto.chg_pct": 0.5},
+    "indpro": {"ip.chg_pct": 0.4},
+    "durables": {"core_capex_orders.chg_pct": 1.0},
+    "trade": {"balance_bn.level": 8},
+    "ism_mfg": {"pmi": 1.5},
+    "ism_services": {"pmi": 1.5},
+    "starts": {"starts_k.level": 100, "permits_k.level": 100},
+    "new_home": {"sales_k.level": 60},
+    "existing_home": {"sales_m.level": 0.15},
+    "umich": {"sentiment.level": 3},
+    "conf_board": {"index": 4},
+    "ifo": {"business_climate": 1.5},
+    "ez_hicp": {"headline.yoy_pct": 0.2},
+    "ez_gdp": {"real_gdp.chg_pct": 0.2},
+    "uk_labour": {"unemployment_rate": 0.2}
+  },
+  "decision": {
+    "_doc": "Any change in the policy rate alerts. A hold alerts only for tier-1 banks.",
+    "alert_on_change": true
+  },
+  "markets": {
+    "lookback_days": 5,
+    "move_bp": {
+      "curve_10y2y": 20, "curve_10y3m": 25,
+      "hy_oas": 25, "ig_oas": 10,
+      "be_5y5y": 15, "ust_2y": 18, "ust_10y": 20
+    },
+    "sign_change": ["curve_10y2y", "curve_10y3m"],
+    "nfci_zero_cross": true,
+    "fedwatch_trigger": "ust_2y"
+  },
+  "health": {"stale_hours": 36}
+}

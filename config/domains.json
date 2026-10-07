@@ -1,0 +1,693 @@
+{
+  "_doc": "Domain -> report catalogue. Collectors read this; nothing else hardcodes series IDs. Report types: series (official API data, new when the reference period advances), decision (central-bank meeting, new when a scheduled meeting date has passed), snapshot (daily market levels, new only on a material move), web (no free API; flagged due by calendar rule, figures fetched by the analyst). Metric keys are '<part>.<transform>'.",
+  "domains": [
+    {
+      "id": "inflation",
+      "name": "Inflation",
+      "lens": "config/lenses/inflation.md",
+      "reports": [
+        {
+          "id": "cpi",
+          "name": "CPI",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 1,
+          "source": "fred",
+          "parts": {
+            "headline": {
+              "id": "CPIAUCSL",
+              "yoy_id": "CPIAUCNS",
+              "transforms": [
+                "chg_pct",
+                "yoy_pct"
+              ]
+            },
+            "core": {
+              "id": "CPILFESL",
+              "yoy_id": "CPILFENS",
+              "transforms": [
+                "chg_pct",
+                "yoy_pct"
+              ]
+            }
+          },
+          "release_url": "https://www.bls.gov/news.release/cpi.htm",
+          "calendar_match": "Consumer Price Index",
+          "_note": "FRED mirrors of BLS CUSR0000SA0/CUUR0000SA0 and CUSR0000SA0L1E/CUUR0000SA0L1E. FRED is keyless with no daily cap; the keyless BLS API stops at 25 requests/day."
+        },
+        {
+          "id": "ppi",
+          "name": "PPI",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 2,
+          "source": "fred",
+          "_note": "Final Demand: PPIFIS (=BLS WPSFD4, SA) and PPIFID (=WPUFD4, NSA); core PPIFES (=WPSFD49104, SA; y/y from SA can differ from the NSA headline by 0.1pp). The Hyperagent skill used WPSFD49207 (Finished Goods), which produced the wrong headline three months running.",
+          "parts": {
+            "headline": {
+              "id": "PPIFIS",
+              "yoy_id": "PPIFID",
+              "transforms": [
+                "chg_pct",
+                "yoy_pct"
+              ]
+            },
+            "core": {
+              "id": "PPIFES",
+              "transforms": [
+                "chg_pct",
+                "yoy_pct"
+              ]
+            }
+          },
+          "release_url": "https://www.bls.gov/news.release/ppi.htm",
+          "calendar_match": "Producer Price Index"
+        },
+        {
+          "id": "pce",
+          "name": "PCE price index",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 1,
+          "source": "fred",
+          "parts": {
+            "headline": {
+              "id": "PCEPI",
+              "transforms": [
+                "chg_pct",
+                "yoy_pct"
+              ]
+            },
+            "core": {
+              "id": "PCEPILFE",
+              "transforms": [
+                "chg_pct",
+                "yoy_pct"
+              ]
+            }
+          },
+          "release_url": "https://www.bea.gov/data/income-saving/personal-income",
+          "calendar_match": "Personal Income and Outlays"
+        }
+      ]
+    },
+    {
+      "id": "labor",
+      "name": "Labor",
+      "lens": "config/lenses/labor.md",
+      "reports": [
+        {
+          "id": "nfp",
+          "name": "Non-Farm Payrolls",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 1,
+          "source": "fred",
+          "parts": {
+            "payrolls_k": {
+              "id": "PAYEMS",
+              "transforms": [
+                "diff"
+              ]
+            },
+            "unemployment_rate": {
+              "id": "UNRATE",
+              "transforms": [
+                "level",
+                "diff"
+              ]
+            },
+            "ahe": {
+              "id": "CES0500000003",
+              "transforms": [
+                "chg_pct",
+                "yoy_pct"
+              ]
+            }
+          },
+          "release_url": "https://www.bls.gov/news.release/empsit.htm",
+          "calendar_match": "Employment Situation"
+        },
+        {
+          "id": "claims",
+          "name": "Initial Jobless Claims",
+          "type": "series",
+          "freq": "weekly",
+          "tier": 2,
+          "source": "fred",
+          "parts": {
+            "initial": {
+              "id": "ICSA",
+              "transforms": [
+                "level",
+                "diff"
+              ]
+            },
+            "initial_4wk": {
+              "id": "IC4WSA",
+              "transforms": [
+                "level"
+              ]
+            },
+            "continuing": {
+              "id": "CCSA",
+              "transforms": [
+                "level"
+              ]
+            }
+          },
+          "release_url": "https://www.dol.gov/ui/data.pdf"
+        },
+        {
+          "id": "jolts",
+          "name": "JOLTS",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 2,
+          "source": "fred",
+          "parts": {
+            "openings_k": {
+              "id": "JTSJOL",
+              "transforms": [
+                "level",
+                "diff"
+              ]
+            },
+            "quits_rate": {
+              "id": "JTSQUR",
+              "transforms": [
+                "level"
+              ]
+            }
+          },
+          "release_url": "https://www.bls.gov/news.release/jolts.htm",
+          "calendar_match": "Job Openings and Labor Turnover"
+        },
+        {
+          "id": "adp",
+          "name": "ADP employment",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 3,
+          "source": "fred",
+          "parts": {
+            "private_payrolls_k": {
+              "id": "ADPMNUSNERSA",
+              "scale": 0.001,
+              "transforms": [
+                "diff"
+              ]
+            }
+          },
+          "release_url": "https://adpemploymentreport.com/"
+        },
+        {
+          "id": "uk_labour",
+          "name": "UK Labour Market (ONS)",
+          "type": "web",
+          "freq": "monthly",
+          "tier": 3,
+          "due_rule": {
+            "rule": "nth_weekday",
+            "weekday": 1,
+            "n": 3
+          },
+          "ref_lag_months": 2,
+          "fields": [
+            "unemployment_rate",
+            "awe_regular_yoy",
+            "payrolled_employees_chg_k"
+          ],
+          "release_url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/latest"
+        }
+      ]
+    },
+    {
+      "id": "growth",
+      "name": "Growth & Activity",
+      "lens": "config/lenses/growth.md",
+      "reports": [
+        {
+          "id": "gdp",
+          "name": "GDP (real, SAAR)",
+          "type": "series",
+          "freq": "quarterly",
+          "tier": 2,
+          "source": "fred",
+          "_note": "Advance, second and third estimates share a reference quarter; only the first print is flagged new. Revisions are visible in the data but don't trigger analysis.",
+          "parts": {
+            "real_gdp_saar": {
+              "id": "A191RL1Q225SBEA",
+              "transforms": [
+                "level",
+                "diff"
+              ]
+            }
+          },
+          "release_url": "https://www.bea.gov/data/gdp/gross-domestic-product",
+          "calendar_match": "GDP"
+        },
+        {
+          "id": "retail",
+          "name": "Retail Sales",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 2,
+          "source": "fred",
+          "parts": {
+            "headline": {
+              "id": "RSAFS",
+              "transforms": [
+                "chg_pct",
+                "yoy_pct"
+              ]
+            },
+            "ex_auto": {
+              "id": "RSXFS",
+              "transforms": [
+                "chg_pct"
+              ]
+            }
+          },
+          "release_url": "https://www.census.gov/retail/index.html"
+        },
+        {
+          "id": "indpro",
+          "name": "Industrial Production",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 3,
+          "source": "fred",
+          "parts": {
+            "ip": {
+              "id": "INDPRO",
+              "transforms": [
+                "chg_pct",
+                "yoy_pct"
+              ]
+            },
+            "capacity_util": {
+              "id": "TCU",
+              "transforms": [
+                "level"
+              ]
+            }
+          },
+          "release_url": "https://www.federalreserve.gov/releases/g17/current/"
+        },
+        {
+          "id": "durables",
+          "name": "Durable Goods",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 3,
+          "source": "fred",
+          "parts": {
+            "orders": {
+              "id": "DGORDER",
+              "transforms": [
+                "chg_pct"
+              ]
+            },
+            "core_capex_orders": {
+              "id": "NEWORDER",
+              "transforms": [
+                "chg_pct"
+              ]
+            }
+          },
+          "release_url": "https://www.census.gov/manufacturing/m3/index.html"
+        },
+        {
+          "id": "trade",
+          "name": "Trade Balance",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 3,
+          "source": "fred",
+          "parts": {
+            "balance_bn": {
+              "id": "BOPGSTB",
+              "scale": 0.001,
+              "transforms": [
+                "level",
+                "diff"
+              ]
+            }
+          },
+          "release_url": "https://www.census.gov/foreign-trade/Press-Release/current_press_release/index.html",
+          "calendar_match": "International Trade in Goods and Services"
+        },
+        {
+          "id": "ism_mfg",
+          "name": "ISM Manufacturing PMI",
+          "type": "web",
+          "freq": "monthly",
+          "tier": 2,
+          "due_rule": {
+            "rule": "nth_business_day",
+            "n": 1
+          },
+          "ref_lag_months": 1,
+          "fields": [
+            "pmi",
+            "new_orders",
+            "prices_paid",
+            "employment"
+          ],
+          "release_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/"
+        },
+        {
+          "id": "ism_services",
+          "name": "ISM Services PMI",
+          "type": "web",
+          "freq": "monthly",
+          "tier": 2,
+          "due_rule": {
+            "rule": "nth_business_day",
+            "n": 3
+          },
+          "ref_lag_months": 1,
+          "fields": [
+            "pmi",
+            "new_orders",
+            "prices_paid",
+            "employment"
+          ],
+          "release_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/"
+        },
+        {
+          "id": "carts",
+          "name": "Chicago Fed CARTS retail nowcast",
+          "type": "web",
+          "freq": "monthly",
+          "tier": 3,
+          "due_rule": {
+            "rule": "day_of_month",
+            "day": 28
+          },
+          "ref_lag_months": 0,
+          "fields": [
+            "ex_auto_nominal_mom",
+            "ex_auto_real_mom"
+          ],
+          "_note": "Preview of Retail Sales. Log as a nowcast; no market consensus. Alert only on divergence from the hard print.",
+          "release_url": "https://www.chicagofed.org/-/media/publications/carts/carts.pdf"
+        }
+      ]
+    },
+    {
+      "id": "housing",
+      "name": "Housing",
+      "lens": "config/lenses/housing.md",
+      "reports": [
+        {
+          "id": "starts",
+          "name": "Housing Starts & Building Permits",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 3,
+          "source": "fred",
+          "parts": {
+            "starts_k": {
+              "id": "HOUST",
+              "transforms": [
+                "level",
+                "chg_pct"
+              ]
+            },
+            "permits_k": {
+              "id": "PERMIT",
+              "transforms": [
+                "level",
+                "chg_pct"
+              ]
+            }
+          },
+          "release_url": "https://www.census.gov/construction/nrc/index.html"
+        },
+        {
+          "id": "new_home",
+          "name": "New Home Sales",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 3,
+          "source": "fred",
+          "parts": {
+            "sales_k": {
+              "id": "HSN1F",
+              "transforms": [
+                "level",
+                "chg_pct"
+              ]
+            }
+          },
+          "release_url": "https://www.census.gov/construction/nrs/index.html"
+        },
+        {
+          "id": "existing_home",
+          "name": "Existing Home Sales",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 3,
+          "source": "fred",
+          "parts": {
+            "sales_m": {
+              "id": "EXHOSLUSM495S",
+              "scale": 1e-06,
+              "transforms": [
+                "level",
+                "chg_pct"
+              ]
+            }
+          },
+          "release_url": "https://www.nar.realtor/research-and-statistics/housing-statistics/existing-home-sales"
+        }
+      ]
+    },
+    {
+      "id": "sentiment",
+      "name": "Sentiment & Surveys",
+      "lens": "config/lenses/sentiment.md",
+      "reports": [
+        {
+          "id": "umich",
+          "name": "UMich Consumer Sentiment (final)",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 3,
+          "source": "fred",
+          "parts": {
+            "sentiment": {
+              "id": "UMCSENT",
+              "transforms": [
+                "level",
+                "diff"
+              ]
+            }
+          },
+          "release_url": "https://www.sca.isr.umich.edu/"
+        },
+        {
+          "id": "conf_board",
+          "name": "Conference Board Consumer Confidence",
+          "type": "web",
+          "freq": "monthly",
+          "tier": 3,
+          "due_rule": {
+            "rule": "last_weekday",
+            "weekday": 1
+          },
+          "ref_lag_months": 0,
+          "fields": [
+            "index",
+            "expectations",
+            "jobs_plentiful_minus_hard"
+          ],
+          "release_url": "https://www.conference-board.org/topics/consumer-confidence"
+        },
+        {
+          "id": "ifo",
+          "name": "German Ifo Business Climate",
+          "type": "web",
+          "freq": "monthly",
+          "tier": 3,
+          "due_rule": {
+            "rule": "day_of_month",
+            "day": 24
+          },
+          "ref_lag_months": 0,
+          "fields": [
+            "business_climate",
+            "current_assessment",
+            "expectations"
+          ],
+          "release_url": "https://www.ifo.de/en/ifo-business-climate-index"
+        }
+      ]
+    },
+    {
+      "id": "policy",
+      "name": "Central Banks & Policy",
+      "lens": "config/lenses/policy.md",
+      "reports": [
+        {
+          "id": "fomc",
+          "name": "FOMC decision",
+          "type": "decision",
+          "tier": 1,
+          "bank": "fed",
+          "source": "fred",
+          "rate_id": "DFEDTARU",
+          "rate_lower_id": "DFEDTARL",
+          "fields": [
+            "vote_split",
+            "guidance_tone",
+            "sep_median_2026"
+          ],
+          "release_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+        },
+        {
+          "id": "ecb",
+          "name": "ECB decision",
+          "type": "decision",
+          "tier": 2,
+          "bank": "ecb",
+          "source": "fred",
+          "rate_id": "ECBDFR",
+          "fields": [
+            "guidance_tone"
+          ],
+          "release_url": "https://www.ecb.europa.eu/press/govcdec/html/index.en.html"
+        },
+        {
+          "id": "boe",
+          "name": "BoE decision",
+          "type": "decision",
+          "tier": 2,
+          "bank": "boe",
+          "source": "boe_page",
+          "fields": [
+            "vote_split",
+            "guidance_tone"
+          ],
+          "release_url": "https://www.bankofengland.co.uk/monetary-policy"
+        },
+        {
+          "id": "ez_hicp",
+          "name": "Eurozone HICP",
+          "type": "series",
+          "freq": "monthly",
+          "tier": 3,
+          "source": "fred",
+          "_note": "FRED carries the final HICP, a couple of weeks after Eurostat's flash.",
+          "parts": {
+            "headline": {
+              "id": "CP0000EZ19M086NEST",
+              "transforms": [
+                "chg_pct",
+                "yoy_pct"
+              ]
+            }
+          },
+          "release_url": "https://ec.europa.eu/eurostat/web/euro-indicators"
+        },
+        {
+          "id": "ez_gdp",
+          "name": "Eurozone GDP",
+          "type": "series",
+          "freq": "quarterly",
+          "tier": 3,
+          "source": "fred",
+          "parts": {
+            "real_gdp": {
+              "id": "CLVMEURSCAB1GQEA19",
+              "transforms": [
+                "chg_pct",
+                "yoy_pct"
+              ]
+            }
+          },
+          "release_url": "https://ec.europa.eu/eurostat/web/euro-indicators"
+        }
+      ]
+    },
+    {
+      "id": "markets",
+      "name": "Financial Conditions & Markets",
+      "lens": "config/lenses/markets.md",
+      "reports": [
+        {
+          "id": "market_levels",
+          "name": "Market levels (curve, spreads, breakevens, vol)",
+          "type": "snapshot",
+          "tier": 3,
+          "source": "fred",
+          "series": {
+            "ust_10y": "DGS10",
+            "ust_2y": "DGS2",
+            "ust_3m": "DGS3MO",
+            "curve_10y2y": "T10Y2Y",
+            "curve_10y3m": "T10Y3M",
+            "hy_oas": "BAMLH0A0HYM2",
+            "ig_oas": "BAMLC0A0CM",
+            "be_5y5y": "T5YIFR",
+            "be_10y": "T10YIE",
+            "real_10y": "DFII10",
+            "sofr": "SOFR",
+            "vix": "VIXCLS",
+            "usd_broad": "DTWEXBGS"
+          },
+          "release_url": "https://fred.stlouisfed.org/",
+          "points_series": [
+            "vix",
+            "usd_broad"
+          ]
+        },
+        {
+          "id": "nfci",
+          "name": "Chicago Fed NFCI",
+          "type": "series",
+          "freq": "weekly",
+          "tier": 3,
+          "source": "fred",
+          "parts": {
+            "nfci": {
+              "id": "NFCI",
+              "transforms": [
+                "level",
+                "diff"
+              ]
+            },
+            "anfci": {
+              "id": "ANFCI",
+              "transforms": [
+                "level",
+                "diff"
+              ]
+            }
+          },
+          "release_url": "https://www.chicagofed.org/research/data/nfci/current-data"
+        },
+        {
+          "id": "sloos",
+          "name": "Senior Loan Officer Survey (C&I standards)",
+          "type": "series",
+          "freq": "quarterly",
+          "tier": 2,
+          "source": "fred",
+          "parts": {
+            "ci_tightening_net_pct": {
+              "id": "DRTSCILM",
+              "transforms": [
+                "level",
+                "diff"
+              ]
+            }
+          },
+          "release_url": "https://www.federalreserve.gov/data/sloos.htm"
+        }
+      ]
+    }
+  ]
+}

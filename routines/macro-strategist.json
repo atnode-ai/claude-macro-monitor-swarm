@@ -1,0 +1,11 @@
+{
+  "_doc": "Declarative routine spec, read by the swarm-setup skill.",
+  "key": "strategist",
+  "name_from": "deployment.routines.strategist.name",
+  "model_from": "deployment.routines.strategist.model",
+  "cron": "CRON_TZ=America/New_York 47 17 * * 5",
+  "fires_into": "new_session",
+  "connectors": ["Slack"],
+  "prompt": "Run the macro-strategist skill in this repository for this week. Follow CLAUDE.md.",
+  "why_this_schedule": "Friday 17:47 ET: after the last collector run (16:15 ET) and the 17:07 release drain."
+}
