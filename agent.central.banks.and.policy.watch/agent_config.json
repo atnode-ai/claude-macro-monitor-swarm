@@ -1,0 +1,84 @@
+{
+  "slug": "agent.central.banks.and.policy.watch",
+  "display_name_current": "A - Central Banks & Policy Watch",
+  "name": "A - Central Banks & Policy Watch",
+  "description": "Policy-domain collector in the macro-monitoring swarm. Watches FOMC decisions/minutes/Beige Book/Fed speeches, BoE and ECB decisions, and the Eurozone CPI & GDP flash; logs events to the Macro Monitor blackboard and alerts #hyper-asset-monitoring on decisions / material shifts.",
+  "icon": "🏛️",
+  "executionMode": "auto",
+  "delegation": {
+    "scope": "none",
+    "approvalMode": "always_ask"
+  },
+  "modelSettings": {
+    "modelId": "zai/glm-5.2",
+    "defaultSubagentModel": null,
+    "maxThinkingTokens": null,
+    "effort": null,
+    "maxBudgetUsd": null,
+    "speed": null,
+    "fastMode": null
+  },
+  "learning": {
+    "skillLoadMode": "discover",
+    "skillScope": "global",
+    "enableMemorySuggestions": true,
+    "enableSkillSuggestions": true,
+    "enablePromptSuggestions": true,
+    "enableRubricSuggestions": true,
+    "autoSaveMemories": false,
+    "autoSaveSkills": false,
+    "autoSaveAgents": false,
+    "autoSavePrompts": false
+  },
+  "tools": [
+    "globalTablesEnabled",
+    "exa-mode",
+    "tables",
+    "web-search",
+    "browser",
+    "documents",
+    "searchthreads"
+  ],
+  "integrations": [
+    {
+      "id": "slack",
+      "resourceScope": {
+        "version": 1,
+        "allChannelsAccess": true,
+        "readDMs": false,
+        "writeDMs": false,
+        "allChannelsPermission": "read",
+        "writeChannels": [
+          {
+            "id": "C0B8B76L7NH",
+            "displayName": "#hyper-asset-monitoring"
+          }
+        ]
+      }
+    }
+  ],
+  "scheduledInvocations": [
+    {
+      "name": "Release check — morning (EU/UK)",
+      "rrule": "FREQ=WEEKLY;BYDAY=FR;BYHOUR=9;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "status": "active",
+      "prompt": "Scheduled release check — skill-first (cheap path). (1) ReadDocument the blackboard (doc cmq5rqdws16qq06adoiw88r03); it externalizes to a file — pass that path to the 'Central Bank Release Check (FRED)' skill via RunWithCredentials: python3 central_bank_release_check.py --blackboard-file <path>. The skill slices ONLY the Central Banks & Policy section and returns any_new + per-report new_event (FOMC, ECB, Eurozone HICP & GDP) plus a SONIA boe_check_needed tripwire. Never read the full 7-section doc into context. (2) any_new=false AND boe_check_needed=false → set the section's 'Last checked' line to '<now ET> - no new release', reply in <=2 lines, STOP. No Slack. (3) any_new=true → actual/prior/move-bp/MoM/YoY are already in the JSON. On a policy decision fetch the ONE official statement page (Fed/ECB; BoE page if boe_check_needed) for vote split, dot-plot/SEP and guidance tone — NOT on FRED; mark 'unconfirmed' if not verifiable. Do ONE consensus web lookup (FRED has no consensus). Append the row(s) Report | Latest date | Actual | Consensus | Surprise | Read, update Current stance, set heartbeat to 'logged <report>', and post a concise alert to #hyper-asset-monitoring (C0B8B76L7NH). (4) Known FOMC/ECB/BoE meeting day but rate unchanged = a HOLD: confirm on the statement page, log it, alert. Never fabricate figures."
+    },
+    {
+      "name": "Decision check — afternoon (Fed)",
+      "rrule": "FREQ=WEEKLY;BYDAY=FR;BYHOUR=14;BYMINUTE=30",
+      "timezone": "America/New_York",
+      "status": "active",
+      "prompt": "Scheduled release check — skill-first (cheap path). (1) ReadDocument the blackboard (doc cmq5rqdws16qq06adoiw88r03); it externalizes to a file — pass that path to the 'Central Bank Release Check (FRED)' skill via RunWithCredentials: python3 central_bank_release_check.py --blackboard-file <path>. The skill slices ONLY the Central Banks & Policy section and returns any_new + per-report new_event (FOMC, ECB, Eurozone HICP & GDP) plus a SONIA boe_check_needed tripwire. Never read the full 7-section doc into context. (2) any_new=false AND boe_check_needed=false → set the section's 'Last checked' line to '<now ET> - no new release', reply in <=2 lines, STOP. No Slack. (3) any_new=true → actual/prior/move-bp/MoM/YoY are already in the JSON. On a policy decision fetch the ONE official statement page (Fed/ECB; BoE page if boe_check_needed) for vote split, dot-plot/SEP and guidance tone — NOT on FRED; mark 'unconfirmed' if not verifiable. Do ONE consensus web lookup (FRED has no consensus). Append the row(s) Report | Latest date | Actual | Consensus | Surprise | Read, update Current stance, set heartbeat to 'logged <report>', and post a concise alert to #hyper-asset-monitoring (C0B8B76L7NH). (4) Known FOMC/ECB/BoE meeting day but rate unchanged = a HOLD: confirm on the statement page, log it, alert. Never fabricate figures."
+    }
+  ],
+  "skills": [
+    "cmq2zoi2z0a1u07ad0unohtca"
+  ],
+  "memories": [
+    "cmr3vjceu0m6g07admce59xjc",
+    "cmr3vjzuf0m7j07adghzvs88p"
+  ],
+  "contextFiles": []
+}

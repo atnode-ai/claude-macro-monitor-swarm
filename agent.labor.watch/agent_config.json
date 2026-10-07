@@ -1,0 +1,95 @@
+{
+  "slug": "agent.labor.watch",
+  "display_name_current": "A - Labor Watch",
+  "name": "A - Labor Watch",
+  "description": "Labor-domain collector in the macro-monitoring swarm. Watches Non-Farm Payrolls, ADP, JOLTS, Jobless Claims and the UK Labour Market report; logs prints to the Macro Monitor blackboard and alerts #hyper-asset-monitoring on new releases / material surprises.",
+  "icon": "👷",
+  "executionMode": "auto",
+  "delegation": {
+    "scope": "none",
+    "approvalMode": "always_ask"
+  },
+  "modelSettings": {
+    "modelId": "zai/glm-5.2",
+    "defaultSubagentModel": null,
+    "maxThinkingTokens": null,
+    "effort": null,
+    "maxBudgetUsd": null,
+    "speed": null,
+    "fastMode": null
+  },
+  "learning": {
+    "skillLoadMode": "discover",
+    "skillScope": "global",
+    "enableMemorySuggestions": true,
+    "enableSkillSuggestions": true,
+    "enablePromptSuggestions": true,
+    "enableRubricSuggestions": true,
+    "autoSaveMemories": false,
+    "autoSaveSkills": false,
+    "autoSaveAgents": false,
+    "autoSavePrompts": false
+  },
+  "tools": [
+    {
+      "id": "globalTablesEnabled",
+      "enabled": true
+    }
+  ],
+  "integrations": [
+    {
+      "id": "slack",
+      "resourceScope": {
+        "version": 1,
+        "allChannelsAccess": true,
+        "readDMs": false,
+        "writeDMs": false,
+        "allChannelsPermission": "read",
+        "writeChannels": [
+          {
+            "id": "C0B8B76L7NH",
+            "displayName": "#hyper-asset-monitoring"
+          }
+        ]
+      }
+    }
+  ],
+  "scheduledInvocations": [
+    {
+      "id": "cmq76u92u03bv07adwrbhw940",
+      "name": "Release check — morning",
+      "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;BYHOUR=9;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "prompt": "Scheduled release check. (1) DEDUP: read the Macro Monitor blackboard (doc cmq5rqdws16qq06adoiw88r03), the Labor section; note the latest logged date per report. (2) CHECK each of your official sources for a release newer than logged (use the browser if a source blocks plain fetch). (3) NEW release -> capture headline + key sub-readings, consensus, prior, surprise (mark 'unconfirmed' if not verifiable); append a row to your section table; update Current stance; post a concise alert to #hyper-asset-monitoring (C0B8B76L7NH). (4) HEARTBEAT (ALWAYS, even if nothing new): set the section's 'Last checked' line to the current time (ET) with status 'logged <report>' or 'no new release'. Never post to Slack on a no-new-release run.",
+      "threadStrategy": "new",
+      "status": "paused",
+      "readOnlyMode": false,
+      "alertMode": false,
+      "runNotifications": []
+    },
+    {
+      "id": "cmq76u93y03bx07adwane87xy",
+      "name": "Release check — late morning + heartbeat",
+      "rrule": "FREQ=WEEKLY;BYDAY=FR;BYHOUR=11;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "prompt": "Scheduled release check. (1) DEDUP: read the Macro Monitor blackboard (doc cmq5rqdws16qq06adoiw88r03), the Labor section; note the latest logged date per report. (2) CHECK each of your official sources for a release newer than logged (use the browser if a source blocks plain fetch). (3) NEW release -> capture headline + key sub-readings, consensus, prior, surprise (mark 'unconfirmed' if not verifiable); append a row to your section table; update Current stance; post a concise alert to #hyper-asset-monitoring (C0B8B76L7NH). (4) HEARTBEAT (ALWAYS, even if nothing new): set the section's 'Last checked' line to the current time (ET) with status 'logged <report>' or 'no new release'. Never post to Slack on a no-new-release run.",
+      "threadStrategy": "new",
+      "status": "active",
+      "readOnlyMode": false,
+      "alertMode": false,
+      "runNotifications": []
+    }
+  ],
+  "skills": [
+    "cmq2zoi2z0a1u07ad0unohtca",
+    "cmqim4z57023n07ad7it6mifj"
+  ],
+  "memories": [
+    "cmq7lkiwy03mw07ad6lql4ztq",
+    "cmr3vk95j0m7l07aditxt5gh4",
+    "cmr3vkozu0j7k06ad39e6q4k9",
+    "cmr3vluuo0jqz07adkzbtpeug"
+  ],
+  "contextFiles": [],
+  "persistBrowser": false
+}

@@ -1,0 +1,56 @@
+{
+  "agent_name": "A - Sentiment & Surveys Watch",
+  "display_name_current": "A - Sentiment & Surveys Watch",
+  "slug": "agent.sentiment.and.surveys.watch",
+  "source_agent_id": "cmq6717ut00mb06adl5rj88kf",
+  "model": "zai/glm-5.2",
+  "blackboard_doc_id": "cmq5rqdws16qq06adoiw88r03",
+  "blackboard_section": "Sentiment & Surveys",
+  "skills": [
+    {
+      "id": "cmq2zoi2z0a1u07ad0unohtca",
+      "name": "Agent State Backup"
+    },
+    {
+      "id": "cmqijfb2m010306adv7bymlqe",
+      "name": "Survey Release Checker"
+    }
+  ],
+  "memory_count": 1,
+  "files": [
+    {
+      "path": "MEMORIES.md",
+      "sha256": "56f5021872923a3cdf68fec8b01c4ca218d08301a30eefa984bf7a14faab8c4b"
+    },
+    {
+      "path": "SECTION_SNAPSHOT.md",
+      "sha256": "9efcabf91b77f9fcf73ae4d02f7d6161b2c43b65f8b70d5d471cdf3f32391ba3"
+    },
+    {
+      "path": "SYSTEM_PROMPT.md",
+      "sha256": "299323a04ac29077c811d3e738eac4b5e97e00832038f763e003b7c3f61c1407"
+    },
+    {
+      "path": "agent_config.json",
+      "sha256": "0c8c62c016d7b2356e6d7b419851eb2542ca53bc67459767abde3f1fa4121592"
+    },
+    {
+      "path": "skills/agent-state-backup/SKILL.md",
+      "sha256": "64a18195fa955ef8680c82effb05fc4dda54a4eee54171afa044809ee655124d"
+    },
+    {
+      "path": "skills/agent-state-backup/render_project_doc.py",
+      "sha256": "cae7a05842039ac05c1021afe7ab6bc3c5845a86ea37bf3f53c337e605a604f1"
+    },
+    {
+      "path": "skills/survey-release-checker/SKILL.md",
+      "sha256": "42f58eb258ee1390354b336a911ba3fd3585d69b680ba7d2ef62063e2bf11dc5"
+    },
+    {
+      "path": "skills/survey-release-checker/checker.py",
+      "sha256": "31bf92a763535d7a252c7b47ea80a16fb83b0fe9dbc9ddff108296a465b81723"
+    }
+  ],
+  "last_backup": "2026-10-07",
+  "note": "No secrets or credentials are included."
+}

@@ -1,0 +1,57 @@
+{
+  "agent_name": "A - Inflation Watch",
+  "display_name_current": "A - Inflation Watch",
+  "slug": "agent.inflation.watch",
+  "source_agent_id": "cmq66ilhw00hi07advlez8ew8",
+  "model": "zai/glm-5.2",
+  "blackboard_doc_id": "cmq5rqdws16qq06adoiw88r03",
+  "blackboard_section": "Inflation",
+  "skills": [
+    {
+      "id": "cmq2zoi2z0a1u07ad0unohtca",
+      "name": "Agent State Backup"
+    },
+    {
+      "id": "cmqiie9g800os07advynt3xgl",
+      "name": "US Inflation Release Check"
+    }
+  ],
+  "memory_count": 5,
+  "last_backup": "2026-10-07",
+  "destination": "Google Drive: Agent Backups/agent.hyperagent.talfco",
+  "files": [
+    {
+      "path": "MEMORIES.md",
+      "sha256": "60523227deac510eae926ceac734babd2587a639d34487111222e628c3210258"
+    },
+    {
+      "path": "SECTION_SNAPSHOT.md",
+      "sha256": "47bced0fa6d86e99f9dc10e6c9c54e91316d6fd9b079f892411f62712814066a"
+    },
+    {
+      "path": "SYSTEM_PROMPT.md",
+      "sha256": "6e28cb0da91fe25865839cb951559095dc37cfc689daf3cef2e0fd4a36702aa0"
+    },
+    {
+      "path": "agent_config.json",
+      "sha256": "2fa325ac36a4bfdf0e19ff60bad0da8a0bf2697e39601bafae596eb12fd42078"
+    },
+    {
+      "path": "skills/agent-state-backup/SKILL.md",
+      "sha256": "64a18195fa955ef8680c82effb05fc4dda54a4eee54171afa044809ee655124d"
+    },
+    {
+      "path": "skills/agent-state-backup/render_project_doc.py",
+      "sha256": "cae7a05842039ac05c1021afe7ab6bc3c5845a86ea37bf3f53c337e605a604f1"
+    },
+    {
+      "path": "skills/us-inflation-release-check/SKILL.md",
+      "sha256": "c1128815972a2835e708e05dbb3e0e0dd0b29eab31558ecfb0bc46f2460756a7"
+    },
+    {
+      "path": "skills/us-inflation-release-check/inflation_check.py",
+      "sha256": "fd4d4bed4ab100066ddacec109d3380e87e8e754a65b14a592f9a1f3e410933d"
+    }
+  ],
+  "note": "No secrets or credential values are included in this backup."
+}

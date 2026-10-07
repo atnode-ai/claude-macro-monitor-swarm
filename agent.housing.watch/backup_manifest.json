@@ -1,0 +1,56 @@
+{
+  "agent_name": "A - Housing Watch",
+  "display_name_current": "A - Housing Watch",
+  "slug": "agent.housing.watch",
+  "source_agent_id": "cmq66zw1m00of07ade5llclmo",
+  "model": "zai/glm-5.2",
+  "blackboard_doc_id": "cmq5rqdws16qq06adoiw88r03",
+  "blackboard_section": "Housing",
+  "skills": [
+    {
+      "id": "cmq2zoi2z0a1u07ad0unohtca",
+      "name": "Agent State Backup"
+    },
+    {
+      "id": "cmqiid9ge00ku06adpxauev5j",
+      "name": "Housing Release Check (FRED)"
+    }
+  ],
+  "memory_count": 5,
+  "files": [
+    {
+      "path": "MEMORIES.md",
+      "sha256": "dd6348104e6e501f90578929ed2b5cf32987d19df5c8f4d4bac825b238c567df"
+    },
+    {
+      "path": "SECTION_SNAPSHOT.md",
+      "sha256": "b277e3515917c115e58617e281e0ebc1d496bb7542284e1baf464aca17cb83b6"
+    },
+    {
+      "path": "SYSTEM_PROMPT.md",
+      "sha256": "486248b36a33ec94aeeba248071d21f629b529fdc5c668649748dea2d840c81b"
+    },
+    {
+      "path": "agent_config.json",
+      "sha256": "74b50c694db955e704862cb841f5da78835e7a437d53ea45be8ab2c985e0705e"
+    },
+    {
+      "path": "skills/agent-state-backup/SKILL.md",
+      "sha256": "64a18195fa955ef8680c82effb05fc4dda54a4eee54171afa044809ee655124d"
+    },
+    {
+      "path": "skills/agent-state-backup/render_project_doc.py",
+      "sha256": "cae7a05842039ac05c1021afe7ab6bc3c5845a86ea37bf3f53c337e605a604f1"
+    },
+    {
+      "path": "skills/housing-release-check-fred/SKILL.md",
+      "sha256": "fae2c7fc83a5006696f5cf95f55f4b47d3d5b4d86e84f52bcaa4c3404ca69031"
+    },
+    {
+      "path": "skills/housing-release-check-fred/housing_release_check.py",
+      "sha256": "01a10f83f5139efdcc92931610d3aabd53c47238ad95672be9f91b94747ccd59"
+    }
+  ],
+  "last_backup": "2026-10-07",
+  "note": "No secrets or credential values included."
+}

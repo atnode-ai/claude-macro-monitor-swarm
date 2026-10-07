@@ -1,0 +1,77 @@
+{
+  "slug": "agent.sentiment.and.surveys.watch",
+  "display_name_current": "A - Sentiment & Surveys Watch",
+  "name": "A - Sentiment & Surveys Watch",
+  "description": "Sentiment-domain collector in the macro-monitoring swarm. Watches UMich Consumer Sentiment, Conference Board Consumer Confidence and the German Ifo Business Climate; logs prints to the Macro Monitor blackboard and alerts #hyper-asset-monitoring on new releases / material surprises.",
+  "icon": "📋",
+  "executionMode": "auto",
+  "delegation": {
+    "scope": "none",
+    "approvalMode": "always_ask"
+  },
+  "modelSettings": {
+    "modelId": "zai/glm-5.2",
+    "defaultSubagentModel": null,
+    "maxThinkingTokens": null,
+    "effort": null,
+    "maxBudgetUsd": null,
+    "speed": null,
+    "fastMode": null
+  },
+  "learning": {
+    "skillLoadMode": "discover",
+    "skillScope": "selected",
+    "enableMemorySuggestions": false,
+    "enableSkillSuggestions": false,
+    "enablePromptSuggestions": false,
+    "enableRubricSuggestions": false,
+    "autoSaveMemories": false,
+    "autoSaveSkills": false,
+    "autoSaveAgents": false,
+    "autoSavePrompts": false
+  },
+  "tools_enabled": [
+    "searchMode",
+    "exa-mode",
+    "web-search",
+    "documents",
+    "searchthreads"
+  ],
+  "integrations": [
+    "slack"
+  ],
+  "scheduledInvocations": [
+    {
+      "id": "cmq76terl03ba08adcryqu2oj",
+      "name": "Release check — morning",
+      "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;BYHOUR=9;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "prompt": "Scheduled release check — follow your run cheatsheet memory and the Survey Release Checker skill (don't restate the calendar/sources here).\n(1) DEDUP: read the blackboard Sentiment & Surveys section; note the latest logged date per report.\n(2) GATE: run the skill `due`. If nothing is due, write ONLY the 'Last checked: <ts ET> - no new release' heartbeat line (replacing the previous one) and STOP — no fetching, no Slack, ~2 lines out.\n(3) If a report is due: `fetch` that one, dedup; if genuinely new, append one row, update Current stance, and post a concise #hyper-asset-monitoring alert. Mark unverifiable figures 'unconfirmed' — never guess.\nHeartbeat every run; Slack only on a new landing.",
+      "threadStrategy": "new",
+      "status": "paused",
+      "readOnlyMode": false,
+      "alertMode": false,
+      "runNotifications": []
+    },
+    {
+      "id": "cmq76tes003bb08adltbnbesl",
+      "name": "Release check — late morning + heartbeat",
+      "rrule": "FREQ=WEEKLY;BYDAY=FR;BYHOUR=11;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "prompt": "Scheduled release check — follow your run cheatsheet memory and the Survey Release Checker skill (don't restate the calendar/sources here).\n(1) DEDUP: read the blackboard Sentiment & Surveys section; note the latest logged date per report.\n(2) GATE: run the skill `due`. If nothing is due, write ONLY the 'Last checked: <ts ET> - no new release' heartbeat line (replacing the previous one) and STOP — no fetching, no Slack, ~2 lines out.\n(3) If a report is due: `fetch` that one, dedup; if genuinely new, append one row, update Current stance, and post a concise #hyper-asset-monitoring alert. Mark unverifiable figures 'unconfirmed' — never guess.\nHeartbeat every run; Slack only on a new landing.",
+      "threadStrategy": "new",
+      "status": "active",
+      "readOnlyMode": false,
+      "alertMode": false,
+      "runNotifications": []
+    }
+  ],
+  "skills": [
+    "cmq2zoi2z0a1u07ad0unohtca",
+    "cmqijfb2m010306adv7bymlqe"
+  ],
+  "memories": [
+    "cmqe89sdu0oqk07ad7pnkbnja"
+  ],
+  "contextFiles": []
+}

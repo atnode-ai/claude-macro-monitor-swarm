@@ -1,0 +1,76 @@
+{
+  "agent_name": "A - Growth & Activity Watch",
+  "display_name_current": "A - Growth & Activity Watch",
+  "slug": "agent.growth.and.activity.watch",
+  "source_agent_id": "cmq66yu1a00pf07adck3rx4ou",
+  "model": "claude-sonnet-4-6",
+  "blackboard_doc_id": "cmq5rqdws16qq06adoiw88r03",
+  "blackboard_section": "Growth & Activity",
+  "skills": [
+    {
+      "id": "cmq2zoi2z0a1u07ad0unohtca",
+      "name": "Agent State Backup"
+    },
+    {
+      "id": "cmqe7hnxm0okm06adw688pube",
+      "name": "Chicago Fed CARTS \u2014 Retail Sales Nowcast"
+    },
+    {
+      "id": "cmqihs18w00cu07adypcqrecg",
+      "name": "FRED Growth-Data Pull"
+    }
+  ],
+  "memory_count": 5,
+  "memory_ids": [
+    "cmqe86l0z0pq607ad21i5vw7k",
+    "cmr3vj6540jt506adks78nrr3",
+    "cmr3vkl2c0jij07ad00dqzwif",
+    "cmr3vlw4o0jhb08adjfzrqa2h",
+    "cmto3dux6008b07ad2cbokkbo"
+  ],
+  "last_backup": "2026-10-07",
+  "destination": "Google Drive: Agent Backups/agent.hyperagent.talfco",
+  "files": [
+    {
+      "path": "MEMORIES.md",
+      "sha256": "394775379543dbb18d29e059b2f6fdf909acbd75484b19a13ca76a1e4ea1323c"
+    },
+    {
+      "path": "SECTION_SNAPSHOT.md",
+      "sha256": "8a863838d471bdb9fec19b435e4e77d95791e462513078f37acdeb30d74b9eff"
+    },
+    {
+      "path": "SYSTEM_PROMPT.md",
+      "sha256": "732ac6a7e25feb5dbbf1d748e407f7edf4296543f20f3fc5e0a01e9911e0c448"
+    },
+    {
+      "path": "agent_config.json",
+      "sha256": "850b068a7ddc12245fc90220c2d4080aaff17528e1c5bb81312849d15f20af31"
+    },
+    {
+      "path": "skills/agent-state-backup/SKILL.md",
+      "sha256": "64a18195fa955ef8680c82effb05fc4dda54a4eee54171afa044809ee655124d"
+    },
+    {
+      "path": "skills/agent-state-backup/render_project_doc.py",
+      "sha256": "cae7a05842039ac05c1021afe7ab6bc3c5845a86ea37bf3f53c337e605a604f1"
+    },
+    {
+      "path": "skills/chicago-fed-carts-retail-sales-nowcast/SKILL.md",
+      "sha256": "c2d7833c81dcdfa962b3e2b3ffb7e918859259cb8a13b256c3f8e0fc7c0a03d8"
+    },
+    {
+      "path": "skills/chicago-fed-carts-retail-sales-nowcast/carts_nowcast.py",
+      "sha256": "e533808454b091b5eafcbd574faa175d85d20fa248eb2a2c1cdcd2feebc3602d"
+    },
+    {
+      "path": "skills/fred-growth-data-pull/SKILL.md",
+      "sha256": "02c3599bc103ec836ea7fdf61d84fc67fcfe5f090f14ab2e0691bdb52128181a"
+    },
+    {
+      "path": "skills/fred-growth-data-pull/fred_growth_pull.py",
+      "sha256": "03a5718301234f8842478429d44caf874155f0bd4401140a15b2dface33d51d9"
+    }
+  ],
+  "note": "No secrets or credential values included (FRED_API_KEY is referenced by name only)."
+}

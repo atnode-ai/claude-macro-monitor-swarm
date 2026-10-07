@@ -1,0 +1,81 @@
+{
+  "slug": "agent.market.watch",
+  "display_name_current": "A - Market Watch",
+  "name": "A - Market Watch",
+  "description": "Financial Conditions & Markets domain collector for the macro-monitoring swarm. Tracks market-priced signals (Treasury yield curve, credit spreads, Chicago Fed NFCI, SLOOS, market-implied Fed path, breakevens), writes digests to the shared blackboard, and alerts #hyper-asset-monitoring only on material moves. Coordinates via the blackboard doc; never collects real-activity nowcasts (those belong to Growth/Housing/etc.).",
+  "icon": "💹",
+  "executionMode": null,
+  "delegation": {
+    "scope": "none",
+    "approvalMode": "always_ask"
+  },
+  "modelSettings": {
+    "modelId": "zai/glm-5.2",
+    "defaultSubagentModel": null,
+    "maxThinkingTokens": null,
+    "effort": null,
+    "maxBudgetUsd": null,
+    "speed": null,
+    "fastMode": null
+  },
+  "learning": {
+    "skillLoadMode": "discover",
+    "skillScope": "global",
+    "enableMemorySuggestions": false,
+    "enableSkillSuggestions": false,
+    "enablePromptSuggestions": false,
+    "enableRubricSuggestions": false,
+    "autoSaveMemories": false,
+    "autoSaveSkills": false,
+    "autoSaveAgents": false,
+    "autoSavePrompts": false
+  },
+  "enabled_tool_ids": [
+    "web-search",
+    "documents"
+  ],
+  "integration_ids": [
+    "slack"
+  ],
+  "integrations_scope": [
+    {
+      "id": "slack",
+      "resourceScope": {
+        "version": 1,
+        "allChannelsAccess": true,
+        "readDMs": false,
+        "writeDMs": false,
+        "allChannelsPermission": "read",
+        "writeChannels": [
+          {
+            "id": "C0B8B76L7NH",
+            "displayName": "#hyper-asset-monitoring"
+          }
+        ]
+      }
+    }
+  ],
+  "scheduledInvocations": [
+    {
+      "name": "Market check — morning",
+      "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;BYHOUR=9;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "status": "paused",
+      "prompt": "Scheduled market check. (1) DEDUP: read the Macro Monitor blackboard (doc cmq5rqdws16qq06adoiw88r03), the Financial Conditions & Markets section; note the latest logged levels/dates (create the section per your system prompt if it doesn't exist yet). (2) CHECK your sources for material moves or new releases since last logged: Treasury curve (10y-2y, 10y-3m), HY & IG credit spreads (ICE BofA OAS, FRED), Chicago Fed NFCI/ANFCI (weekly, Wed), SLOOS (quarterly), market-implied Fed path (fed funds/SOFR futures, CME FedWatch), 5y5y forward breakeven / 10y real yield, and MOVE/VIX/DXY for context. Use the browser if a source blocks plain fetch. (3) MATERIAL move or new release (apply your system-prompt thresholds) -> capture level + change (bp) + what it signals; append/update a row in your section; update Current stance; post a concise alert to #hyper-asset-monitoring (C0B8B76L7NH). (4) HEARTBEAT (ALWAYS, even if quiet): set the section's 'Last checked' line to the current time (ET) with status 'logged <signal>' or 'no material move'. Never post to Slack on a quiet run. (5) STAY IN LANE: market-priced data only — do not log CARTS/GDPNow/surveys (Growth) or other domains' releases. Mark unverifiable figures 'unconfirmed'."
+    },
+    {
+      "name": "Market check — close + heartbeat",
+      "rrule": "FREQ=WEEKLY;BYDAY=FR;BYHOUR=16;BYMINUTE=30",
+      "timezone": "America/New_York",
+      "status": "active",
+      "prompt": "Scheduled end-of-day market check (feeds the orchestrator's 17:00 ET daily wrap). (1) DEDUP: read the Macro Monitor blackboard (doc cmq5rqdws16qq06adoiw88r03), the Financial Conditions & Markets section; note the latest logged levels/dates (create the section per your system prompt if it doesn't exist yet). (2) CHECK the day's market-priced moves vs last logged: Treasury curve (10y-2y, 10y-3m), HY & IG credit spreads (ICE BofA OAS, FRED), NFCI/ANFCI if updated, market-implied Fed path (fed funds/SOFR futures, CME FedWatch), 5y5y forward breakeven / 10y real yield, MOVE/VIX/DXY for context. Use the browser if a source blocks plain fetch. (3) MATERIAL move or new release (apply your system-prompt thresholds) -> capture level + change (bp) + what it signals; append/update a row; update Current stance; post a concise alert to #hyper-asset-monitoring (C0B8B76L7NH). (4) HEARTBEAT (ALWAYS, even if quiet): set the 'Last checked' line to current time (ET) with status 'logged <signal>' or 'no material move'. Never post to Slack on a quiet run. (5) STAY IN LANE: market-priced data only — do not log real-activity nowcasts or other domains' releases. Mark unverifiable figures 'unconfirmed'."
+    }
+  ],
+  "skill_ids": [
+    "cmq2zoi2z0a1u07ad0unohtca"
+  ],
+  "memory_ids": [
+    "cmqijatqh010708advjosyj2v"
+  ],
+  "contextFiles": []
+}

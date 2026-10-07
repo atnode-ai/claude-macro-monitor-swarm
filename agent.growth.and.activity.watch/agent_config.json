@@ -1,0 +1,70 @@
+{
+  "slug": "agent.growth.and.activity.watch",
+  "display_name_current": "A - Growth & Activity Watch",
+  "name": "A - Growth & Activity Watch",
+  "description": "Growth-domain collector in the macro-monitoring swarm. Watches GDP, Retail Sales, ISM PMI (Mfg + Services), Industrial Production, Durable Goods and Trade Balance; logs prints to the Macro Monitor blackboard and alerts #hyper-asset-monitoring on new releases / material surprises.",
+  "icon": "📊",
+  "executionMode": "auto",
+  "delegation": {
+    "scope": "none",
+    "approvalMode": "always_ask"
+  },
+  "modelSettings": {
+    "modelId": "claude-sonnet-4-6",
+    "defaultSubagentModel": null,
+    "maxThinkingTokens": null,
+    "effort": null,
+    "maxBudgetUsd": null,
+    "speed": null,
+    "fastMode": null
+  },
+  "learning": {
+    "skillLoadMode": "discover",
+    "skillScope": "selected",
+    "enableMemorySuggestions": true,
+    "enableSkillSuggestions": false,
+    "enablePromptSuggestions": false,
+    "enableRubricSuggestions": true,
+    "autoSaveMemories": false,
+    "autoSaveSkills": false,
+    "autoSaveAgents": false,
+    "autoSavePrompts": false
+  },
+  "tools": [
+    "browser",
+    "web-search",
+    "documents"
+  ],
+  "integrations": [
+    "slack"
+  ],
+  "scheduledInvocations": [
+    {
+      "name": "Release check — morning",
+      "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;BYHOUR=9;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "status": "active",
+      "prompt": "Scheduled release check. (1) DEDUP: read the Macro Monitor blackboard (doc cmq5rqdws16qq06adoiw88r03), the 'Growth & Activity' section; note the latest logged date per report (currently through Sep 3: ISM Services Aug, Trade Jul). (2) CHECK each of your official sources (ISM Mfg/Services PMI, GDP, Retail Sales + Chicago Fed CARTS, Industrial Production, Durable Goods, Trade Balance) for a release newer than logged; use the browser if a source blocks plain fetch. Prefer the 'FRED Growth-Data Pull' skill for GDP/Retail/IP/Durable Goods/Trade, and ExaSearch news for ISM PMI on release days. (3) NEW release -> capture headline + key sub-readings, consensus, prior, surprise (mark 'unconfirmed' if not verifiable); APPEND a row to your section's markdown table (immediately ABOVE the 'Current stance:' line, never below it); update Current stance; post a concise alert to #hyper-asset-monitoring (C0B8B76L7NH). (4) HEARTBEAT (ALWAYS, even if nothing new): OVERWRITE the single existing 'Last checked:' line in place with the current time (ET) and status 'logged <report>' or 'no new release'. Never post to Slack on a no-new-release run. (5) NEVER replace the whole section with empty or truncated content — make targeted edits only (append one row + overwrite the heartbeat line). Once you resume clean updates, delete the '⚠️ Restored snapshot' marker line at the top of the section."
+    },
+    {
+      "name": "Release check — late morning + heartbeat",
+      "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;BYHOUR=11;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "status": "active",
+      "prompt": "Scheduled release check. (1) DEDUP: read the Macro Monitor blackboard (doc cmq5rqdws16qq06adoiw88r03), the 'Growth & Activity' section; note the latest logged date per report (currently through Sep 3: ISM Services Aug, Trade Jul). (2) CHECK each of your official sources (ISM Mfg/Services PMI, GDP, Retail Sales + Chicago Fed CARTS, Industrial Production, Durable Goods, Trade Balance) for a release newer than logged; use the browser if a source blocks plain fetch. Prefer the 'FRED Growth-Data Pull' skill for GDP/Retail/IP/Durable Goods/Trade, and ExaSearch news for ISM PMI on release days. (3) NEW release -> capture headline + key sub-readings, consensus, prior, surprise (mark 'unconfirmed' if not verifiable); APPEND a row to your section's markdown table (immediately ABOVE the 'Current stance:' line, never below it); update Current stance; post a concise alert to #hyper-asset-monitoring (C0B8B76L7NH). (4) HEARTBEAT (ALWAYS, even if nothing new): OVERWRITE the single existing 'Last checked:' line in place with the current time (ET) and status 'logged <report>' or 'no new release'. Never post to Slack on a no-new-release run. (5) NEVER replace the whole section with empty or truncated content — make targeted edits only (append one row + overwrite the heartbeat line). Once you resume clean updates, delete the '⚠️ Restored snapshot' marker line at the top of the section."
+    }
+  ],
+  "skill_ids": [
+    "cmq2zoi2z0a1u07ad0unohtca",
+    "cmqe7hnxm0okm06adw688pube",
+    "cmqihs18w00cu07adypcqrecg"
+  ],
+  "memory_ids": [
+    "cmqe86l0z0pq607ad21i5vw7k",
+    "cmr3vj6540jt506adks78nrr3",
+    "cmr3vkl2c0jij07ad00dqzwif",
+    "cmr3vlw4o0jhb08adjfzrqa2h",
+    "cmto3dux6008b07ad2cbokkbo"
+  ],
+  "contextFiles": []
+}

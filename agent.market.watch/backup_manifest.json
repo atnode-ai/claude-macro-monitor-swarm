@@ -1,0 +1,44 @@
+{
+  "agent_name": "A - Market Watch",
+  "display_name_current": "A - Market Watch",
+  "slug": "agent.market.watch",
+  "source_agent_id": "cmqe5znqb0oet07adr8yfvicr",
+  "model": "zai/glm-5.2",
+  "blackboard_doc_id": "cmq5rqdws16qq06adoiw88r03",
+  "blackboard_section": "Financial Conditions & Markets",
+  "skills": [
+    {
+      "id": "cmq2zoi2z0a1u07ad0unohtca",
+      "name": "Agent State Backup"
+    }
+  ],
+  "memory_count": 1,
+  "files": [
+    {
+      "path": "MEMORIES.md",
+      "sha256": "bf6c48049acb401a7744d84525c056a89f0d5183f03e85385272f735fce61b06"
+    },
+    {
+      "path": "SECTION_SNAPSHOT.md",
+      "sha256": "579c1edeb731d87f92e869406238475138a7c8aed93faf74e7a4e77bc2c2ba8b"
+    },
+    {
+      "path": "SYSTEM_PROMPT.md",
+      "sha256": "8a9479294619fc8d6bb42b54cf8b6662691b39e994a9ccef7576b2dc519dccec"
+    },
+    {
+      "path": "agent_config.json",
+      "sha256": "95801c44ff4401fffdbcbc13678212f21ff4499eeb9052500789912f513fadc1"
+    },
+    {
+      "path": "skills/agent-state-backup/SKILL.md",
+      "sha256": "64a18195fa955ef8680c82effb05fc4dda54a4eee54171afa044809ee655124d"
+    },
+    {
+      "path": "skills/agent-state-backup/render_project_doc.py",
+      "sha256": "cae7a05842039ac05c1021afe7ab6bc3c5845a86ea37bf3f53c337e605a604f1"
+    }
+  ],
+  "last_backup": "2026-10-07",
+  "note": "No secrets, tokens or credential values are included. Destination: Google Drive Agent Backups/agent.hyperagent.talfco."
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "agent.housing.watch",
+  "display_name_current": "A - Housing Watch",
+  "name": "A - Housing Watch",
+  "description": "Housing-domain collector in the macro-monitoring swarm. Watches Building Permits & Housing Starts and Existing/New Home Sales; logs prints to the Macro Monitor blackboard and alerts #hyper-asset-monitoring on new releases / material surprises.",
+  "icon": "🏠",
+  "executionMode": "auto",
+  "delegation": {
+    "scope": "none",
+    "approvalMode": "always_ask"
+  },
+  "modelSettings": {
+    "modelId": "zai/glm-5.2",
+    "defaultSubagentModel": null,
+    "maxThinkingTokens": null,
+    "effort": null,
+    "maxBudgetUsd": null,
+    "speed": null,
+    "fastMode": null
+  },
+  "learning": {
+    "skillLoadMode": "discover",
+    "skillScope": "global",
+    "enableMemorySuggestions": true,
+    "enableSkillSuggestions": true,
+    "enablePromptSuggestions": true,
+    "enableRubricSuggestions": true,
+    "autoSaveMemories": false,
+    "autoSaveSkills": false,
+    "autoSaveAgents": false,
+    "autoSavePrompts": false
+  },
+  "tools": [
+    "globalTablesEnabled"
+  ],
+  "integrations": [
+    "slack",
+    "googledrive"
+  ],
+  "scheduledInvocations": [
+    {
+      "name": "Release check + heartbeat",
+      "rrule": "FREQ=WEEKLY;BYDAY=FR;BYHOUR=11;BYMINUTE=0",
+      "timezone": "America/New_York",
+      "status": "active",
+      "prompt": "Scheduled Housing release check + heartbeat. Follow your system prompt's cheap-path procedure: ReadDocument the blackboard (doc cmq5rqdws16qq06adoiw88r03) — it externalizes, so pass the returned file path to the Housing Release Check (FRED) skill via --blackboard-file and do NOT read the full doc into context. If any_new is false → only refresh the Housing 'Last checked' heartbeat ('<now ET> - no new release') and stop, NO Slack. If any_new is true → look up consensus for each new report, append the row, update Current stance, set the heartbeat to 'logged <report>', and post a concise #hyper-asset-monitoring (C0B8B76L7NH) alert. Never Slack on a no-new-release run; never log a release twice (reference-month dedup is authoritative)."
+    }
+  ],
+  "skills": [
+    "cmq2zoi2z0a1u07ad0unohtca",
+    "cmqiid9ge00ku06adpxauev5j"
+  ],
+  "memories": [
+    "cmr31vhpu05v508adjmp4cqjn",
+    "cmr31vtvr060306adssrfmafd",
+    "cmr3vhusz0k6i07adimtaqfdf",
+    "cmr3vibnd0jsg07adjgz1pev5",
+    "cmr3vkscf0jho06adthbzw10p"
+  ],
+  "contextFiles": [
+    {
+      "type": "document",
+      "id": "cmr12ppsu0dhl07adp90shzrg",
+      "name": "Housing Watch — Deterministic Python Cron Script",
+      "isPinned": false
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "agent_name": "A - Central Banks & Policy Watch",
+  "display_name_current": "A - Central Banks & Policy Watch",
+  "slug": "agent.central.banks.and.policy.watch",
+  "source_agent_id": "cmq66qwom00n707adnafyct7l",
+  "model": "zai/glm-5.2",
+  "blackboard_doc_id": "cmq5rqdws16qq06adoiw88r03",
+  "blackboard_section": "Central Banks & Policy",
+  "skills": [
+    {
+      "id": "cmq2zoi2z0a1u07ad0unohtca",
+      "name": "Agent State Backup"
+    }
+  ],
+  "memory_count": 2,
+  "files": [
+    {
+      "path": "MEMORIES.md",
+      "sha256": "fcadd0febe4f9b4efd51388ad72ae2a55817574b35756fafd3685a76b1c55146"
+    },
+    {
+      "path": "SECTION_SNAPSHOT.md",
+      "sha256": "5ef6f6a88f45901b536b25f26a18fef3ccc7775036725686c2cd36bef9cced6d"
+    },
+    {
+      "path": "SYSTEM_PROMPT.md",
+      "sha256": "acee7f01ce424d799c419a34456b1ff9b82b7152cf2e327cc4a720de9d40dbeb"
+    },
+    {
+      "path": "agent_config.json",
+      "sha256": "ed844c107a7158bfe0b32985a6dc432d994c3a8385c488a8571c7640c4dbf130"
+    },
+    {
+      "path": "skills/agent-state-backup/SKILL.md",
+      "sha256": "d2c6e35ec47a13cfe54cd65cf080df056b9d9e41f35e73425ade2b65a04e9e41"
+    },
+    {
+      "path": "skills/agent-state-backup/render_project_doc.py",
+      "sha256": "cae7a05842039ac05c1021afe7ab6bc3c5845a86ea37bf3f53c337e605a604f1"
+    },
+    {
+      "path": "backup_manifest.json",
+      "sha256": "(self)"
+    }
+  ],
+  "last_backup": "2026-10-07",
+  "note": "No secrets or credentials included."
+}
