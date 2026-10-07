@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-07 17:33 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-07 18:07 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -113,10 +113,10 @@ _No synthesis yet; the Friday strategist run writes it._
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-07 17:32 ET | 0.0 | ok |
-| Labor | 2026-10-07 17:32 ET | 0.0 | ok |
-| Growth & Activity | 2026-10-07 17:32 ET | 0.0 | ok |
-| Housing | 2026-10-07 17:32 ET | 0.0 | ok |
-| Sentiment & Surveys | 2026-10-07 17:32 ET | 0.0 | ok |
-| Central Banks & Policy | 2026-10-07 17:32 ET | 0.0 | ok |
-| Financial Conditions & Markets | 2026-10-07 17:32 ET | 0.0 | ok |
+| Inflation | 2026-10-07 18:07 ET | 0.0 | ok |
+| Labor | 2026-10-07 18:07 ET | 0.0 | ok |
+| Growth & Activity | 2026-10-07 18:07 ET | 0.0 | ok |
+| Housing | 2026-10-07 18:07 ET | 0.0 | ok |
+| Sentiment & Surveys | 2026-10-07 18:07 ET | 0.0 | ok |
+| Central Banks & Policy | 2026-10-07 18:07 ET | 0.0 | ok |
+| Financial Conditions & Markets | 2026-10-07 18:07 ET | 0.0 | ok |
