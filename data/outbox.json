@@ -1,0 +1,10 @@
+{
+  "items": [
+    {
+      "report": "claims",
+      "ref": "2026-10-03",
+      "path": "data/releases/labor/claims/2026-10-03.json",
+      "alert": false
+    }
+  ]
+}

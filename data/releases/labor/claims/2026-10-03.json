@@ -21,8 +21,18 @@
   },
   "verified": true,
   "consensus": null,
-  "consensus_source": null,
+  "consensus_source": "not found: one search returned no poll for the week ended 2026-10-03",
   "surprise": null,
-  "read": null,
-  "status": "pending_analysis"
+  "read": "Initial claims 197k, down 2k from 199k; 4-week average 198k (prior 200.5k); continuing 1.716M, unchanged. Low and drifting lower, no layoff signal. Consensus unconfirmed.",
+  "status": "analysed",
+  "fields": null,
+  "sources": [],
+  "alert": {
+    "alert": false,
+    "material": false,
+    "reasons": [
+      "no consensus available; surprise not assessed"
+    ]
+  },
+  "analysed_at": "2026-10-08 17:08 ET"
 }

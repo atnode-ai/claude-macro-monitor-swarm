@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-08 16:08 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-08 17:08 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -20,13 +20,13 @@ _Rendered 2026-10-08 16:08 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
-| **Initial Jobless Claims** | 2026-10-03 | initial 197,000; initial -2,000 chg; initial 4wk 198,000; continuing 1,716,000 | initial 199,000; initial +1,000 chg; initial 4wk 200,500; continuing 1,716,000 |  |  | _pending analysis_ [source](https://www.dol.gov/ui/data.pdf) |
+| **Initial Jobless Claims** | 2026-10-03 | initial 197,000; initial -2,000 chg; initial 4wk 198,000; continuing 1,716,000 | initial 199,000; initial +1,000 chg; initial 4wk 200,500; continuing 1,716,000 | unconfirmed |  | Initial claims 197k, down 2k from 199k; 4-week average 198k (prior 200.5k); continuing 1.716M, unchanged. Low and drifting lower, no layoff signal. Consensus unconfirmed. [source](https://www.dol.gov/ui/data.pdf) |
 | **Initial Jobless Claims** | 2026-09-26 | initial 197,000; initial -1,000 chg; initial 4wk 200,000; continuing 1,701,000 | initial 198,000; initial +0.00 chg; initial 4wk 202,500; continuing 1,701,000 |  |  | _baseline (pre-migration)_ [source](https://www.dol.gov/ui/data.pdf) |
 | **Non-Farm Payrolls** | 2026-09 | payrolls +29k chg; unemployment rate 4.20%; unemployment rate +0.10pp chg; ahe +0.1% m/m; ahe 3.0% y/y | payrolls +133k chg; unemployment rate 4.10%; unemployment rate +0.00pp chg; ahe +0.3% m/m; ahe 3.1% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bls.gov/news.release/empsit.htm) |
 | **ADP employment** | 2026-09 | private payrolls +90k chg | private payrolls +36k chg |  |  | _baseline (pre-migration)_ [source](https://adpemploymentreport.com/) |
 | **JOLTS** | 2026-08 | openings 7,079k; openings -256k chg; quits rate 1.90% | openings 7,335k; openings +153k chg; quits rate 1.90% |  |  | _baseline (pre-migration)_ [source](https://www.bls.gov/news.release/jolts.htm) |
 
-**Current stance:** _not set yet_
+**Current stance:** Labour market firm on the claims evidence. Initial claims at 197k with the 4-week average at 198k and continuing claims flat at 1.716M show low layoffs and no sign of a turn. No JOLTS or payrolls data logged yet, so the labour-market turn test (rising claims, falling openings, soft payrolls) is not met. A move in initial claims above 220k or continuing claims above 1.8M would change the view. _(updated 2026-10-08 17:08 ET)_
 
 ## Growth & Activity
 
@@ -114,10 +114,10 @@ _No synthesis yet; the Friday strategist run writes it._
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-08 16:08 ET | 0.0 | ok |
-| Labor | 2026-10-08 16:08 ET | 0.0 | ok |
-| Growth & Activity | 2026-10-08 16:08 ET | 0.0 | ok |
-| Housing | 2026-10-08 16:08 ET | 0.0 | ok |
-| Sentiment & Surveys | 2026-10-08 16:08 ET | 0.0 | ok |
-| Central Banks & Policy | 2026-10-08 16:08 ET | 0.0 | ok |
-| Financial Conditions & Markets | 2026-10-08 16:08 ET | 0.0 | ok |
+| Inflation | 2026-10-08 16:08 ET | 1.0 | ok |
+| Labor | 2026-10-08 16:08 ET | 1.0 | ok |
+| Growth & Activity | 2026-10-08 16:08 ET | 1.0 | ok |
+| Housing | 2026-10-08 16:08 ET | 1.0 | ok |
+| Sentiment & Surveys | 2026-10-08 16:08 ET | 1.0 | ok |
+| Central Banks & Policy | 2026-10-08 16:08 ET | 1.0 | ok |
+| Financial Conditions & Markets | 2026-10-08 16:08 ET | 1.0 | ok |
