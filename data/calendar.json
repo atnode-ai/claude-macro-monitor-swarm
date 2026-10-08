@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07 18:07 ET",
+  "generated_at": "2026-10-08 15:09 ET",
   "cb_meetings": {
     "fed": [
       "2021-01-27",
@@ -98,24 +98,6 @@
     ]
   },
   "events": [
-    {
-      "date": "2026-09-30",
-      "time_et": "08:30",
-      "report": "gdp",
-      "name": "GDP (real, SAAR)",
-      "source": "official",
-      "summary": "GDP (Third Estimate), Industries, Corporate Profits, State GDP, and State Personal Income, 2nd Quarter 2026\\; State PCE, 2025",
-      "weekday": "Wed"
-    },
-    {
-      "date": "2026-09-30",
-      "time_et": "08:30",
-      "report": "pce",
-      "name": "PCE price index",
-      "source": "official",
-      "summary": "Personal Income and Outlays, August 2026",
-      "weekday": "Wed"
-    },
     {
       "date": "2026-10-01",
       "time_et": "08:30",

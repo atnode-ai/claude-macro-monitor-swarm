@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-07 18:07 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-08 15:09 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -20,6 +20,7 @@ _Rendered 2026-10-07 18:07 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
+| **Initial Jobless Claims** | 2026-10-03 | initial 197,000; initial -2,000 chg; initial 4wk 198,000; continuing 1,716,000 | initial 199,000; initial +1,000 chg; initial 4wk 200,500; continuing 1,716,000 |  |  | _pending analysis_ [source](https://www.dol.gov/ui/data.pdf) |
 | **Initial Jobless Claims** | 2026-09-26 | initial 197,000; initial -1,000 chg; initial 4wk 200,000; continuing 1,701,000 | initial 198,000; initial +0.00 chg; initial 4wk 202,500; continuing 1,701,000 |  |  | _baseline (pre-migration)_ [source](https://www.dol.gov/ui/data.pdf) |
 | **Non-Farm Payrolls** | 2026-09 | payrolls +29k chg; unemployment rate 4.20%; unemployment rate +0.10pp chg; ahe +0.1% m/m; ahe 3.0% y/y | payrolls +133k chg; unemployment rate 4.10%; unemployment rate +0.00pp chg; ahe +0.3% m/m; ahe 3.1% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bls.gov/news.release/empsit.htm) |
 | **ADP employment** | 2026-09 | private payrolls +90k chg | private payrolls +36k chg |  |  | _baseline (pre-migration)_ [source](https://adpemploymentreport.com/) |
@@ -96,13 +97,13 @@ _Rendered 2026-10-07 18:07 ET from data/. Do not edit by hand; edit data/ or rer
 | ust_3m | 4.21 | -1 | -4 | bp |
 | curve_10y2y | 0.51 | +3 | +10 | bp |
 | curve_10y3m | 1.06 | +0 | -3 | bp |
-| hy_oas | 3.03 | -9 | -5 | bp |
-| ig_oas | 0.83 | -1 | -1 | bp |
+| hy_oas | 3.09 | +6 | -3 | bp |
+| ig_oas | 0.82 | -1 | -2 | bp |
 | be_5y5y | 2.35 | +0 | -1 | bp |
 | be_10y | 2.36 | +0 | +0 | bp |
 | real_10y | 2.91 | -4 | +0 | bp |
-| sofr | 3.90 | +1 | +2 | bp |
-| vix | 15.01 | -0 | -1 | pts |
+| sofr | 3.88 | -2 | -2 | bp |
+| vix | 15.08 | +0 | -1 | pts |
 | usd_broad | 121.38 | -0 | +1 | pts |
 
 ## Macro Synthesis
@@ -113,10 +114,10 @@ _No synthesis yet; the Friday strategist run writes it._
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-07 18:07 ET | 0.0 | ok |
-| Labor | 2026-10-07 18:07 ET | 0.0 | ok |
-| Growth & Activity | 2026-10-07 18:07 ET | 0.0 | ok |
-| Housing | 2026-10-07 18:07 ET | 0.0 | ok |
-| Sentiment & Surveys | 2026-10-07 18:07 ET | 0.0 | ok |
-| Central Banks & Policy | 2026-10-07 18:07 ET | 0.0 | ok |
-| Financial Conditions & Markets | 2026-10-07 18:07 ET | 0.0 | ok |
+| Inflation | 2026-10-08 15:09 ET | 0.0 | ok |
+| Labor | 2026-10-08 15:09 ET | 0.0 | ok |
+| Growth & Activity | 2026-10-08 15:09 ET | 0.0 | ok |
+| Housing | 2026-10-08 15:09 ET | 0.0 | ok |
+| Sentiment & Surveys | 2026-10-08 15:09 ET | 0.0 | ok |
+| Central Banks & Policy | 2026-10-08 15:09 ET | 0.0 | ok |
+| Financial Conditions & Markets | 2026-10-08 15:09 ET | 0.0 | ok |
