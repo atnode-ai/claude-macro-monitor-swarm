@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-08 17:08 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-08 20:25 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -88,20 +88,20 @@ _Rendered 2026-10-08 17:08 ET from data/. Do not edit by hand; edit data/ or rer
 
 **Current stance:** _not set yet_
 
-**Latest market levels** (as of 2026-10-07):
+**Latest market levels** (as of 2026-10-08):
 
 | Series | Level | 1d | 5d | Unit |
 |---|---|---|---|---|
-| ust_10y | 5.27 | -4 | +1 | bp |
-| ust_2y | 4.79 | -5 | -10 | bp |
-| ust_3m | 4.21 | -1 | -4 | bp |
-| curve_10y2y | 0.51 | +3 | +10 | bp |
-| curve_10y3m | 1.06 | +0 | -3 | bp |
+| ust_10y | 5.28 | +1 | -1 | bp |
+| ust_2y | 4.77 | -2 | -11 | bp |
+| ust_3m | 4.22 | +1 | +2 | bp |
+| curve_10y2y | 0.47 | -4 | +1 | bp |
+| curve_10y3m | 0.99 | -7 | -8 | bp |
 | hy_oas | 3.09 | +6 | -3 | bp |
 | ig_oas | 0.82 | -1 | -2 | bp |
-| be_5y5y | 2.35 | +0 | -1 | bp |
-| be_10y | 2.36 | +0 | +0 | bp |
-| real_10y | 2.91 | -4 | +0 | bp |
+| be_5y5y | 2.33 | -2 | -3 | bp |
+| be_10y | 2.35 | -1 | -1 | bp |
+| real_10y | 2.92 | +1 | -1 | bp |
 | sofr | 3.88 | -2 | -2 | bp |
 | vix | 15.08 | +0 | -1 | pts |
 | usd_broad | 121.38 | -0 | +1 | pts |
@@ -114,10 +114,10 @@ _No synthesis yet; the Friday strategist run writes it._
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-08 16:08 ET | 1.0 | ok |
-| Labor | 2026-10-08 16:08 ET | 1.0 | ok |
-| Growth & Activity | 2026-10-08 16:08 ET | 1.0 | ok |
-| Housing | 2026-10-08 16:08 ET | 1.0 | ok |
-| Sentiment & Surveys | 2026-10-08 16:08 ET | 1.0 | ok |
-| Central Banks & Policy | 2026-10-08 16:08 ET | 1.0 | ok |
-| Financial Conditions & Markets | 2026-10-08 16:08 ET | 1.0 | ok |
+| Inflation | 2026-10-08 20:25 ET | 0.0 | ok |
+| Labor | 2026-10-08 20:25 ET | 0.0 | ok |
+| Growth & Activity | 2026-10-08 20:25 ET | 0.0 | ok |
+| Housing | 2026-10-08 20:25 ET | 0.0 | ok |
+| Sentiment & Surveys | 2026-10-08 20:25 ET | 0.0 | ok |
+| Central Banks & Policy | 2026-10-08 20:25 ET | 0.0 | ok |
+| Financial Conditions & Markets | 2026-10-08 20:25 ET | 0.0 | ok |
