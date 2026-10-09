@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-09 15:45 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-09 17:49 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -108,16 +108,22 @@ _Rendered 2026-10-09 15:45 ET from data/. Do not edit by hand; edit data/ or rer
 
 ## Macro Synthesis
 
-_No synthesis yet; the Friday strategist run writes it._
+**2026-W41: Firm labour, sticky inflation, easy financial conditions: late-cycle expansion with no turn yet confirmed**
+
+A thin week. The only new release was weekly jobless claims: initial claims fell to 197,000, the 4-week average is 198,000 and continuing claims held at 1.716M. That is the only domain with an analysed stance; inflation, growth, housing, sentiment, policy and markets carry baseline prints with no consensus or stance logged, so the read below leans on levels, not surprises. The picture across domains is mixed. Inflation is firm: August headline CPI ran at 3.4% y/y, core PCE at 3.0% and PPI at 5.4%. Payroll growth is slow at 29k in September with unemployment at 4.2%, but layoffs stay low. Financial conditions are easy, with NFCI at -0.494, HY spreads at 3.15% and VIX near 15. The 2y yield fell 11bp on the week. Next week brings CPI, PPI, retail sales and industrial production, which will test whether inflation and spending stay firm.
+
+**Regime watch:** Two alignments matter. Firm inflation (CPI, PCE, PPI all elevated) with easy financial conditions and strong retail sales argues against further easing. Slow payrolls, falling openings and soft housing are the early side of a labour and growth turn. A turn needs claims to confirm: initial claims above 220,000 or continuing claims above 1.8M, alongside a soft retail print. If next week's CPI and PPI stay hot while claims rise, that is the dual-mandate dilemma. If CPI cools and claims stay low, the soft-landing read strengthens.
+**Week ahead:** Mon 2026-10-12 CPI; Tue 2026-10-13 PPI; Thu 2026-10-15 Initial Jobless Claims; Fri 2026-10-16 Retail Sales; Fri 2026-10-16 Industrial Production
+**Swarm health:** all domains fresh
 
 ## Collector health
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-09 15:45 ET | 0.0 | ok |
-| Labor | 2026-10-09 15:45 ET | 0.0 | ok |
-| Growth & Activity | 2026-10-09 15:45 ET | 0.0 | ok |
-| Housing | 2026-10-09 15:45 ET | 0.0 | ok |
-| Sentiment & Surveys | 2026-10-09 15:45 ET | 0.0 | ok |
-| Central Banks & Policy | 2026-10-09 15:45 ET | 0.0 | ok |
-| Financial Conditions & Markets | 2026-10-09 15:45 ET | 0.0 | ok |
+| Inflation | 2026-10-09 15:45 ET | 2.1 | ok |
+| Labor | 2026-10-09 15:45 ET | 2.1 | ok |
+| Growth & Activity | 2026-10-09 15:45 ET | 2.1 | ok |
+| Housing | 2026-10-09 15:45 ET | 2.1 | ok |
+| Sentiment & Surveys | 2026-10-09 15:45 ET | 2.1 | ok |
+| Central Banks & Policy | 2026-10-09 15:45 ET | 2.1 | ok |
+| Financial Conditions & Markets | 2026-10-09 15:45 ET | 2.1 | ok |

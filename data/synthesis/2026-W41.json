@@ -1,0 +1,218 @@
+{
+  "regime": "Firm labour, sticky inflation, easy financial conditions: late-cycle expansion with no turn yet confirmed",
+  "executive_summary": "A thin week. The only new release was weekly jobless claims: initial claims fell to 197,000, the 4-week average is 198,000 and continuing claims held at 1.716M. That is the only domain with an analysed stance; inflation, growth, housing, sentiment, policy and markets carry baseline prints with no consensus or stance logged, so the read below leans on levels, not surprises. The picture across domains is mixed. Inflation is firm: August headline CPI ran at 3.4% y/y, core PCE at 3.0% and PPI at 5.4%. Payroll growth is slow at 29k in September with unemployment at 4.2%, but layoffs stay low. Financial conditions are easy, with NFCI at -0.494, HY spreads at 3.15% and VIX near 15. The 2y yield fell 11bp on the week. Next week brings CPI, PPI, retail sales and industrial production, which will test whether inflation and spending stay firm.",
+  "narrative": [
+    {
+      "title": "Inflation and policy",
+      "body": "The August prints keep inflation well above target. Headline CPI rose 0.4% m/m and 3.4% y/y; core CPI rose 0.29% m/m and 2.4% y/y. Headline PCE is at 3.4% y/y and core PCE at 3.0%. Core PCE running above core CPI is unusual and worth checking against the source when September data lands. Pipeline pressure is high: PPI is up 5.4% y/y and core PPI 4.6%, which on the usual 1 to 3 month lag points to more goods pressure ahead. The FOMC range is logged at 3.75% to 4.00% after a 25bp change at the September meeting. The BoE is at 3.75%. Euro area HICP is 3.2% y/y. None of these releases has an analyst stance or consensus logged, so the inflation domain is unscored on surprise."
+    },
+    {
+      "title": "Labour",
+      "body": "Claims are the one fresh signal and they say layoffs are low. Initial claims fell 2,000 to 197,000, the 4-week average is 198,000 and continuing claims are flat at 1.716M. The hiring side is softer. September payrolls added 29k, unemployment rose 0.1pp to 4.2% and AHE grew 3.0% y/y. ADP showed 90k private jobs. August JOLTS openings fell 256k to 7.08M and the quits rate is 1.9. So the pattern is low firing and slow hiring. The labour-turn test from the cross-indicator chain needs rising claims on top of falling openings and weak payrolls; claims are not rising, so the test is not met."
+    },
+    {
+      "title": "Growth, housing and sentiment",
+      "body": "August retail sales were strong, up 1.1% m/m and 5.4% y/y, with ex-autos also up 1.1%. Core capex orders rose 1.6% while total durable orders were flat. Industrial production was flat on the month and up 1.4% y/y, with capacity use at 76.3. Q2 GDP grew 2.2% SAAR. The trade deficit widened to 105.6bn. Housing is soft: starts fell 2.6% and permits 2.1%, which leads residential investment lower; existing home sales fell 2.0% to 3.98M while new home sales rose 6.4%. UMich sentiment fell 3.5 points to 51.7. Households report gloom while still spending. No domain stance is logged for growth, housing or sentiment."
+    },
+    {
+      "title": "Financial conditions",
+      "body": "Conditions remain loose and eased further on the week. NFCI is -0.494, the adjusted index -0.504. HY OAS tightened 9bp to 3.15% and IG OAS 4bp to 0.82%. VIX is 15.41. The 2y yield fell 11bp to 4.77% while the 10y held near 5.28%, so the 10y-2y curve is positive at 0.47. 5y5y breakevens eased 3bp to 2.33%, so long-run inflation pricing is anchored despite hot spot prints. Banks reported no net tightening of C&I standards in Q3. On the 6 to 18 month lead, these conditions support activity rather than signal a downturn."
+    }
+  ],
+  "domain_scorecard": [
+    {
+      "domain": "Inflation",
+      "signal": "firm",
+      "note": "CPI 3.4% y/y, PPI 5.4%; no analyst stance logged"
+    },
+    {
+      "domain": "Labor",
+      "signal": "steady",
+      "note": "Claims low at 197,000; payrolls slow at 29k"
+    },
+    {
+      "domain": "Growth & Activity",
+      "signal": "steady",
+      "note": "Retail sales strong, IP flat; no stance logged"
+    },
+    {
+      "domain": "Housing",
+      "signal": "weakening",
+      "note": "Starts and permits down; no stance logged"
+    },
+    {
+      "domain": "Sentiment & Surveys",
+      "signal": "weakening",
+      "note": "UMich 51.7, down 3.5; no stance logged"
+    },
+    {
+      "domain": "Central Banks & Policy",
+      "signal": "n/a",
+      "note": "Fed range 3.75% to 4.00%; no stance logged"
+    },
+    {
+      "domain": "Financial Conditions & Markets",
+      "signal": "strong",
+      "note": "NFCI -0.494, HY OAS 3.15%; easy conditions"
+    }
+  ],
+  "regime_watch": "Two alignments matter. Firm inflation (CPI, PCE, PPI all elevated) with easy financial conditions and strong retail sales argues against further easing. Slow payrolls, falling openings and soft housing are the early side of a labour and growth turn. A turn needs claims to confirm: initial claims above 220,000 or continuing claims above 1.8M, alongside a soft retail print. If next week's CPI and PPI stay hot while claims rise, that is the dual-mandate dilemma. If CPI cools and claims stay low, the soft-landing read strengthens.",
+  "week_ahead": [
+    {
+      "report": "cpi",
+      "name": "CPI",
+      "date": "2026-10-12",
+      "weekday": "Mon",
+      "time_et": "08:30",
+      "date_source": "estimate",
+      "why": "Tests whether headline at 3.4% y/y and pipeline PPI pressure pass through"
+    },
+    {
+      "report": "ppi",
+      "name": "PPI",
+      "date": "2026-10-13",
+      "weekday": "Tue",
+      "time_et": "08:30",
+      "date_source": "estimate",
+      "why": "Pipeline check after 5.4% y/y; leads CPI by 1 to 3 months"
+    },
+    {
+      "report": "claims",
+      "name": "Initial Jobless Claims",
+      "date": "2026-10-15",
+      "weekday": "Thu",
+      "time_et": "08:30",
+      "date_source": "estimate",
+      "why": "Only live labour-turn trigger; watch 220,000 initial and 1.8M continuing"
+    },
+    {
+      "report": "retail",
+      "name": "Retail Sales",
+      "date": "2026-10-16",
+      "weekday": "Fri",
+      "time_et": "08:30",
+      "date_source": "estimate",
+      "why": "Follows a strong August; a reversal would align with soft sentiment"
+    },
+    {
+      "report": "indpro",
+      "name": "Industrial Production",
+      "date": "2026-10-16",
+      "weekday": "Fri",
+      "time_et": "09:15",
+      "date_source": "estimate",
+      "why": "Flat in August; confirms or denies goods-sector stall"
+    }
+  ],
+  "kpis": [
+    {
+      "label": "CPI y/y",
+      "ref": "inflation/cpi/2026-08:headline.yoy_pct",
+      "value": 3.397,
+      "unit": "%"
+    },
+    {
+      "label": "Core PCE y/y",
+      "ref": "inflation/pce/2026-08:core.yoy_pct",
+      "value": 3.008,
+      "unit": "%"
+    },
+    {
+      "label": "Initial claims",
+      "ref": "labor/claims/2026-10-03:initial.level",
+      "value": 197000.0,
+      "unit": ""
+    },
+    {
+      "label": "Unemployment rate",
+      "ref": "labor/nfp/2026-09:unemployment_rate.level",
+      "value": 4.2,
+      "unit": "%"
+    },
+    {
+      "label": "HY OAS",
+      "ref": "markets:hy_oas",
+      "value": 3.15,
+      "unit": "%"
+    },
+    {
+      "label": "2y UST",
+      "ref": "markets:ust_2y",
+      "value": 4.77,
+      "unit": "%"
+    }
+  ],
+  "slack_summary": "Regime: firm labour, sticky inflation, easy financial conditions; no turn confirmed.\nThis week: initial claims 197,000 (4-wk avg 198,000), 2y yield down 11bp, HY OAS 3.15%. Only claims carry an analyst read; other domains are baseline.\nNext week: CPI, PPI, claims, retail sales, industrial production.",
+  "week": "2026-W41",
+  "week_ending": "2026-10-09",
+  "swarm_health": "all domains fresh",
+  "health": {
+    "all_ok": true,
+    "domains": [
+      {
+        "domain": "inflation",
+        "name": "Inflation",
+        "last_success": "2026-10-09 15:45 ET",
+        "age_hours": 2.1,
+        "stale": false,
+        "errors": []
+      },
+      {
+        "domain": "labor",
+        "name": "Labor",
+        "last_success": "2026-10-09 15:45 ET",
+        "age_hours": 2.1,
+        "stale": false,
+        "errors": []
+      },
+      {
+        "domain": "growth",
+        "name": "Growth & Activity",
+        "last_success": "2026-10-09 15:45 ET",
+        "age_hours": 2.1,
+        "stale": false,
+        "errors": []
+      },
+      {
+        "domain": "housing",
+        "name": "Housing",
+        "last_success": "2026-10-09 15:45 ET",
+        "age_hours": 2.1,
+        "stale": false,
+        "errors": []
+      },
+      {
+        "domain": "sentiment",
+        "name": "Sentiment & Surveys",
+        "last_success": "2026-10-09 15:45 ET",
+        "age_hours": 2.1,
+        "stale": false,
+        "errors": []
+      },
+      {
+        "domain": "policy",
+        "name": "Central Banks & Policy",
+        "last_success": "2026-10-09 15:45 ET",
+        "age_hours": 2.1,
+        "stale": false,
+        "errors": []
+      },
+      {
+        "domain": "markets",
+        "name": "Financial Conditions & Markets",
+        "last_success": "2026-10-09 15:45 ET",
+        "age_hours": 2.1,
+        "stale": false,
+        "errors": []
+      }
+    ],
+    "alert_text": "",
+    "checked_at": "2026-10-09 17:49 ET"
+  },
+  "audit": {
+    "issues": [],
+    "ok": true,
+    "checked_at": "2026-10-09 17:49 ET"
+  },
+  "finalized_at": "2026-10-09 17:49 ET"
+}
