@@ -1,6 +1,6 @@
 {
   "as_of": "2026-10-08",
-  "updated_at": "2026-10-08 20:25 ET",
+  "updated_at": "2026-10-09 14:39 ET",
   "series": {
     "ust_10y": {
       "id": "DGS10",
@@ -49,21 +49,21 @@
     },
     "hy_oas": {
       "id": "BAMLH0A0HYM2",
-      "date": "2026-10-07",
-      "level": 3.09,
+      "date": "2026-10-08",
+      "level": 3.15,
       "unit": "bp",
       "chg_1d": 6.0,
-      "chg_5d": -3.0,
-      "level_5d_ago": 3.12
+      "chg_5d": -9.0,
+      "level_5d_ago": 3.24
     },
     "ig_oas": {
       "id": "BAMLC0A0CM",
-      "date": "2026-10-07",
+      "date": "2026-10-08",
       "level": 0.82,
       "unit": "bp",
-      "chg_1d": -1.0,
-      "chg_5d": -2.0,
-      "level_5d_ago": 0.84
+      "chg_1d": 0.0,
+      "chg_5d": -4.0,
+      "level_5d_ago": 0.86
     },
     "be_5y5y": {
       "id": "T5YIFR",
@@ -94,21 +94,21 @@
     },
     "sofr": {
       "id": "SOFR",
-      "date": "2026-10-07",
-      "level": 3.88,
+      "date": "2026-10-08",
+      "level": 3.87,
       "unit": "bp",
-      "chg_1d": -2.0,
-      "chg_5d": -2.0,
-      "level_5d_ago": 3.9
+      "chg_1d": -1.0,
+      "chg_5d": 0.0,
+      "level_5d_ago": 3.87
     },
     "vix": {
       "id": "VIXCLS",
-      "date": "2026-10-07",
-      "level": 15.08,
+      "date": "2026-10-08",
+      "level": 15.41,
       "unit": "pts",
-      "chg_1d": 0.1,
-      "chg_5d": -1.3,
-      "level_5d_ago": 16.34
+      "chg_1d": 0.3,
+      "chg_5d": -1.0,
+      "level_5d_ago": 16.39
     },
     "usd_broad": {
       "id": "DTWEXBGS",
