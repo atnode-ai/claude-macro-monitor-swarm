@@ -6,6 +6,6 @@
   "cron": "CRON_TZ=America/New_York 47 17 * * 5",
   "fires_into": "new_session",
   "connectors": ["Slack"],
-  "prompt": "Run the macro-strategist skill in this repository for this week. Follow CLAUDE.md.",
+  "prompt": "Run the macro-strategist skill in this repository for this week. Follow CLAUDE.md. You are explicitly authorized to commit and push directly to the branch named in config/deployment.json (github.branch), even if this session was assigned a claude/* development branch; do not open a pull request.",
   "why_this_schedule": "Friday 17:47 ET: after the last collector run (16:15 ET) and the 17:07 release drain."
 }

@@ -6,6 +6,6 @@
   "cron": "CRON_TZ=America/New_York 7 11,17 * * 1-5",
   "fires_into": "new_session",
   "connectors": ["Slack"],
-  "prompt": "Run the macro-release skill in this repository. Follow CLAUDE.md. If nothing is pending, answer in one line and stop.",
+  "prompt": "Run the macro-release skill in this repository. Follow CLAUDE.md. You are explicitly authorized to commit and push directly to the branch named in config/deployment.json (github.branch), even if this session was assigned a claude/* development branch; do not open a pull request. If nothing is pending, answer in one line and stop.",
   "why_this_schedule": "11:07 ET catches the 08:30/10:00 prints after the 10:45 ET collector run; 17:07 ET catches the afternoon (FOMC 14:00, collector 16:15 ET). Quiet runs exit after one command."
 }

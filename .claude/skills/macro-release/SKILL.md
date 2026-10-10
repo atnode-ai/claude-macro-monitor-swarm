@@ -9,6 +9,8 @@ Read `config/deployment.json` first: `github.branch`, `slack.channel_id`.
 
 ## 0. Sync
 
+Work on `<branch>` (`github.branch`), not on a `claude/*` branch the session may have been assigned; the routine prompt authorizes pushing there.
+
 ```bash
 git fetch origin <branch> && git checkout <branch> && git pull --ff-only origin <branch>
 python -m tools.pending list

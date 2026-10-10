@@ -11,6 +11,8 @@ Read `config/deployment.json` (branch, Slack channel, `site.base_url`) and `conf
 
 ## 0. Sync and drain
 
+Work on `<branch>` (`github.branch`), not on a `claude/*` branch the session may have been assigned; the routine prompt authorizes pushing there.
+
 ```bash
 git fetch origin <branch> && git checkout <branch> && git pull --ff-only origin <branch>
 python -m tools.pending list
