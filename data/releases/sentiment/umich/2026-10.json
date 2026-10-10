@@ -19,7 +19,17 @@
   "consensus": null,
   "consensus_source": null,
   "surprise": null,
-  "read": null,
-  "status": "pending_analysis",
-  "vintage": "prelim"
+  "read": "Prelim Oct sentiment 46.3 vs 48.1 in Sep (-1.8), 2.5 above the May low of 44.8. No consensus found. 5-10y inflation expectations not logged, so no Fed anchoring read. Soft, but one survey.",
+  "status": "analysed",
+  "vintage": "prelim",
+  "fields": null,
+  "sources": [],
+  "alert": {
+    "alert": false,
+    "material": false,
+    "reasons": [
+      "no consensus available; surprise not assessed"
+    ]
+  },
+  "analysed_at": "2026-10-10 16:57 ET"
 }
