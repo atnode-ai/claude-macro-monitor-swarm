@@ -25,6 +25,7 @@ PENDING = C.DATA / "pending.json"
 MARKETS_LATEST = C.DATA / "markets_latest.json"
 CALENDAR = C.DATA / "calendar.json"
 
+PRELIM_KEY = "_prelim"  # series_map entry: dates whose value is still preliminary (UMich)
 DECISION_GRACE_HOURS = {"fed": 14.5, "ecb": 8.5, "boe": 7.5}  # ET hour after which the day's decision is out
 
 
@@ -119,6 +120,9 @@ def fetch_series_map(rep, now):
             ids.append(p["yoy_id"])
     if rep["source"] == "bls":
         return C.bls_series(ids, now.year - 2, now.year)
+    if rep["source"] == "umich":
+        series, prelim = C.umich_csv()
+        return {i: series for i in ids} | {PRELIM_KEY: prelim}
     return {i: C.fred_csv(i) for i in ids}
 
 
@@ -203,10 +207,18 @@ def collect_series(domain, rep, now, rstate, seed):
     smap = fetch_series_map(rep, now)
     ref_d, metrics, prior = compute_series_report(rep, smap)
     ref = C.ref_period(ref_d, rep["freq"])
+    vintage = None
+    if PRELIM_KEY in smap:
+        vintage = "prelim" if ref_d in smap[PRELIM_KEY] else "final"
     last = rstate.get("last_ref")
-    if last is not None and ref <= last:
+    # a preliminary print is logged at once; its final reading comes back as a new release
+    final_of_prelim = ref == last and vintage == "final" and rstate.get("last_vintage") == "prelim"
+    if last is not None and ref <= last and not final_of_prelim:
         return None
     rec = _new_release(domain, rep, ref, now, metrics=metrics, prior=prior)
+    if vintage:
+        rec["vintage"] = vintage
+        rec["name"] = f"{rep['name']} ({'preliminary' if vintage == 'prelim' else 'final'})"
     if seed:
         rec["status"] = "baseline"
     return rec
@@ -364,10 +376,18 @@ def run(domain_filter=None, seed=False, dry_run=False, now=None):
                     continue
                 path = release_path(domain["id"], rep["id"], rec["ref"])
                 if not dry_run:
+                    old = C.load_json(path) if path.exists() else None
+                    if old and old.get("vintage") == "prelim" and rec.get("vintage") == "final":
+                        # final replaces the preliminary print; keep what was logged for it
+                        rec["preliminary"] = {k: old.get(k) for k in
+                                              ("metrics", "detected_at", "consensus", "consensus_source", "read")}
+                        old = None
                     # a seeded web report has no figures yet: keep only the dedup baseline
-                    if not path.exists() and not (seed and t == "web"):
+                    if old is None and not (seed and t == "web"):
                         C.save_json(path, rec)
                     rstate["last_ref"] = rec["ref"]
+                    if rec.get("vintage"):
+                        rstate["last_vintage"] = rec["vintage"]
                     if not seed:
                         _queue(pending, {
                             "domain": domain["id"], "report": rep["id"], "ref": rec["ref"],

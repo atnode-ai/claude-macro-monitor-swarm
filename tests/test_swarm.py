@@ -171,6 +171,59 @@ class PipelineTests(TempData):
             C.ROOT = orig_root
 
 
+UMICH_CSV = (",,,THE INDEX OF CONSUMER SENTIMENT,,,\r\n,,,,,,\r\n"
+             "DATE OF SURVEY,,,,INDEX OF CONSUMER SENTIMENT,,\r\n,,,,,,\r\n"
+             "August,2026,,,51.7,,\r\nSeptember,2026,,,48.1,,\r\n{oct}\r\n,,,,,,\r\n")
+
+
+class UMichTests(TempData):
+    def test_parse_marks_preliminary(self):
+        rows, prelim = C.umich_csv(UMICH_CSV.format(oct="October (P),2026,,,46.3,,"))
+        self.assertEqual(rows[-1], (date(2026, 10, 1), 46.3))
+        self.assertEqual(prelim, {date(2026, 10, 1)})
+        self.assertEqual(len(rows), 3)
+
+    def _umich_new(self, text, now):
+        return [n for n in self._run(text, now)["new"] if n["report"] == "umich"]
+
+    def _run(self, text, now):
+        orig, root = C.umich_csv, C.ROOT
+        C.umich_csv, C.ROOT = (lambda: orig(text)), self.tmp
+        try:
+            out = E.run(domain_filter="sentiment", now=C.now_et(now))
+        finally:
+            C.umich_csv, C.ROOT = orig, root
+        self.assertEqual(out["errors"], [])
+        return out
+
+    def test_preliminary_then_final(self):
+        C.save_json(E.STATE, {"reports": {"umich": {"last_ref": "2026-08"}}, "collectors": {}})
+        out = self._run(UMICH_CSV.format(oct="October (P),2026,,,46.3,,"), "2026-10-09 11:00")
+        self.assertIn({"report": "umich", "ref": "2026-10", "status": "pending_analysis"}, out["new"])
+        path = E.release_path("sentiment", "umich", "2026-10")
+        rec = C.load_json(path)
+        self.assertEqual(rec["vintage"], "prelim")
+        self.assertEqual(rec["metrics"], {"sentiment.level": 46.3, "sentiment.diff": -1.8})
+        self.assertIn("preliminary", rec["name"])
+        # unchanged preliminary: nothing new
+        self.assertEqual(self._umich_new(UMICH_CSV.format(oct="October (P),2026,,,46.3,,"), "2026-10-12 11:00"), [])
+        # final reading replaces it and is queued again
+        rec["read"] = "prelim read"
+        C.save_json(path, rec)
+        pend = C.load_json(E.PENDING)
+        pend["items"] = []
+        C.save_json(E.PENDING, pend)
+        out = self._run(UMICH_CSV.format(oct="October,2026,,,47.0,,"), "2026-10-23 11:00")
+        self.assertEqual([n["ref"] for n in out["new"] if n["report"] == "umich"], ["2026-10"])
+        rec = C.load_json(path)
+        self.assertEqual(rec["vintage"], "final")
+        self.assertEqual(rec["metrics"]["sentiment.level"], 47.0)
+        self.assertEqual(rec["preliminary"]["metrics"]["sentiment.level"], 46.3)
+        self.assertEqual(rec["preliminary"]["read"], "prelim read")
+        self.assertEqual([i["ref"] for i in C.load_json(E.PENDING)["items"] if i["report"] == "umich"], ["2026-10"])
+        self.assertEqual(self._umich_new(UMICH_CSV.format(oct="October,2026,,,47.0,,"), "2026-10-26 11:00"), [])
+
+
 class AlertGateTests(unittest.TestCase):
     def test_threshold(self):
         from tools.alert_gate import evaluate

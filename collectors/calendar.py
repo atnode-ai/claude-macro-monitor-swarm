@@ -118,19 +118,20 @@ def match_report(summary, reports):
 
 # Cadence rules (ET) for reports without an official machine-readable calendar.
 # Source: the Hyperagent release-calendar memory; treat as estimates.
-CADENCE = {
-    "nfp": ({"rule": "nth_weekday", "weekday": 4, "n": 1}, "08:30"),
-    "cpi": ({"rule": "day_of_month", "day": 12}, "08:30"),
-    "ppi": ({"rule": "day_of_month", "day": 13}, "08:30"),
-    "retail": ({"rule": "day_of_month", "day": 16}, "08:30"),
-    "indpro": ({"rule": "day_of_month", "day": 16}, "09:15"),
-    "starts": ({"rule": "day_of_month", "day": 17}, "08:30"),
-    "existing_home": ({"rule": "day_of_month", "day": 21}, "10:00"),
-    "new_home": ({"rule": "day_of_month", "day": 24}, "10:00"),
-    "durables": ({"rule": "day_of_month", "day": 26}, "08:30"),
-    "jolts": ({"rule": "nth_business_day", "n": 5}, "10:00"),
-    "umich": ({"rule": "nth_weekday", "weekday": 4, "n": 2}, "10:00"),
-}
+CADENCE = [  # (report, due rule, time, label for a report released twice a month)
+    ("nfp", {"rule": "nth_weekday", "weekday": 4, "n": 1}, "08:30", None),
+    ("cpi", {"rule": "day_of_month", "day": 12}, "08:30", None),
+    ("ppi", {"rule": "day_of_month", "day": 13}, "08:30", None),
+    ("retail", {"rule": "day_of_month", "day": 16}, "08:30", None),
+    ("indpro", {"rule": "day_of_month", "day": 16}, "09:15", None),
+    ("starts", {"rule": "day_of_month", "day": 17}, "08:30", None),
+    ("existing_home", {"rule": "day_of_month", "day": 21}, "10:00", None),
+    ("new_home", {"rule": "day_of_month", "day": 24}, "10:00", None),
+    ("durables", {"rule": "day_of_month", "day": 26}, "08:30", None),
+    ("jolts", {"rule": "nth_business_day", "n": 5}, "10:00", None),
+    ("umich", {"rule": "nth_weekday", "weekday": 4, "n": 2}, "10:00", "preliminary"),
+    ("umich", {"rule": "nth_weekday", "weekday": 4, "n": 4}, "10:00", "final"),
+]
 
 
 def build(now):
@@ -192,11 +193,12 @@ def build(now):
     # cadence estimates and web-report due dates for this month and next
     for mo in (0, 1):
         m0 = C.add_months(date(today.year, today.month, 1), mo)
-        for rid, (rule, t) in CADENCE.items():
+        for rid, rule, t, label in CADENCE:
             if (rid, m0.isoformat()[:7]) in covered_reports_month:
                 continue
             d = due_date(rule, m0.year, m0.month)
-            events.append({"date": d.isoformat(), "time_et": t, "report": rid, "name": reports[rid]["name"],
+            name = reports[rid]["name"] + (f" ({label})" if label else "")
+            events.append({"date": d.isoformat(), "time_et": t, "report": rid, "name": name,
                            "source": "estimate"})
         for rid, rep in reports.items():
             if rep.get("type") == "web" and rep.get("due_rule"):

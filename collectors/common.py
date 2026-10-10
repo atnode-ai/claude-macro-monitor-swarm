@@ -130,6 +130,41 @@ def fred_csv(series_id, text=None, years=4):
     return rows
 
 
+MONTHS = {m: i for i, m in enumerate(("january", "february", "march", "april", "may", "june", "july",
+                                       "august", "september", "october", "november", "december"), 1)}
+
+
+def umich_csv(text=None):
+    """University of Michigan Index of Consumer Sentiment from the survey's own
+    table (FRED's UMCSENT is delayed by one month at the source's request).
+    -> ([(date, float)] ascending, {dates still preliminary}). Rows look like
+    'October (P),2026,,,46.3'; '(P)' marks the preliminary reading."""
+    if text is None:
+        text = http_get("https://www.sca.isr.umich.edu/files/tbcics.csv", timeout=30, browser_ua=False)
+    rows, prelim, col = [], set(), None
+    for rec in csv.reader(io.StringIO(text)):
+        if col is None:
+            col = next((i for i, c in enumerate(rec) if "INDEX OF CONSUMER SENTIMENT" in c.upper()
+                        and any(x.strip().upper() == "DATE OF SURVEY" for x in rec)), None)
+            continue
+        if len(rec) <= col:
+            continue
+        label = rec[0].strip()
+        month = MONTHS.get(label.split()[0].lower()) if label else None
+        if not month:
+            continue
+        try:
+            d, v = date(int(rec[1]), month, 1), float(rec[col])
+        except ValueError:
+            continue
+        rows.append((d, v))
+        if "(P)" in label.upper():
+            prelim.add(d)
+    if col is None:
+        raise RuntimeError("UMich table: header row not found")
+    return sorted(rows), prelim
+
+
 def bls_series(series_ids, start_year, end_year, payload_override=None):
     """{series_id: [(date, float)] ascending} from the BLS public API v2."""
     payload = {"seriesid": list(series_ids), "startyear": str(start_year), "endyear": str(end_year)}

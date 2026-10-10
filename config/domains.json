@@ -472,14 +472,14 @@
       "reports": [
         {
           "id": "umich",
-          "name": "UMich Consumer Sentiment (final)",
+          "name": "UMich Consumer Sentiment",
           "type": "series",
           "freq": "monthly",
           "tier": 3,
-          "source": "fred",
+          "source": "umich",
           "parts": {
             "sentiment": {
-              "id": "UMCSENT",
+              "id": "ICS",
               "transforms": [
                 "level",
                 "diff"
