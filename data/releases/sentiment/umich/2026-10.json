@@ -1,0 +1,25 @@
+{
+  "domain": "sentiment",
+  "report": "umich",
+  "name": "UMich Consumer Sentiment (preliminary)",
+  "ref": "2026-10",
+  "tier": 3,
+  "detected_at": "2026-10-10 16:54 ET",
+  "source": "umich",
+  "source_url": "https://www.sca.isr.umich.edu/",
+  "metrics": {
+    "sentiment.level": 46.3,
+    "sentiment.diff": -1.8
+  },
+  "prior": {
+    "sentiment.level": 48.1,
+    "sentiment.diff": -3.6
+  },
+  "verified": true,
+  "consensus": null,
+  "consensus_source": null,
+  "surprise": null,
+  "read": null,
+  "status": "pending_analysis",
+  "vintage": "prelim"
+}

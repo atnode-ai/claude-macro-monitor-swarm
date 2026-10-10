@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-10 16:29 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-10 16:54 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -56,10 +56,11 @@ _Rendered 2026-10-10 16:29 ET from data/. Do not edit by hand; edit data/ or rer
 
 ## Sentiment & Surveys
 
-**Tracks:** UMich Consumer Sentiment (final), Conference Board Consumer Confidence, German Ifo Business Climate
+**Tracks:** UMich Consumer Sentiment, Conference Board Consumer Confidence, German Ifo Business Climate
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
+| **UMich Consumer Sentiment (preliminary)** | 2026-10 | sentiment 46.3; sentiment -1.8 chg | sentiment 48.1; sentiment -3.6 chg |  |  | _pending analysis_ [source](https://www.sca.isr.umich.edu/) |
 | **UMich Consumer Sentiment (final)** | 2026-08 | sentiment 51.7; sentiment -3.5 chg | sentiment 55.2; sentiment +5.7 chg |  |  | _baseline (pre-migration)_ [source](https://www.sca.isr.umich.edu/) |
 
 **Current stance:** _not set yet_
@@ -120,10 +121,10 @@ A thin week. The only new release was weekly jobless claims: initial claims fell
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-09 20:04 ET | -3.6 | ok |
-| Labor | 2026-10-09 20:04 ET | -3.6 | ok |
-| Growth & Activity | 2026-10-09 20:04 ET | -3.6 | ok |
-| Housing | 2026-10-09 20:04 ET | -3.6 | ok |
-| Sentiment & Surveys | 2026-10-09 20:04 ET | -3.6 | ok |
-| Central Banks & Policy | 2026-10-09 20:04 ET | -3.6 | ok |
-| Financial Conditions & Markets | 2026-10-09 20:04 ET | -3.6 | ok |
+| Inflation | 2026-10-10 16:54 ET | 0.0 | ok |
+| Labor | 2026-10-10 16:54 ET | 0.0 | ok |
+| Growth & Activity | 2026-10-10 16:54 ET | 0.0 | ok |
+| Housing | 2026-10-10 16:54 ET | 0.0 | ok |
+| Sentiment & Surveys | 2026-10-10 16:54 ET | 0.0 | ok |
+| Central Banks & Policy | 2026-10-10 16:54 ET | 0.0 | ok |
+| Financial Conditions & Markets | 2026-10-10 16:54 ET | 0.0 | ok |
