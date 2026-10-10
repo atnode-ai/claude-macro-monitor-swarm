@@ -250,6 +250,22 @@ class AuditTests(TempData):
         self.assertTrue(any("is a Fri" in t for t in texts))     # 21 Aug 2026 is a Friday
         self.assertFalse(any("Tue 13 Oct" in i["text"] for i in issues if i["type"] == "date"))
 
+    def test_spread_must_match_its_legs(self):
+        from tools.synthesis import audit
+        C.save_json(C.DATA / "markets_latest.json", {"series": {
+            "ust_10y": {"level": 5.28, "date": "2026-10-07"}, "ust_2y": {"level": 4.77, "date": "2026-10-07"},
+            "curve_10y2y": {"level": 0.47, "date": "2026-10-08"}}})
+        body = "The 2y yield fell to 4.77% while the 10y held near 5.28%, so the 10y-2y curve is positive at 0.47."
+        draft = {"narrative": [{"title": "x", "body": body}], "week_ahead": [], "kpis": []}
+        issues = [i for i in audit(draft, C.now_et("2026-10-09 17:00"))["issues"] if i["type"] == "arithmetic"]
+        self.assertEqual(len(issues), 1)
+        self.assertIn("is 0.51, not 0.47", issues[0]["problem"])
+        # quoting only the spread, or only the legs, is fine
+        for text in ("The 10y-2y curve is positive at 0.47.", "The 2y is 4.77% and the 10y 5.28%."):
+            draft["narrative"][0]["body"] = text
+            self.assertFalse([i for i in audit(draft, C.now_et("2026-10-09 17:00"))["issues"]
+                              if i["type"] == "arithmetic"])
+
 
 if __name__ == "__main__":
     unittest.main()

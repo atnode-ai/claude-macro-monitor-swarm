@@ -67,7 +67,7 @@ def digest(now=None):
         "unanalysed_pending": [{"report": p["report"], "ref": p["ref"]} for p in pend],
         "domains": domains,
         "markets": {k: {"level": v["level"], "chg_5d": next((x for kk, x in v.items() if kk.startswith("chg_") and kk != "chg_1d"), None),
-                        "unit": v.get("unit")} for k, v in (m.get("series") or {}).items()},
+                        "unit": v.get("unit"), "date": v.get("date")} for k, v in (m.get("series") or {}).items()},
         "next_week_calendar": ahead,
         "prior_synthesis": None if not prior else {k: prior.get(k) for k in ("week", "regime", "regime_watch")},
         "kpi_refs_help": "kpis[].ref = '<domain>/<report>/<ref>:<metric_key>' or 'markets:<series>'",
@@ -96,6 +96,35 @@ DATE_RE = re.compile(r"\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*\.?,?\s+(\d{1,2})\s+
                      r"|\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*\.?,?\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{1,2})\b")
 MON = {m: i for i, m in enumerate(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], 1)}
 NUM_RE = re.compile(r"(?<![\w.])[-+]?\d+(?:\.\d+)?(?=\s?(?:%|pp|bp|k\b))")
+ANY_NUM_RE = re.compile(r"(?<![\w.])-?\d+(?:\.\d+)?")
+# market series that are, by definition, the difference of two others (FRED: T10Y2Y = DGS10 - DGS2, ...)
+SPREADS = {
+    "curve_10y2y": ("ust_10y", "ust_2y", "10y-2y spread"),
+    "curve_10y3m": ("ust_10y", "ust_3m", "10y-3m spread"),
+    "be_10y": ("ust_10y", "real_10y", "10y breakeven"),
+}
+SPREAD_TOL = 0.015  # levels are rounded to 2 decimals
+
+
+def _spread_issues(blob):
+    """Flag text that quotes a spread together with both legs when they don't
+    reconcile, usually because the series carry different observation dates."""
+    series = (C.load_json(C.DATA / "markets_latest.json", {}).get("series") or {})
+    quoted = {round(float(x), 2) for x in ANY_NUM_RE.findall(blob)}
+    issues = []
+    for sid, (a, b, label) in SPREADS.items():
+        s, sa, sb = series.get(sid), series.get(a), series.get(b)
+        if not (s and sa and sb):
+            continue
+        if not all(round(x["level"], 2) in quoted for x in (s, sa, sb)):
+            continue
+        implied = sa["level"] - sb["level"]
+        if abs(implied - s["level"]) > SPREAD_TOL:
+            issues.append({"type": "arithmetic", "text": f"{label} {s['level']:.2f}",
+                           "problem": f"{a} {sa['level']:.2f} minus {b} {sb['level']:.2f} is {implied:.2f}, not "
+                                      f"{s['level']:.2f} (dated {sa.get('date')} / {sb.get('date')} vs {s.get('date')}); "
+                                      f"quote the spread or the two legs, not both"})
+    return issues
 
 
 def _known_numbers():
@@ -154,7 +183,9 @@ def audit(draft, now=None):
     if unknown:
         issues.append({"type": "figure", "text": ", ".join(sorted(set(unknown))[:20]),
                        "problem": "figures not found in data/ (check or remove)"})
-    # 4. KPI refs resolve
+    # 4. a quoted spread must equal the quoted legs
+    issues += _spread_issues(blob)
+    # 5. KPI refs resolve
     for k in draft.get("kpis", []):
         if resolve_ref(k.get("ref", "")) is None:
             issues.append({"type": "kpi", "text": k.get("ref"), "problem": "ref does not resolve"})
