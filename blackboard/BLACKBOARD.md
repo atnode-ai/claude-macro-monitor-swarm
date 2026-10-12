@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-10 16:57 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-12 17:34 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -104,7 +104,7 @@ _Rendered 2026-10-10 16:57 ET from data/. Do not edit by hand; edit data/ or rer
 | be_10y | 2.33 | -2 | -3 | bp |
 | real_10y | 2.87 | -5 | -1 | bp |
 | sofr | 3.87 | -1 | +0 | bp |
-| vix | 15.41 | +0 | -1 | pts |
+| vix | 14.84 | -1 | -0 | pts |
 | usd_broad | 121.38 | -0 | +1 | pts |
 
 ## Macro Synthesis
@@ -121,10 +121,10 @@ A thin week. The only new release was weekly jobless claims: initial claims fell
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-10 16:54 ET | 0.1 | ok |
-| Labor | 2026-10-10 16:54 ET | 0.1 | ok |
-| Growth & Activity | 2026-10-10 16:54 ET | 0.1 | ok |
-| Housing | 2026-10-10 16:54 ET | 0.1 | ok |
-| Sentiment & Surveys | 2026-10-10 16:54 ET | 0.1 | ok |
-| Central Banks & Policy | 2026-10-10 16:54 ET | 0.1 | ok |
-| Financial Conditions & Markets | 2026-10-10 16:54 ET | 0.1 | ok |
+| Inflation | 2026-10-12 17:34 ET | 0.0 | ok |
+| Labor | 2026-10-12 17:34 ET | 0.0 | ok |
+| Growth & Activity | 2026-10-12 17:34 ET | 0.0 | ok |
+| Housing | 2026-10-12 17:34 ET | 0.0 | ok |
+| Sentiment & Surveys | 2026-10-12 17:34 ET | 0.0 | ok |
+| Central Banks & Policy | 2026-10-12 17:34 ET | 0.0 | ok |
+| Financial Conditions & Markets | 2026-10-12 17:34 ET | 0.0 | ok |
