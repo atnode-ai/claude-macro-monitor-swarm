@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-13 15:45 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-13 16:21 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -94,19 +94,19 @@ _Rendered 2026-10-13 15:45 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Series | Level | 1d | 5d | Unit |
 |---|---|---|---|---|
-| ust_10y | 5.22 | -6 | -2 | bp |
+| ust_10y | 5.24 | +2 | -4 | bp |
 | ust_2y | 4.75 | -2 | -3 | bp |
-| ust_3m | 4.23 | +1 | +6 | bp |
+| ust_3m | 4.25 | +2 | +6 | bp |
 | curve_10y2y | 0.44 | -3 | -1 | bp |
 | curve_10y3m | 0.99 | +0 | -10 | bp |
 | hy_oas | 3.11 | +0 | -1 | bp |
 | ig_oas | 0.83 | +0 | -1 | bp |
 | be_5y5y | 2.32 | -1 | -3 | bp |
 | be_10y | 2.33 | -2 | -3 | bp |
-| real_10y | 2.87 | -5 | -1 | bp |
+| real_10y | 2.91 | +4 | -1 | bp |
 | sofr | 3.87 | +0 | -1 | bp |
 | vix | 15.21 | +0 | -0 | pts |
-| usd_broad | 121.38 | -0 | +1 | pts |
+| usd_broad | 121.60 | +0 | +0 | pts |
 
 ## Macro Synthesis
 
@@ -122,10 +122,10 @@ A thin week. The only new release was weekly jobless claims: initial claims fell
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-13 15:45 ET | 0.0 | ok |
-| Labor | 2026-10-13 15:45 ET | 0.0 | ok |
-| Growth & Activity | 2026-10-13 15:45 ET | 0.0 | ok |
-| Housing | 2026-10-13 15:45 ET | 0.0 | ok |
-| Sentiment & Surveys | 2026-10-13 15:45 ET | 0.0 | ok |
-| Central Banks & Policy | 2026-10-13 15:45 ET | 0.0 | ok |
-| Financial Conditions & Markets | 2026-10-13 15:45 ET | 0.0 | ok |
+| Inflation | 2026-10-13 16:21 ET | 0.0 | ok |
+| Labor | 2026-10-13 16:21 ET | 0.0 | ok |
+| Growth & Activity | 2026-10-13 16:21 ET | 0.0 | ok |
+| Housing | 2026-10-13 16:21 ET | 0.0 | ok |
+| Sentiment & Surveys | 2026-10-13 16:21 ET | 0.0 | ok |
+| Central Banks & Policy | 2026-10-13 16:21 ET | 0.0 | ok |
+| Financial Conditions & Markets | 2026-10-13 16:21 ET | 0.0 | ok |
