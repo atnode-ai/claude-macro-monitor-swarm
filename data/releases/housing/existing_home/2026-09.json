@@ -17,8 +17,18 @@
   },
   "verified": true,
   "consensus": null,
-  "consensus_source": null,
+  "consensus_source": "No September 2026 consensus found in a targeted search",
   "surprise": null,
-  "read": null,
-  "status": "pending_analysis"
+  "read": "Existing home sales rose 1.5% m/m to 3.99M SAAR from 3.93M, a partial rebound after a 3.2% drop. Consensus unconfirmed. Closings lag contracts, so this shows past affordability strain, still a low level.",
+  "status": "analysed",
+  "fields": null,
+  "sources": [],
+  "alert": {
+    "alert": false,
+    "material": false,
+    "reasons": [
+      "no consensus available; surprise not assessed"
+    ]
+  },
+  "analysed_at": "2026-10-13 17:08 ET"
 }

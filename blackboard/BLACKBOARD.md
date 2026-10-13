@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-13 16:21 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-13 17:08 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -48,12 +48,12 @@ _Rendered 2026-10-13 16:21 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
-| **Existing Home Sales** | 2026-09 | sales 3.99m; sales +1.5% m/m | sales 3.93m; sales -3.2% m/m |  |  | _pending analysis_ [source](https://www.nar.realtor/research-and-statistics/housing-statistics/existing-home-sales) |
+| **Existing Home Sales** | 2026-09 | sales 3.99m; sales +1.5% m/m | sales 3.93m; sales -3.2% m/m | unconfirmed |  | Existing home sales rose 1.5% m/m to 3.99M SAAR from 3.93M, a partial rebound after a 3.2% drop. Consensus unconfirmed. Closings lag contracts, so this shows past affordability strain, still a low level. [source](https://www.nar.realtor/research-and-statistics/housing-statistics/existing-home-sales) |
 | **Housing Starts & Building Permits** | 2026-08 | starts 1,275k; starts -2.6% m/m; permits 1,403k; permits -2.1% m/m | starts 1,309k; starts -9.0% m/m; permits 1,433k; permits +4.3% m/m |  |  | _baseline (pre-migration)_ [source](https://www.census.gov/construction/nrc/index.html) |
 | **New Home Sales** | 2026-08 | sales 684k; sales +6.4% m/m | sales 643k; sales -4.3% m/m |  |  | _baseline (pre-migration)_ [source](https://www.census.gov/construction/nrs/index.html) |
 | **Existing Home Sales** | 2026-08 | sales 3.98m; sales -2.0% m/m | sales 4.06m; sales -1.7% m/m |  |  | _baseline (pre-migration)_ [source](https://www.nar.realtor/research-and-statistics/housing-statistics/existing-home-sales) |
 
-**Current stance:** _not set yet_
+**Current stance:** Housing is weak but stabilising. Existing sales at 3.99M SAAR, up 1.5% after a 3.2% drop, stay near cycle lows. Closings lag, so the print says little about direction. No consensus was found, so beat or miss is unconfirmed. Watch permits and new home sales for a turn, and mortgage rates for affordability. A move above 4.1M would suggest recovery. _(updated 2026-10-13 17:08 ET)_
 
 ## Sentiment & Surveys
 
@@ -122,10 +122,10 @@ A thin week. The only new release was weekly jobless claims: initial claims fell
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-13 16:21 ET | 0.0 | ok |
-| Labor | 2026-10-13 16:21 ET | 0.0 | ok |
-| Growth & Activity | 2026-10-13 16:21 ET | 0.0 | ok |
-| Housing | 2026-10-13 16:21 ET | 0.0 | ok |
-| Sentiment & Surveys | 2026-10-13 16:21 ET | 0.0 | ok |
-| Central Banks & Policy | 2026-10-13 16:21 ET | 0.0 | ok |
-| Financial Conditions & Markets | 2026-10-13 16:21 ET | 0.0 | ok |
+| Inflation | 2026-10-13 16:21 ET | 0.8 | ok |
+| Labor | 2026-10-13 16:21 ET | 0.8 | ok |
+| Growth & Activity | 2026-10-13 16:21 ET | 0.8 | ok |
+| Housing | 2026-10-13 16:21 ET | 0.8 | ok |
+| Sentiment & Surveys | 2026-10-13 16:21 ET | 0.8 | ok |
+| Central Banks & Policy | 2026-10-13 16:21 ET | 0.8 | ok |
+| Financial Conditions & Markets | 2026-10-13 16:21 ET | 0.8 | ok |
