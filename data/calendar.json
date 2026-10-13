@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12 22:03 ET",
+  "generated_at": "2026-10-13 15:45 ET",
   "cb_meetings": {
     "fed": [
       "2021-01-27",
@@ -98,14 +98,6 @@
     ]
   },
   "events": [
-    {
-      "date": "2026-10-05",
-      "time_et": null,
-      "report": "ism_services",
-      "name": "ISM Services PMI",
-      "source": "estimate",
-      "weekday": "Mon"
-    },
     {
       "date": "2026-10-06",
       "time_et": "08:30",
@@ -495,6 +487,14 @@
       "name": "Durable Goods",
       "source": "estimate",
       "weekday": "Thu"
+    },
+    {
+      "date": "2026-11-27",
+      "time_et": "10:00",
+      "report": "umich",
+      "name": "UMich Consumer Sentiment (final)",
+      "source": "estimate",
+      "weekday": "Fri"
     }
   ],
   "errors": []

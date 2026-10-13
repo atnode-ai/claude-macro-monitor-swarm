@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-12 22:03 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-13 15:45 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -48,6 +48,7 @@ _Rendered 2026-10-12 22:03 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
+| **Existing Home Sales** | 2026-09 | sales 3.99m; sales +1.5% m/m | sales 3.93m; sales -3.2% m/m |  |  | _pending analysis_ [source](https://www.nar.realtor/research-and-statistics/housing-statistics/existing-home-sales) |
 | **Housing Starts & Building Permits** | 2026-08 | starts 1,275k; starts -2.6% m/m; permits 1,403k; permits -2.1% m/m | starts 1,309k; starts -9.0% m/m; permits 1,433k; permits +4.3% m/m |  |  | _baseline (pre-migration)_ [source](https://www.census.gov/construction/nrc/index.html) |
 | **New Home Sales** | 2026-08 | sales 684k; sales +6.4% m/m | sales 643k; sales -4.3% m/m |  |  | _baseline (pre-migration)_ [source](https://www.census.gov/construction/nrs/index.html) |
 | **Existing Home Sales** | 2026-08 | sales 3.98m; sales -2.0% m/m | sales 4.06m; sales -1.7% m/m |  |  | _baseline (pre-migration)_ [source](https://www.nar.realtor/research-and-statistics/housing-statistics/existing-home-sales) |
@@ -89,7 +90,7 @@ _Rendered 2026-10-12 22:03 ET from data/. Do not edit by hand; edit data/ or rer
 
 **Current stance:** _not set yet_
 
-**Latest market levels** (as of 2026-10-09):
+**Latest market levels** (as of 2026-10-12):
 
 | Series | Level | 1d | 5d | Unit |
 |---|---|---|---|---|
@@ -98,13 +99,13 @@ _Rendered 2026-10-12 22:03 ET from data/. Do not edit by hand; edit data/ or rer
 | ust_3m | 4.23 | +1 | +6 | bp |
 | curve_10y2y | 0.44 | -3 | -1 | bp |
 | curve_10y3m | 0.99 | +0 | -10 | bp |
-| hy_oas | 3.15 | +6 | -9 | bp |
-| ig_oas | 0.82 | +0 | -4 | bp |
+| hy_oas | 3.11 | +0 | -1 | bp |
+| ig_oas | 0.83 | +0 | -1 | bp |
 | be_5y5y | 2.32 | -1 | -3 | bp |
 | be_10y | 2.33 | -2 | -3 | bp |
 | real_10y | 2.87 | -5 | -1 | bp |
-| sofr | 3.87 | -1 | +0 | bp |
-| vix | 14.84 | -1 | -0 | pts |
+| sofr | 3.87 | +0 | -1 | bp |
+| vix | 15.21 | +0 | -0 | pts |
 | usd_broad | 121.38 | -0 | +1 | pts |
 
 ## Macro Synthesis
@@ -121,10 +122,10 @@ A thin week. The only new release was weekly jobless claims: initial claims fell
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-12 22:03 ET | 0.0 | ok |
-| Labor | 2026-10-12 22:03 ET | 0.0 | ok |
-| Growth & Activity | 2026-10-12 22:03 ET | 0.0 | ok |
-| Housing | 2026-10-12 22:03 ET | 0.0 | ok |
-| Sentiment & Surveys | 2026-10-12 22:03 ET | 0.0 | ok |
-| Central Banks & Policy | 2026-10-12 22:03 ET | 0.0 | ok |
-| Financial Conditions & Markets | 2026-10-12 22:03 ET | 0.0 | ok |
+| Inflation | 2026-10-13 15:45 ET | 0.0 | ok |
+| Labor | 2026-10-13 15:45 ET | 0.0 | ok |
+| Growth & Activity | 2026-10-13 15:45 ET | 0.0 | ok |
+| Housing | 2026-10-13 15:45 ET | 0.0 | ok |
+| Sentiment & Surveys | 2026-10-13 15:45 ET | 0.0 | ok |
+| Central Banks & Policy | 2026-10-13 15:45 ET | 0.0 | ok |
+| Financial Conditions & Markets | 2026-10-13 15:45 ET | 0.0 | ok |
