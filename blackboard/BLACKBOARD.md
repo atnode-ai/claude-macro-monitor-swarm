@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-13 19:45 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-14 13:47 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -8,6 +8,7 @@ _Rendered 2026-10-13 19:45 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
+| **CPI** | 2026-09 | headline +0.6% m/m; headline 3.7% y/y; core +0.3% m/m; core 2.6% y/y | headline +0.4% m/m; headline 3.4% y/y; core +0.3% m/m; core 2.4% y/y |  |  | _pending analysis_ [source](https://www.bls.gov/news.release/cpi.htm) |
 | **PPI** | 2026-08 | headline +0.4% m/m; headline 5.4% y/y; core +0.2% m/m; core 4.6% y/y | headline +0.1% m/m; headline 4.8% y/y; core +0.3% m/m; core 4.3% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bls.gov/news.release/ppi.htm) |
 | **PCE price index** | 2026-08 | headline +0.3% m/m; headline 3.4% y/y; core +0.2% m/m; core 3.0% y/y | headline +0.1% m/m; headline 3.4% y/y; core +0.1% m/m; core 3.0% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bea.gov/data/income-saving/personal-income) |
 | **CPI** | 2026-08 | headline +0.4% m/m; headline 3.4% y/y; core +0.3% m/m; core 2.4% y/y | headline +0.1% m/m; headline 3.4% y/y; core +0.2% m/m; core 2.5% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bls.gov/news.release/cpi.htm) |
@@ -99,13 +100,13 @@ _Rendered 2026-10-13 19:45 ET from data/. Do not edit by hand; edit data/ or rer
 | ust_3m | 4.25 | +2 | +6 | bp |
 | curve_10y2y | 0.42 | -2 | -5 | bp |
 | curve_10y3m | 0.95 | -4 | -14 | bp |
-| hy_oas | 3.11 | +0 | -1 | bp |
-| ig_oas | 0.83 | +0 | -1 | bp |
+| hy_oas | 3.16 | +5 | +13 | bp |
+| ig_oas | 0.83 | +0 | +0 | bp |
 | be_5y5y | 2.33 | +1 | -3 | bp |
 | be_10y | 2.33 | +0 | -3 | bp |
 | real_10y | 2.91 | +4 | -1 | bp |
-| sofr | 3.87 | +0 | -1 | bp |
-| vix | 15.21 | +0 | -0 | pts |
+| sofr | 3.89 | +2 | +0 | bp |
+| vix | 15.27 | +0 | +0 | pts |
 | usd_broad | 121.60 | +0 | +0 | pts |
 
 ## Macro Synthesis
@@ -122,10 +123,10 @@ A thin week. The only new release was weekly jobless claims: initial claims fell
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-13 19:44 ET | 0.0 | ok |
-| Labor | 2026-10-13 19:44 ET | 0.0 | ok |
-| Growth & Activity | 2026-10-13 19:44 ET | 0.0 | ok |
-| Housing | 2026-10-13 19:44 ET | 0.0 | ok |
-| Sentiment & Surveys | 2026-10-13 19:44 ET | 0.0 | ok |
-| Central Banks & Policy | 2026-10-13 19:44 ET | 0.0 | ok |
-| Financial Conditions & Markets | 2026-10-13 19:44 ET | 0.0 | ok |
+| Inflation | 2026-10-14 13:47 ET | 0.0 | ok |
+| Labor | 2026-10-14 13:47 ET | 0.0 | ok |
+| Growth & Activity | 2026-10-14 13:47 ET | 0.0 | ok |
+| Housing | 2026-10-14 13:47 ET | 0.0 | ok |
+| Sentiment & Surveys | 2026-10-14 13:47 ET | 0.0 | ok |
+| Central Banks & Policy | 2026-10-14 13:47 ET | 0.0 | ok |
+| Financial Conditions & Markets | 2026-10-14 13:47 ET | 0.0 | ok |
