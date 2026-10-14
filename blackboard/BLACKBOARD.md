@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-14 14:53 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-14 17:08 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -8,12 +8,12 @@ _Rendered 2026-10-14 14:53 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
-| **CPI** | 2026-09 | headline +0.6% m/m; headline 3.7% y/y; core +0.3% m/m; core 2.6% y/y | headline +0.4% m/m; headline 3.4% y/y; core +0.3% m/m; core 2.4% y/y |  |  | _pending analysis_ [source](https://www.bls.gov/news.release/cpi.htm) |
+| **CPI** | 2026-09 | headline +0.6% m/m; headline 3.7% y/y; core +0.3% m/m; core 2.6% y/y | headline +0.4% m/m; headline 3.4% y/y; core +0.3% m/m; core 2.4% y/y | unconfirmed |  | Core CPI 0.335% m/m (prior 0.29%) and 2.564% y/y (prior 2.446%) is hot against TD's 0.20% forecast (single bank, unconfirmed). Headline 3.738% y/y, up from 3.397%, in line with ~3.7% previews. Hawkish for cuts. [source](https://www.bls.gov/news.release/cpi.htm) |
 | **PPI** | 2026-08 | headline +0.4% m/m; headline 5.4% y/y; core +0.2% m/m; core 4.6% y/y | headline +0.1% m/m; headline 4.8% y/y; core +0.3% m/m; core 4.3% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bls.gov/news.release/ppi.htm) |
 | **PCE price index** | 2026-08 | headline +0.3% m/m; headline 3.4% y/y; core +0.2% m/m; core 3.0% y/y | headline +0.1% m/m; headline 3.4% y/y; core +0.1% m/m; core 3.0% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bea.gov/data/income-saving/personal-income) |
 | **CPI** | 2026-08 | headline +0.4% m/m; headline 3.4% y/y; core +0.3% m/m; core 2.4% y/y | headline +0.1% m/m; headline 3.4% y/y; core +0.2% m/m; core 2.5% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bls.gov/news.release/cpi.htm) |
 
-**Current stance:** _not set yet_
+**Current stance:** Inflation is re-accelerating. September headline CPI rose 0.649% m/m and 3.738% y/y (from 3.397%), driven largely by energy. Core rose 0.335% m/m and 2.564% y/y (from 2.446%), above the single-bank forecast of 0.20% m/m. Core PCE y/y at 2% remains the Fed gauge, so cut expectations face pushback. Playbook is yields up, USD up, equities down. No history yet, so treat as one print. Would soften if PPI and ISM Prices Paid cool and core m/m returns to 0.2% or below. _(updated 2026-10-14 17:08 ET)_
 
 ## Labor
 
@@ -123,10 +123,10 @@ A thin week. The only new release was weekly jobless claims: initial claims fell
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-14 14:53 ET | 0.0 | ok |
-| Labor | 2026-10-14 14:53 ET | 0.0 | ok |
-| Growth & Activity | 2026-10-14 14:53 ET | 0.0 | ok |
-| Housing | 2026-10-14 14:53 ET | 0.0 | ok |
-| Sentiment & Surveys | 2026-10-14 14:53 ET | 0.0 | ok |
-| Central Banks & Policy | 2026-10-14 14:53 ET | 0.0 | ok |
-| Financial Conditions & Markets | 2026-10-14 14:53 ET | 0.0 | ok |
+| Inflation | 2026-10-14 14:53 ET | 2.3 | ok |
+| Labor | 2026-10-14 14:53 ET | 2.3 | ok |
+| Growth & Activity | 2026-10-14 14:53 ET | 2.3 | ok |
+| Housing | 2026-10-14 14:53 ET | 2.3 | ok |
+| Sentiment & Surveys | 2026-10-14 14:53 ET | 2.3 | ok |
+| Central Banks & Policy | 2026-10-14 14:53 ET | 2.3 | ok |
+| Financial Conditions & Markets | 2026-10-14 14:53 ET | 2.3 | ok |

@@ -21,8 +21,19 @@
   },
   "verified": true,
   "consensus": null,
-  "consensus_source": null,
+  "consensus_source": "No Reuters/Bloomberg/Dow Jones poll found. Only single-bank previews (TD Securities core m/m 0.20%, y/y 2.4%), not recorded as consensus.",
   "surprise": null,
-  "read": null,
-  "status": "pending_analysis"
+  "read": "Core CPI 0.335% m/m (prior 0.29%) and 2.564% y/y (prior 2.446%) is hot against TD's 0.20% forecast (single bank, unconfirmed). Headline 3.738% y/y, up from 3.397%, in line with ~3.7% previews. Hawkish for cuts.",
+  "status": "analysed",
+  "fields": null,
+  "sources": [],
+  "alert": {
+    "alert": true,
+    "material": false,
+    "reasons": [
+      "tier-1 release",
+      "no consensus available; surprise not assessed"
+    ]
+  },
+  "analysed_at": "2026-10-14 17:08 ET"
 }
