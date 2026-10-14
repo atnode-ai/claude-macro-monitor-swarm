@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-14 17:08 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-14 19:16 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -91,20 +91,20 @@ _Rendered 2026-10-14 17:08 ET from data/. Do not edit by hand; edit data/ or rer
 
 **Current stance:** _not set yet_
 
-**Latest market levels** (as of 2026-10-13):
+**Latest market levels** (as of 2026-10-14):
 
 | Series | Level | 1d | 5d | Unit |
 |---|---|---|---|---|
-| ust_10y | 5.24 | +2 | -4 | bp |
-| ust_2y | 4.80 | +5 | -3 | bp |
-| ust_3m | 4.25 | +2 | +6 | bp |
-| curve_10y2y | 0.42 | -2 | -5 | bp |
-| curve_10y3m | 0.95 | -4 | -14 | bp |
+| ust_10y | 5.21 | -3 | -10 | bp |
+| ust_2y | 4.79 | -1 | -5 | bp |
+| ust_3m | 4.26 | +1 | +4 | bp |
+| curve_10y2y | 0.37 | -5 | -11 | bp |
+| curve_10y3m | 0.91 | -4 | -15 | bp |
 | hy_oas | 3.16 | +5 | +13 | bp |
 | ig_oas | 0.83 | +0 | +0 | bp |
-| be_5y5y | 2.33 | +1 | -3 | bp |
-| be_10y | 2.33 | +0 | -3 | bp |
-| real_10y | 2.91 | +4 | -1 | bp |
+| be_5y5y | 2.34 | +1 | -1 | bp |
+| be_10y | 2.35 | +2 | -1 | bp |
+| real_10y | 2.88 | -3 | -7 | bp |
 | sofr | 3.89 | +2 | +0 | bp |
 | vix | 15.27 | +0 | +0 | pts |
 | usd_broad | 121.60 | +0 | +0 | pts |
@@ -123,10 +123,10 @@ A thin week. The only new release was weekly jobless claims: initial claims fell
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-14 14:53 ET | 2.3 | ok |
-| Labor | 2026-10-14 14:53 ET | 2.3 | ok |
-| Growth & Activity | 2026-10-14 14:53 ET | 2.3 | ok |
-| Housing | 2026-10-14 14:53 ET | 2.3 | ok |
-| Sentiment & Surveys | 2026-10-14 14:53 ET | 2.3 | ok |
-| Central Banks & Policy | 2026-10-14 14:53 ET | 2.3 | ok |
-| Financial Conditions & Markets | 2026-10-14 14:53 ET | 2.3 | ok |
+| Inflation | 2026-10-14 19:16 ET | 0.0 | ok |
+| Labor | 2026-10-14 19:16 ET | 0.0 | ok |
+| Growth & Activity | 2026-10-14 19:16 ET | 0.0 | ok |
+| Housing | 2026-10-14 19:16 ET | 0.0 | ok |
+| Sentiment & Surveys | 2026-10-14 19:16 ET | 0.0 | ok |
+| Central Banks & Policy | 2026-10-14 19:16 ET | 0.0 | ok |
+| Financial Conditions & Markets | 2026-10-14 19:16 ET | 0.0 | ok |
