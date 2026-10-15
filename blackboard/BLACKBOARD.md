@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-14 19:16 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-15 13:37 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -8,6 +8,7 @@ _Rendered 2026-10-14 19:16 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
+| **PPI** | 2026-09 | headline +1.3% m/m; headline 6.3% y/y; core +0.7% m/m; core 5.0% y/y | headline +0.5% m/m; headline 5.6% y/y; core +0.2% m/m; core 4.8% y/y |  |  | _pending analysis_ [source](https://www.bls.gov/news.release/ppi.htm) |
 | **CPI** | 2026-09 | headline +0.6% m/m; headline 3.7% y/y; core +0.3% m/m; core 2.6% y/y | headline +0.4% m/m; headline 3.4% y/y; core +0.3% m/m; core 2.4% y/y | unconfirmed |  | Core CPI 0.335% m/m (prior 0.29%) and 2.564% y/y (prior 2.446%) is hot against TD's 0.20% forecast (single bank, unconfirmed). Headline 3.738% y/y, up from 3.397%, in line with ~3.7% previews. Hawkish for cuts. [source](https://www.bls.gov/news.release/cpi.htm) |
 | **PPI** | 2026-08 | headline +0.4% m/m; headline 5.4% y/y; core +0.2% m/m; core 4.6% y/y | headline +0.1% m/m; headline 4.8% y/y; core +0.3% m/m; core 4.3% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bls.gov/news.release/ppi.htm) |
 | **PCE price index** | 2026-08 | headline +0.3% m/m; headline 3.4% y/y; core +0.2% m/m; core 3.0% y/y | headline +0.1% m/m; headline 3.4% y/y; core +0.1% m/m; core 3.0% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bea.gov/data/income-saving/personal-income) |
@@ -21,6 +22,7 @@ _Rendered 2026-10-14 19:16 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
+| **Initial Jobless Claims** | 2026-10-10 | initial 199,000; initial +1,000 chg; initial 4wk 198,500; continuing 1,710,000 | initial 198,000; initial -1,000 chg; initial 4wk 198,250; continuing 1,710,000 |  |  | _pending analysis_ [source](https://www.dol.gov/ui/data.pdf) |
 | **Initial Jobless Claims** | 2026-10-03 | initial 197,000; initial -2,000 chg; initial 4wk 198,000; continuing 1,716,000 | initial 199,000; initial +1,000 chg; initial 4wk 200,500; continuing 1,716,000 | unconfirmed |  | Initial claims 197k, down 2k from 199k; 4-week average 198k (prior 200.5k); continuing 1.716M, unchanged. Low and drifting lower, no layoff signal. Consensus unconfirmed. [source](https://www.dol.gov/ui/data.pdf) |
 | **Initial Jobless Claims** | 2026-09-26 | initial 197,000; initial -1,000 chg; initial 4wk 200,000; continuing 1,701,000 | initial 198,000; initial +0.00 chg; initial 4wk 202,500; continuing 1,701,000 |  |  | _baseline (pre-migration)_ [source](https://www.dol.gov/ui/data.pdf) |
 | **Non-Farm Payrolls** | 2026-09 | payrolls +29k chg; unemployment rate 4.20%; unemployment rate +0.10pp chg; ahe +0.1% m/m; ahe 3.0% y/y | payrolls +133k chg; unemployment rate 4.10%; unemployment rate +0.00pp chg; ahe +0.3% m/m; ahe 3.1% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bls.gov/news.release/empsit.htm) |
@@ -35,6 +37,7 @@ _Rendered 2026-10-14 19:16 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
+| **Retail Sales** | 2026-09 | headline +0.8% m/m; headline 6.3% y/y; ex auto +0.7% m/m | headline +1.3% m/m; headline 5.6% y/y; ex auto +1.3% m/m |  |  | _pending analysis_ [source](https://www.census.gov/retail/index.html) |
 | **GDP (real, SAAR)** | 2026-Q2 | real gdp saar 2.20; real gdp saar -0.30 chg | real gdp saar 2.50; real gdp saar +2.3 chg |  |  | _baseline (pre-migration)_ [source](https://www.bea.gov/data/gdp/gross-domestic-product) |
 | **Trade Balance** | 2026-08 | balance -105.6 $bn; balance -12.7 $bn chg | balance -92.8 $bn; balance -21.6 $bn chg |  |  | _baseline (pre-migration)_ [source](https://www.census.gov/foreign-trade/Press-Release/current_press_release/index.html) |
 | **Retail Sales** | 2026-08 | headline +1.1% m/m; headline 5.4% y/y; ex auto +1.1% m/m | headline -0.5% m/m; headline 4.5% y/y; ex auto -0.6% m/m |  |  | _baseline (pre-migration)_ [source](https://www.census.gov/retail/index.html) |
@@ -86,6 +89,7 @@ _Rendered 2026-10-14 19:16 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
+| **Chicago Fed NFCI** | 2026-10-09 | nfci -0.50; nfci +0.01 chg; anfci -0.48; anfci +0.01 chg | nfci -0.51; nfci +0.01 chg; anfci -0.50; anfci +0.01 chg |  |  | _pending analysis_ [source](https://www.chicagofed.org/research/data/nfci/current-data) |
 | **Senior Loan Officer Survey (C&I standards)** | 2026-Q3 | ci tightening net 0.00%; ci tightening net -8.1pp chg | ci tightening net 8.10%; ci tightening net +2.8pp chg |  |  | _baseline (pre-migration)_ [source](https://www.federalreserve.gov/data/sloos.htm) |
 | **Chicago Fed NFCI** | 2026-10-02 | nfci -0.49; nfci +0.02 chg; anfci -0.50; anfci +0.02 chg | nfci -0.51; nfci +0.01 chg; anfci -0.52; anfci +0.02 chg |  |  | _baseline (pre-migration)_ [source](https://www.chicagofed.org/research/data/nfci/current-data) |
 
@@ -100,13 +104,13 @@ _Rendered 2026-10-14 19:16 ET from data/. Do not edit by hand; edit data/ or rer
 | ust_3m | 4.26 | +1 | +4 | bp |
 | curve_10y2y | 0.37 | -5 | -11 | bp |
 | curve_10y3m | 0.91 | -4 | -15 | bp |
-| hy_oas | 3.16 | +5 | +13 | bp |
-| ig_oas | 0.83 | +0 | +0 | bp |
+| hy_oas | 3.25 | +9 | +16 | bp |
+| ig_oas | 0.84 | +1 | +2 | bp |
 | be_5y5y | 2.34 | +1 | -1 | bp |
 | be_10y | 2.35 | +2 | -1 | bp |
 | real_10y | 2.88 | -3 | -7 | bp |
-| sofr | 3.89 | +2 | +0 | bp |
-| vix | 15.27 | +0 | +0 | pts |
+| sofr | 3.88 | -1 | -2 | bp |
+| vix | 16.87 | +2 | +2 | pts |
 | usd_broad | 121.60 | +0 | +0 | pts |
 
 ## Macro Synthesis
@@ -123,10 +127,10 @@ A thin week. The only new release was weekly jobless claims: initial claims fell
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-14 19:16 ET | 0.0 | ok |
-| Labor | 2026-10-14 19:16 ET | 0.0 | ok |
-| Growth & Activity | 2026-10-14 19:16 ET | 0.0 | ok |
-| Housing | 2026-10-14 19:16 ET | 0.0 | ok |
-| Sentiment & Surveys | 2026-10-14 19:16 ET | 0.0 | ok |
-| Central Banks & Policy | 2026-10-14 19:16 ET | 0.0 | ok |
-| Financial Conditions & Markets | 2026-10-14 19:16 ET | 0.0 | ok |
+| Inflation | 2026-10-15 13:37 ET | 0.0 | ok |
+| Labor | 2026-10-15 13:37 ET | 0.0 | ok |
+| Growth & Activity | 2026-10-15 13:37 ET | 0.0 | ok |
+| Housing | 2026-10-15 13:37 ET | 0.0 | ok |
+| Sentiment & Surveys | 2026-10-15 13:37 ET | 0.0 | ok |
+| Central Banks & Policy | 2026-10-15 13:37 ET | 0.0 | ok |
+| Financial Conditions & Markets | 2026-10-15 13:37 ET | 0.0 | ok |
