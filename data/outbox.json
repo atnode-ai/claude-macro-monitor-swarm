@@ -1,3 +1,28 @@
 {
-  "items": []
+  "items": [
+    {
+      "report": "ppi",
+      "ref": "2026-09",
+      "path": "data/releases/inflation/ppi/2026-09.json",
+      "alert": false
+    },
+    {
+      "report": "claims",
+      "ref": "2026-10-10",
+      "path": "data/releases/labor/claims/2026-10-10.json",
+      "alert": false
+    },
+    {
+      "report": "nfci",
+      "ref": "2026-10-09",
+      "path": "data/releases/markets/nfci/2026-10-09.json",
+      "alert": false
+    },
+    {
+      "report": "retail",
+      "ref": "2026-09",
+      "path": "data/releases/growth/retail/2026-09.json",
+      "alert": false
+    }
+  ]
 }

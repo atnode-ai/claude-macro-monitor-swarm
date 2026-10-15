@@ -19,8 +19,18 @@
   },
   "verified": true,
   "consensus": null,
-  "consensus_source": null,
+  "consensus_source": "No September 2026 consensus found in one targeted search",
   "surprise": null,
-  "read": null,
-  "status": "pending_analysis"
+  "read": "Retail sales +0.77% m/m (prior +1.29%), ex-auto +0.72% (prior +1.28%), yoy 6.29% (prior 5.56%). Pace halves but stays firm; no consensus found, control group not in metrics. Supports Q3 consumption.",
+  "status": "analysed",
+  "fields": null,
+  "sources": [],
+  "alert": {
+    "alert": false,
+    "material": false,
+    "reasons": [
+      "no consensus available; surprise not assessed"
+    ]
+  },
+  "analysed_at": "2026-10-15 17:08 ET"
 }

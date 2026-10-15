@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-15 14:40 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-15 17:08 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -8,13 +8,13 @@ _Rendered 2026-10-15 14:40 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
-| **PPI** | 2026-09 | headline +1.3% m/m; headline 6.3% y/y; core +0.7% m/m; core 5.0% y/y | headline +0.5% m/m; headline 5.6% y/y; core +0.2% m/m; core 4.8% y/y |  |  | _pending analysis_ [source](https://www.bls.gov/news.release/ppi.htm) |
+| **PPI** | 2026-09 | headline +1.3% m/m; headline 6.3% y/y; core +0.7% m/m; core 5.0% y/y | headline +0.5% m/m; headline 5.6% y/y; core +0.2% m/m; core 4.8% y/y | unconfirmed |  | PPI accelerated: headline 1.343% m/m (prior 0.47%), 6.338% y/y; core 0.681% m/m (prior 0.246%), 4.978% y/y. No consensus found. Confirms CPI energy pass-through and points to firmer CPI; yields up, USD up, equities down. [source](https://www.bls.gov/news.release/ppi.htm) |
 | **CPI** | 2026-09 | headline +0.6% m/m; headline 3.7% y/y; core +0.3% m/m; core 2.6% y/y | headline +0.4% m/m; headline 3.4% y/y; core +0.3% m/m; core 2.4% y/y | unconfirmed |  | Core CPI 0.335% m/m (prior 0.29%) and 2.564% y/y (prior 2.446%) is hot against TD's 0.20% forecast (single bank, unconfirmed). Headline 3.738% y/y, up from 3.397%, in line with ~3.7% previews. Hawkish for cuts. [source](https://www.bls.gov/news.release/cpi.htm) |
 | **PPI** | 2026-08 | headline +0.4% m/m; headline 5.4% y/y; core +0.2% m/m; core 4.6% y/y | headline +0.1% m/m; headline 4.8% y/y; core +0.3% m/m; core 4.3% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bls.gov/news.release/ppi.htm) |
 | **PCE price index** | 2026-08 | headline +0.3% m/m; headline 3.4% y/y; core +0.2% m/m; core 3.0% y/y | headline +0.1% m/m; headline 3.4% y/y; core +0.1% m/m; core 3.0% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bea.gov/data/income-saving/personal-income) |
 | **CPI** | 2026-08 | headline +0.4% m/m; headline 3.4% y/y; core +0.3% m/m; core 2.4% y/y | headline +0.1% m/m; headline 3.4% y/y; core +0.2% m/m; core 2.5% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bls.gov/news.release/cpi.htm) |
 
-**Current stance:** Inflation is re-accelerating. September headline CPI rose 0.649% m/m and 3.738% y/y (from 3.397%), driven largely by energy. Core rose 0.335% m/m and 2.564% y/y (from 2.446%), above the single-bank forecast of 0.20% m/m. Core PCE y/y at 2% remains the Fed gauge, so cut expectations face pushback. Playbook is yields up, USD up, equities down. No history yet, so treat as one print. Would soften if PPI and ISM Prices Paid cool and core m/m returns to 0.2% or below. _(updated 2026-10-14 17:08 ET)_
+**Current stance:** Inflation is re-accelerating on two sources. September CPI: headline 0.649% m/m, 3.738% y/y; core 0.335% m/m, 2.564% y/y. September PPI, a CPI leader, is hotter: headline 1.343% m/m, 6.338% y/y; core 0.681% m/m, 4.978% y/y. Core PCE y/y at 2% is the Fed gauge, so cut expectations face pushback. Playbook: yields up, USD up, equities down. Would soften if ISM Prices Paid cools and core CPI m/m returns to 0.2% or below. _(updated 2026-10-15 17:08 ET)_
 
 ## Labor
 
@@ -22,14 +22,14 @@ _Rendered 2026-10-15 14:40 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
-| **Initial Jobless Claims** | 2026-10-10 | initial 199,000; initial +1,000 chg; initial 4wk 198,500; continuing 1,710,000 | initial 198,000; initial -1,000 chg; initial 4wk 198,250; continuing 1,710,000 |  |  | _pending analysis_ [source](https://www.dol.gov/ui/data.pdf) |
+| **Initial Jobless Claims** | 2026-10-10 | initial 199,000; initial +1,000 chg; initial 4wk 198,500; continuing 1,710,000 | initial 198,000; initial -1,000 chg; initial 4wk 198,250; continuing 1,710,000 | unconfirmed |  | Initial claims 199k, up 1k from 198k; 4-week average 198.5k (prior 198.25k); continuing 1.710M, unchanged. Layoffs remain low, no turn signal. Consensus unconfirmed. [source](https://www.dol.gov/ui/data.pdf) |
 | **Initial Jobless Claims** | 2026-10-03 | initial 197,000; initial -2,000 chg; initial 4wk 198,000; continuing 1,716,000 | initial 199,000; initial +1,000 chg; initial 4wk 200,500; continuing 1,716,000 | unconfirmed |  | Initial claims 197k, down 2k from 199k; 4-week average 198k (prior 200.5k); continuing 1.716M, unchanged. Low and drifting lower, no layoff signal. Consensus unconfirmed. [source](https://www.dol.gov/ui/data.pdf) |
 | **Initial Jobless Claims** | 2026-09-26 | initial 197,000; initial -1,000 chg; initial 4wk 200,000; continuing 1,701,000 | initial 198,000; initial +0.00 chg; initial 4wk 202,500; continuing 1,701,000 |  |  | _baseline (pre-migration)_ [source](https://www.dol.gov/ui/data.pdf) |
 | **Non-Farm Payrolls** | 2026-09 | payrolls +29k chg; unemployment rate 4.20%; unemployment rate +0.10pp chg; ahe +0.1% m/m; ahe 3.0% y/y | payrolls +133k chg; unemployment rate 4.10%; unemployment rate +0.00pp chg; ahe +0.3% m/m; ahe 3.1% y/y |  |  | _baseline (pre-migration)_ [source](https://www.bls.gov/news.release/empsit.htm) |
 | **ADP employment** | 2026-09 | private payrolls +90k chg | private payrolls +36k chg |  |  | _baseline (pre-migration)_ [source](https://adpemploymentreport.com/) |
 | **JOLTS** | 2026-08 | openings 7,079k; openings -256k chg; quits rate 1.90% | openings 7,335k; openings +153k chg; quits rate 1.90% |  |  | _baseline (pre-migration)_ [source](https://www.bls.gov/news.release/jolts.htm) |
 
-**Current stance:** Labour market firm on the claims evidence. Initial claims at 197k with the 4-week average at 198k and continuing claims flat at 1.716M show low layoffs and no sign of a turn. No JOLTS or payrolls data logged yet, so the labour-market turn test (rising claims, falling openings, soft payrolls) is not met. A move in initial claims above 220k or continuing claims above 1.8M would change the view. _(updated 2026-10-08 17:08 ET)_
+**Current stance:** Labour market firm on the claims evidence. Initial claims at 199k with the 4-week average at 198.5k and continuing claims flat at 1.710M show low layoffs and no sign of a turn. No JOLTS or payrolls data logged yet, so the labour-market turn test (rising claims, falling openings, soft payrolls) is not met. Initial claims above 220k or continuing claims above 1.8M would change the view. _(updated 2026-10-15 17:08 ET)_
 
 ## Growth & Activity
 
@@ -37,14 +37,14 @@ _Rendered 2026-10-15 14:40 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
-| **Retail Sales** | 2026-09 | headline +0.8% m/m; headline 6.3% y/y; ex auto +0.7% m/m | headline +1.3% m/m; headline 5.6% y/y; ex auto +1.3% m/m |  |  | _pending analysis_ [source](https://www.census.gov/retail/index.html) |
+| **Retail Sales** | 2026-09 | headline +0.8% m/m; headline 6.3% y/y; ex auto +0.7% m/m | headline +1.3% m/m; headline 5.6% y/y; ex auto +1.3% m/m | unconfirmed |  | Retail sales +0.77% m/m (prior +1.29%), ex-auto +0.72% (prior +1.28%), yoy 6.29% (prior 5.56%). Pace halves but stays firm; no consensus found, control group not in metrics. Supports Q3 consumption. [source](https://www.census.gov/retail/index.html) |
 | **GDP (real, SAAR)** | 2026-Q2 | real gdp saar 2.20; real gdp saar -0.30 chg | real gdp saar 2.50; real gdp saar +2.3 chg |  |  | _baseline (pre-migration)_ [source](https://www.bea.gov/data/gdp/gross-domestic-product) |
 | **Trade Balance** | 2026-08 | balance -105.6 $bn; balance -12.7 $bn chg | balance -92.8 $bn; balance -21.6 $bn chg |  |  | _baseline (pre-migration)_ [source](https://www.census.gov/foreign-trade/Press-Release/current_press_release/index.html) |
 | **Retail Sales** | 2026-08 | headline +1.1% m/m; headline 5.4% y/y; ex auto +1.1% m/m | headline -0.5% m/m; headline 4.5% y/y; ex auto -0.6% m/m |  |  | _baseline (pre-migration)_ [source](https://www.census.gov/retail/index.html) |
 | **Industrial Production** | 2026-08 | ip +0.0% m/m; ip 1.4% y/y; capacity util 76.3 | ip +0.2% m/m; ip 1.1% y/y; capacity util 76.3 |  |  | _baseline (pre-migration)_ [source](https://www.federalreserve.gov/releases/g17/current/) |
 | **Durable Goods** | 2026-08 | orders -0.1% m/m; core capex orders +1.6% m/m | orders +0.9% m/m; core capex orders +0.6% m/m |  |  | _baseline (pre-migration)_ [source](https://www.census.gov/manufacturing/m3/index.html) |
 
-**Current stance:** _not set yet_
+**Current stance:** Growth: consumer spending is firm. September retail sales rose 0.77% m/m after 1.29% in August, with ex-auto at 0.72% and yoy accelerating to 6.29%. The m/m pace is cooling from a strong August, but the level is high. Consensus and control group were unavailable, so GDP consumption read is unconfirmed. Would turn cautious if ex-auto m/m goes negative or ISM New Orders fall below 50. _(updated 2026-10-15 17:08 ET)_
 
 ## Housing
 
@@ -89,11 +89,11 @@ _Rendered 2026-10-15 14:40 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
-| **Chicago Fed NFCI** | 2026-10-09 | nfci -0.50; nfci +0.01 chg; anfci -0.48; anfci +0.01 chg | nfci -0.51; nfci +0.01 chg; anfci -0.50; anfci +0.01 chg |  |  | _pending analysis_ [source](https://www.chicagofed.org/research/data/nfci/current-data) |
+| **Chicago Fed NFCI** | 2026-10-09 | nfci -0.50; nfci +0.01 chg; anfci -0.48; anfci +0.01 chg | nfci -0.51; nfci +0.01 chg; anfci -0.50; anfci +0.01 chg | unconfirmed |  | NFCI -0.499 (prior -0.507), +0.008 on the week, 2nd straight tightening. Still well below 0, so conditions stay loose; no zero cross. Adjusted index -0.485 (+0.012). Not material alone; watch for alignment with curve and HY. [source](https://www.chicagofed.org/research/data/nfci/current-data) |
 | **Senior Loan Officer Survey (C&I standards)** | 2026-Q3 | ci tightening net 0.00%; ci tightening net -8.1pp chg | ci tightening net 8.10%; ci tightening net +2.8pp chg |  |  | _baseline (pre-migration)_ [source](https://www.federalreserve.gov/data/sloos.htm) |
 | **Chicago Fed NFCI** | 2026-10-02 | nfci -0.49; nfci +0.02 chg; anfci -0.50; anfci +0.02 chg | nfci -0.51; nfci +0.01 chg; anfci -0.52; anfci +0.02 chg |  |  | _baseline (pre-migration)_ [source](https://www.chicagofed.org/research/data/nfci/current-data) |
 
-**Current stance:** _not set yet_
+**Current stance:** Financial conditions are loose but drifting tighter. NFCI at -0.499 has risen 2 weeks in a row (+0.010, +0.008), and the adjusted index at -0.485 moves the same way. No zero cross, so no restrictive signal yet. No other markets data is logged in history to confirm alignment with the curve or HY spreads. A move toward 0, or HY OAS widening 25bp+ alongside, would change the view. _(updated 2026-10-15 17:08 ET)_
 
 **Latest market levels** (as of 2026-10-14):
 
@@ -127,10 +127,10 @@ A thin week. The only new release was weekly jobless claims: initial claims fell
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-15 14:39 ET | 0.0 | ok |
-| Labor | 2026-10-15 14:39 ET | 0.0 | ok |
-| Growth & Activity | 2026-10-15 14:39 ET | 0.0 | ok |
-| Housing | 2026-10-15 14:39 ET | 0.0 | ok |
-| Sentiment & Surveys | 2026-10-15 14:39 ET | 0.0 | ok |
-| Central Banks & Policy | 2026-10-15 14:39 ET | 0.0 | ok |
-| Financial Conditions & Markets | 2026-10-15 14:39 ET | 0.0 | ok |
+| Inflation | 2026-10-15 14:39 ET | 2.5 | ok |
+| Labor | 2026-10-15 14:39 ET | 2.5 | ok |
+| Growth & Activity | 2026-10-15 14:39 ET | 2.5 | ok |
+| Housing | 2026-10-15 14:39 ET | 2.5 | ok |
+| Sentiment & Surveys | 2026-10-15 14:39 ET | 2.5 | ok |
+| Central Banks & Policy | 2026-10-15 14:39 ET | 2.5 | ok |
+| Financial Conditions & Markets | 2026-10-15 14:39 ET | 2.5 | ok |

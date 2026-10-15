@@ -21,8 +21,18 @@
   },
   "verified": true,
   "consensus": null,
-  "consensus_source": null,
+  "consensus_source": "No economist poll found for September PPI; only a prediction-market estimate, not recorded",
   "surprise": null,
-  "read": null,
-  "status": "pending_analysis"
+  "read": "PPI accelerated: headline 1.343% m/m (prior 0.47%), 6.338% y/y; core 0.681% m/m (prior 0.246%), 4.978% y/y. No consensus found. Confirms CPI energy pass-through and points to firmer CPI; yields up, USD up, equities down.",
+  "status": "analysed",
+  "fields": null,
+  "sources": [],
+  "alert": {
+    "alert": false,
+    "material": false,
+    "reasons": [
+      "no consensus available; surprise not assessed"
+    ]
+  },
+  "analysed_at": "2026-10-15 17:08 ET"
 }

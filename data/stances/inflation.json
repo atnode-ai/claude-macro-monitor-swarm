@@ -1,6 +1,6 @@
 {
   "domain": "inflation",
-  "stance": "Inflation is re-accelerating. September headline CPI rose 0.649% m/m and 3.738% y/y (from 3.397%), driven largely by energy. Core rose 0.335% m/m and 2.564% y/y (from 2.446%), above the single-bank forecast of 0.20% m/m. Core PCE y/y at 2% remains the Fed gauge, so cut expectations face pushback. Playbook is yields up, USD up, equities down. No history yet, so treat as one print. Would soften if PPI and ISM Prices Paid cool and core m/m returns to 0.2% or below.",
-  "updated_at": "2026-10-14 17:08 ET",
-  "from": "cpi 2026-09"
+  "stance": "Inflation is re-accelerating on two sources. September CPI: headline 0.649% m/m, 3.738% y/y; core 0.335% m/m, 2.564% y/y. September PPI, a CPI leader, is hotter: headline 1.343% m/m, 6.338% y/y; core 0.681% m/m, 4.978% y/y. Core PCE y/y at 2% is the Fed gauge, so cut expectations face pushback. Playbook: yields up, USD up, equities down. Would soften if ISM Prices Paid cools and core CPI m/m returns to 0.2% or below.",
+  "updated_at": "2026-10-15 17:08 ET",
+  "from": "ppi 2026-09"
 }

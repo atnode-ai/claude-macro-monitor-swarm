@@ -23,6 +23,18 @@
   "consensus": null,
   "consensus_source": null,
   "surprise": null,
-  "read": null,
-  "status": "pending_analysis"
+  "read": "NFCI -0.499 (prior -0.507), +0.008 on the week, 2nd straight tightening. Still well below 0, so conditions stay loose; no zero cross. Adjusted index -0.485 (+0.012). Not material alone; watch for alignment with curve and HY.",
+  "status": "analysed",
+  "fields": null,
+  "sources": [
+    "https://www.chicagofed.org/research/data/nfci/current-data"
+  ],
+  "alert": {
+    "alert": false,
+    "material": false,
+    "reasons": [
+      "no consensus available; surprise not assessed"
+    ]
+  },
+  "analysed_at": "2026-10-15 17:08 ET"
 }
