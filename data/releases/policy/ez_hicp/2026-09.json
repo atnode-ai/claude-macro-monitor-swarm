@@ -16,9 +16,25 @@
     "headline.yoy_pct": 3.226
   },
   "verified": true,
-  "consensus": null,
-  "consensus_source": null,
-  "surprise": null,
-  "read": null,
-  "status": "pending_analysis"
+  "consensus": {
+    "headline.yoy_pct": 3.6
+  },
+  "consensus_source": "Trading Economics market expectations for the September flash estimate (euro-area inflation page); no Reuters or Bloomberg poll found, m/m consensus not found",
+  "surprise": {
+    "headline.yoy_pct": 0.2
+  },
+  "read": "HICP yoy 3.75% vs 3.23% prior and 3.6% flash consensus (unconfirmed source): a 0.15pt beat. Energy-led (18.8% yoy), core 2.5% in line. Hawkish for ECB path; EUR and Bund yields supported.",
+  "status": "analysed",
+  "fields": null,
+  "sources": [
+    "https://tradingeconomics.com/euro-area/inflation-cpi"
+  ],
+  "alert": {
+    "alert": true,
+    "material": true,
+    "reasons": [
+      "headline.yoy_pct surprise +0.2 (threshold 0.2)"
+    ]
+  },
+  "analysed_at": "2026-10-16 17:08 ET"
 }

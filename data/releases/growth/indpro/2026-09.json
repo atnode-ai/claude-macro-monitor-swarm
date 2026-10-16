@@ -19,8 +19,18 @@
   },
   "verified": true,
   "consensus": null,
-  "consensus_source": null,
+  "consensus_source": "No market consensus found in one search",
   "surprise": null,
-  "read": null,
-  "status": "pending_analysis"
+  "read": "IP +0.66% m/m (prior +0.06%), yoy 2.25% (prior 1.62%), capacity utilization 76.85% (prior 76.42%). Strong output gain, consensus unavailable. Fed annual revision may affect comparisons, unconfirmed.",
+  "status": "analysed",
+  "fields": null,
+  "sources": [],
+  "alert": {
+    "alert": false,
+    "material": false,
+    "reasons": [
+      "no consensus available; surprise not assessed"
+    ]
+  },
+  "analysed_at": "2026-10-16 17:08 ET"
 }

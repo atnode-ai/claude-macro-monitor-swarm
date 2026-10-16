@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-16 14:21 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-16 17:08 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -37,14 +37,14 @@ _Rendered 2026-10-16 14:21 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
-| **Industrial Production** | 2026-09 | ip +0.7% m/m; ip 2.2% y/y; capacity util 76.8 | ip +0.1% m/m; ip 1.6% y/y; capacity util 76.4 |  |  | _pending analysis_ [source](https://www.federalreserve.gov/releases/g17/current/) |
+| **Industrial Production** | 2026-09 | ip +0.7% m/m; ip 2.2% y/y; capacity util 76.8 | ip +0.1% m/m; ip 1.6% y/y; capacity util 76.4 | unconfirmed |  | IP +0.66% m/m (prior +0.06%), yoy 2.25% (prior 1.62%), capacity utilization 76.85% (prior 76.42%). Strong output gain, consensus unavailable. Fed annual revision may affect comparisons, unconfirmed. [source](https://www.federalreserve.gov/releases/g17/current/) |
 | **Retail Sales** | 2026-09 | headline +0.8% m/m; headline 6.3% y/y; ex auto +0.7% m/m | headline +1.3% m/m; headline 5.6% y/y; ex auto +1.3% m/m | unconfirmed |  | Retail sales +0.77% m/m (prior +1.29%), ex-auto +0.72% (prior +1.28%), yoy 6.29% (prior 5.56%). Pace halves but stays firm; no consensus found, control group not in metrics. Supports Q3 consumption. [source](https://www.census.gov/retail/index.html) |
 | **GDP (real, SAAR)** | 2026-Q2 | real gdp saar 2.20; real gdp saar -0.30 chg | real gdp saar 2.50; real gdp saar +2.3 chg |  |  | _baseline (pre-migration)_ [source](https://www.bea.gov/data/gdp/gross-domestic-product) |
 | **Trade Balance** | 2026-08 | balance -105.6 $bn; balance -12.7 $bn chg | balance -92.8 $bn; balance -21.6 $bn chg |  |  | _baseline (pre-migration)_ [source](https://www.census.gov/foreign-trade/Press-Release/current_press_release/index.html) |
 | **Retail Sales** | 2026-08 | headline +1.1% m/m; headline 5.4% y/y; ex auto +1.1% m/m | headline -0.5% m/m; headline 4.5% y/y; ex auto -0.6% m/m |  |  | _baseline (pre-migration)_ [source](https://www.census.gov/retail/index.html) |
 | **Industrial Production** | 2026-08 | ip +0.0% m/m; ip 1.4% y/y; capacity util 76.3 | ip +0.2% m/m; ip 1.1% y/y; capacity util 76.3 |  |  | _baseline (pre-migration)_ [source](https://www.federalreserve.gov/releases/g17/current/) |
 
-**Current stance:** Growth: consumer spending is firm. September retail sales rose 0.77% m/m after 1.29% in August, with ex-auto at 0.72% and yoy accelerating to 6.29%. The m/m pace is cooling from a strong August, but the level is high. Consensus and control group were unavailable, so GDP consumption read is unconfirmed. Would turn cautious if ex-auto m/m goes negative or ISM New Orders fall below 50. _(updated 2026-10-15 17:08 ET)_
+**Current stance:** Growth: consumer spending is firm. September retail sales rose 0.77% m/m after 1.29% in August, with ex-auto at 0.72% and yoy at 6.29%. September IP rose 0.66% m/m (yoy 2.25%) and capacity utilization rose to 76.85%, so production confirms activity is firm. Consensus and control group were unavailable, so the GDP consumption read is unconfirmed. Would turn cautious if ex-auto retail m/m goes negative, IP reverses, or ISM New Orders fall below 50. _(updated 2026-10-16 17:08 ET)_
 
 ## Housing
 
@@ -76,13 +76,13 @@ _Rendered 2026-10-16 14:21 ET from data/. Do not edit by hand; edit data/ or rer
 
 | Report | Period | Actual | Prior | Consensus | Surprise | Read |
 |---|---|---|---|---|---|---|
-| **Eurozone HICP** | 2026-09 | headline +0.6% m/m; headline 3.8% y/y | headline +0.4% m/m; headline 3.2% y/y |  |  | _pending analysis_ [source](https://ec.europa.eu/eurostat/web/euro-indicators) |
+| **Eurozone HICP** | 2026-09 | headline +0.6% m/m; headline 3.8% y/y | headline +0.4% m/m; headline 3.2% y/y | headline 3.6% y/y | headline.yoy_pct +0.2 | HICP yoy 3.75% vs 3.23% prior and 3.6% flash consensus (unconfirmed source): a 0.15pt beat. Energy-led (18.8% yoy), core 2.5% in line. Hawkish for ECB path; EUR and Bund yields supported. [source](https://ec.europa.eu/eurostat/web/euro-indicators) |
 | **Eurozone GDP** | 2026-Q2 | real gdp +0.6% q/q; real gdp 1.2% y/y | real gdp -0.0% q/q; real gdp 0.5% y/y |  |  | _baseline (pre-migration)_ [source](https://ec.europa.eu/eurostat/web/euro-indicators) |
 | **BoE decision** | 2026-09-17 | rate 3.75% |  |  |  | _baseline (pre-migration)_ [source](https://www.bankofengland.co.uk/monetary-policy) |
 | **FOMC decision** | 2026-09-16 | rate 4.00%; rate +25bp; rate lower 3.75% | rate 3.75% |  |  | _baseline (pre-migration)_ [source](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm) |
 | **Eurozone HICP** | 2026-08 | headline +0.4% m/m; headline 3.2% y/y | headline +0.2% m/m; headline 2.9% y/y |  |  | _baseline (pre-migration)_ [source](https://ec.europa.eu/eurostat/web/euro-indicators) |
 
-**Current stance:** _not set yet_
+**Current stance:** Policy stance leans hawkish on euro-area inflation. September HICP yoy rose to 3.75% from 3.23%, above the 3.6% flash expectation, driven by energy (18.8% yoy) while core held at 2.5%. An energy-led overshoot limits ECB easing room but argues for a hold rather than hikes unless core firms. No Fed or BoE data logged yet. A core reading above 2.7% or a hawkish ECB statement would harden the view. _(updated 2026-10-16 17:08 ET)_
 
 ## Financial Conditions & Markets
 
@@ -128,10 +128,10 @@ A thin week. The only new release was weekly jobless claims: initial claims fell
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-16 14:21 ET | 0.0 | ok |
-| Labor | 2026-10-16 14:21 ET | 0.0 | ok |
-| Growth & Activity | 2026-10-16 14:21 ET | 0.0 | ok |
-| Housing | 2026-10-16 14:21 ET | 0.0 | ok |
-| Sentiment & Surveys | 2026-10-16 14:21 ET | 0.0 | ok |
-| Central Banks & Policy | 2026-10-16 14:21 ET | 0.0 | ok |
-| Financial Conditions & Markets | 2026-10-16 14:21 ET | 0.0 | ok |
+| Inflation | 2026-10-16 14:21 ET | 2.8 | ok |
+| Labor | 2026-10-16 14:21 ET | 2.8 | ok |
+| Growth & Activity | 2026-10-16 14:21 ET | 2.8 | ok |
+| Housing | 2026-10-16 14:21 ET | 2.8 | ok |
+| Sentiment & Surveys | 2026-10-16 14:21 ET | 2.8 | ok |
+| Central Banks & Policy | 2026-10-16 14:21 ET | 2.8 | ok |
+| Financial Conditions & Markets | 2026-10-16 14:21 ET | 2.8 | ok |
