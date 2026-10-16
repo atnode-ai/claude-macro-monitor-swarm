@@ -1,6 +1,6 @@
 # Macro Monitor: Blackboard
 
-_Rendered 2026-10-16 17:08 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
+_Rendered 2026-10-16 17:48 ET from data/. Do not edit by hand; edit data/ or rerun the tools._
 
 ## Inflation
 
@@ -116,22 +116,22 @@ _Rendered 2026-10-16 17:08 ET from data/. Do not edit by hand; edit data/ or rer
 
 ## Macro Synthesis
 
-**2026-W41: Firm labour, sticky inflation, easy financial conditions: late-cycle expansion with no turn yet confirmed**
+**2026-W42: Inflation re-accelerating on both sides of the Atlantic while US activity stays firm: a hawkish late-cycle mix, no labour turn**
 
-A thin week. The only new release was weekly jobless claims: initial claims fell to 197,000, the 4-week average is 198,000 and continuing claims held at 1.716M. That is the only domain with an analysed stance; inflation, growth, housing, sentiment, policy and markets carry baseline prints with no consensus or stance logged, so the read below leans on levels, not surprises. The picture across domains is mixed. Inflation is firm: August headline CPI ran at 3.4% y/y, core PCE at 3.0% and PPI at 5.4%. Payroll growth is slow at 29k in September with unemployment at 4.2%, but layoffs stay low. Financial conditions are easy, with NFCI at -0.494, HY spreads at 3.15% and VIX near 15. The 2y yield fell 11bp on the week. Next week brings CPI, PPI, retail sales and industrial production, which will test whether inflation and spending stay firm.
+Inflation was the story of the week, and it came from several sources at once. US core CPI rose 0.335% m/m in September, taking the yoy rate to 2.564%, and headline reached 3.738%. PPI ran hotter still: headline 1.343% m/m and core 0.681% m/m, which points to more pass-through into CPI in the coming months. Euro-area HICP rose to 3.75% yoy against a 3.6% expectation, led by energy. Demand did not soften to offset this. Retail sales rose 0.77% m/m and industrial production 0.66%, while initial claims held at 199,000. Financial conditions remain loose but are drifting tighter: NFCI rose for a 2nd week, HY spreads widened 8bp and the 10y-2y curve flattened 18bp. Sentiment is the one soft reading. Taken together, inflation, activity and labour point the same way, which leaves little room for further Fed easing. The open question is whether markets keep pricing that calmly: 5y5y breakevens fell 4bp to 2.31%.
 
-**Regime watch:** Two alignments matter. Firm inflation (CPI, PCE, PPI all elevated) with easy financial conditions and strong retail sales argues against further easing. Slow payrolls, falling openings and soft housing are the early side of a labour and growth turn. A turn needs claims to confirm: initial claims above 220,000 or continuing claims above 1.8M, alongside a soft retail print. If next week's CPI and PPI stay hot while claims rise, that is the dual-mandate dilemma. If CPI cools and claims stay low, the soft-landing read strengthens.
-**Week ahead:** Mon 2026-10-12 CPI; Tue 2026-10-13 PPI; Thu 2026-10-15 Initial Jobless Claims; Fri 2026-10-16 Retail Sales; Fri 2026-10-16 Industrial Production
+**Regime watch:** The alignment this week is inflation plus activity: CPI, PPI and HICP all firmer while retail sales, IP and claims stay strong. That is the opposite of the labour-turn pattern, and it argues for a pause in easing. A regime change toward stagflation would need the demand side to crack while prices stay hot: initial claims above 220,000 or continuing claims above 1.8M, and a negative ex-auto retail print. A soft-landing read would need core CPI back to 0.2% m/m or below and PPI to cool. On the market side, an NFCI move toward zero with HY widening of 25bp or more would mean conditions are starting to restrain growth.
+**Week ahead:** Mon 2026-10-19 Housing Starts & Building Permits; Tue 2026-10-20 UK Labour Market (ONS); Wed 2026-10-21 Existing Home Sales; Thu 2026-10-22 Initial Jobless Claims; Fri 2026-10-23 UMich Consumer Sentiment
 **Swarm health:** all domains fresh
 
 ## Collector health
 
 | Domain | Last success | Age (h, weekdays) | Status |
 |---|---|---|---|
-| Inflation | 2026-10-16 14:21 ET | 2.8 | ok |
-| Labor | 2026-10-16 14:21 ET | 2.8 | ok |
-| Growth & Activity | 2026-10-16 14:21 ET | 2.8 | ok |
-| Housing | 2026-10-16 14:21 ET | 2.8 | ok |
-| Sentiment & Surveys | 2026-10-16 14:21 ET | 2.8 | ok |
-| Central Banks & Policy | 2026-10-16 14:21 ET | 2.8 | ok |
-| Financial Conditions & Markets | 2026-10-16 14:21 ET | 2.8 | ok |
+| Inflation | 2026-10-16 14:21 ET | 3.5 | ok |
+| Labor | 2026-10-16 14:21 ET | 3.5 | ok |
+| Growth & Activity | 2026-10-16 14:21 ET | 3.5 | ok |
+| Housing | 2026-10-16 14:21 ET | 3.5 | ok |
+| Sentiment & Surveys | 2026-10-16 14:21 ET | 3.5 | ok |
+| Central Banks & Policy | 2026-10-16 14:21 ET | 3.5 | ok |
+| Financial Conditions & Markets | 2026-10-16 14:21 ET | 3.5 | ok |
