@@ -1,3 +1,22 @@
 {
-  "items": []
+  "items": [
+    {
+      "domain": "growth",
+      "report": "indpro",
+      "ref": "2026-09",
+      "path": "data/releases/growth/indpro/2026-09.json",
+      "needs_fetch": false,
+      "tier": 3,
+      "detected_at": "2026-10-16 13:10 ET"
+    },
+    {
+      "domain": "policy",
+      "report": "ez_hicp",
+      "ref": "2026-09",
+      "path": "data/releases/policy/ez_hicp/2026-09.json",
+      "needs_fetch": false,
+      "tier": 3,
+      "detected_at": "2026-10-16 13:10 ET"
+    }
+  ]
 }
